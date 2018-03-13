@@ -1,0 +1,6 @@
+Wheel inside to inside measurement: 1067,51 mm  (wing max dimension width)
+max length theoretical, headrest to wheel backside + 250mm: 923,01 mm
+
+AR = AR_actual*(1+1,9*h/b), h højde af endplate og b vinge bredde (katz side 145), cirka 3,56
+
+Slats info: side 154 (152-154) katz
