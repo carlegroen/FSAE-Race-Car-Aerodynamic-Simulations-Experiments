@@ -1,5 +1,27 @@
 % !TEX root = main.tex
 \chapter{Theory}
+
+First, let's explain what makes a car fast, and what parameters we can change to improve the speed of our car. The car's acceleration can be described by Newton's second law as:\fxnote{stort D eller lille d i ligningen?}
+\begin{align}
+\sum F_x &= m \ddot{x} = F
+\intertext{Where the sum of forces in the x-direction (the direction of travel) can be expressed as the force already pertained by the vehicle, minus the drag force:}
+F &- C_D \left(\frac{1}{2}  \rho \dot{x}^2 A \right) = m \ddot{x}
+\intertext{Assuming we're moving at a steady speed, the acceleration is 0, hence}
+F &= C_D \left(\frac{1}{2}  \rho \dot{x}^2 A \right)
+\intertext{As we were interested in the speed of the car, let's solve for the velocity. The force is given by $F = \frac{P}{\dot{x}}$, where $P$ is the power of the car, which gives:}
+\dot{x} &= \left( \frac{2 P}{C_D \left(\rho A \right)}\right)^{\frac{1}{3}}
+\end{align}
+This is assuming we're traveling at terminal velocity -- that is, the point where the $\text{Driving Force} = \text{Friction Force}$.\fxnote{Muligvis uddyb her} The terminal velocity of the racer is then easily calculated, as the competition restricts the maximum amount of power:
+\begin{align}
+\dot{x}_\text{max} &= \frac{2\cdot \SI{80}{\kilo\watt}}{0.85\left(\SI{1.225}{\kilogram\per\cubic\metre}~ \SI{1.2}{\square\metre}\right)} = \SI{50}{\metre\per\second} = \SI{181.4}{\kilo\metre\per\hour}
+\intertext{however, given the ruleset a forecasted maximum of $\SI{110}{\kilo\metre\per\hour}$ allows a much larger drag coefficient $C_D$:}
+C_D &= \frac{2 P}{\dot{x}^3 \left(\rho A \right)}
+= \frac{2 \cdot \SI{80}{\kilo\watt}}{(\SI{120}{\kilo\metre\per\hour})^3 \left(\SI{1.225}{\kilogram\per\cubic\metre}~ \SI{1.2}{\square\metre} \right)} = 2.82
+\end{align}
+Thus, the car's top speed will only be limited by a drag factor $>2.82$, which is far above the drag introduced by the aerodynamic devices.
+
+From this derivation, it's clear that the car's abilities at maximum speeds far exceed the requirement of the track. Therefore, the next step is to improve cornering speeds which depend strongly on the tyre's grip on the surface of the road \cite{jkatz}.
+
 \section{Aerodynamics}
 \section{Vehicle Performance}
 \subsection{Improvements in Top Speed}
