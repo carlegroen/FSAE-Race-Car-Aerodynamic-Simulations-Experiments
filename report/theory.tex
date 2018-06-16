@@ -32,6 +32,7 @@
 \subsection{Load Distribution}
 
 \section{Similarity of Flows}
+\label{sec:similarflows}
 
   In order to perform tests on the rear wing, it has to be scaled down to fit inside the wind tunnel. This reduces the physical size of the wing, which under equal circumstances changes the flow around it. In order to correctly emulate the simulated flow inside a wind tunnel, the Reynolds number and Euler number have to be the same, assuming incompressible flows:
   \begin{align}
@@ -47,6 +48,6 @@
   For a down-scaled model, matching Reynolds- and Euler number requires an increase in velocity, inversely proportional to the increase in length \fxnote{skriv det her ud plx.}
 
   \begin{align}
-    \frac{u_\text{m} L_\text{m}}{\nu} &= \frac{u L}{\nu}\\
-    \Rightarrow u_\text{m} &= \frac{L}{L_\text{m}} u
+    \frac{u_\text{m} L_\text{m}}{\nu} &= \frac{u L}{\nu} \nonumber \\
+    \Rightarrow u_\text{m} &= \frac{L}{L_\text{m}} u \label{eq:windtunnelspeed}
   \end{align}
