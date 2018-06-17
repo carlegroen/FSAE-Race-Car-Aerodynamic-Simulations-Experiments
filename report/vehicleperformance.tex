@@ -1,7 +1,7 @@
 % !TEX root = main.tex
 \chapter{Aerodynamic Effects on Vehicle Performance}
 
-  Understanding the theoretical background as to why aerodynamics is important for a vehicles's handling requires knowledge of how a vehicle's top speed and cornering performance depends on drag, grip and how downforce differs from mass. The first theoretical segment covers how top speed changes with aerodynamics on straights and during cornering, in order to understand the behaviour of a racing vehicle.
+  The first argument to the importance of aerodynamics is based around two facts: The fact that drag is neglible in regards to the Formula Student vehicle's top speed on straights, and the fact that aerodynamically increasing the vehicle's \emph{effective} mass due to downforce increases tyre grip, which in turn allows for higher cornering velocities.
 
 \section{Drag Effects on Straights}
 \label{sec:topspeed}
@@ -16,17 +16,17 @@
     \intertext{As we were interested in the speed of the car, let's solve for the velocity. The force is given by $F = \frac{P}{\dot{x}}$, where $P$ is the power of the car, which gives:}
     \dot{x} &= \left( \frac{2 P}{C_D \left(\rho A \right)}\right)^{\frac{1}{3}}
   \end{align}
-  This is assuming we're traveling at terminal velocity -- that is, the point where the $\text{Driving Force} = \text{Friction Force}$. The terminal velocity of the racer is then easily calculated, as the competition restricts the maximum amount of power to $\SI{80}{\kilo\watt}$, and the frontal area of the car is approximated from the CAD drawing seen in figure \ref{fig:frontarea}
+  This is assuming we're traveling at terminal velocity -- that is, the point where the $\text{Driving Force} = \text{Friction Force}$. The terminal velocity of the racer is then easily calculated, as the competition restricts the maximum amount of power to $\SI{80}{\kilo\watt}$, and the frontal area of the car is approximated from the CAD drawing seen in figure \ref{fig:frontarea}\fxnote{fix calculation to use 0.99 instead of 1.2}.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{frontalarea.png}
     \caption{Frontal area of the car with a dummy wing inserted into the CAD model, in order to get an estimate of the drag coefficient $C_D$.}
     \label{fig:frontarea}
-  \end{figure}
+  \end{figure}\fxnote{missing radiators}
 
   \begin{align}
     \dot{x}_\text{max} &= \left(\frac{2\cdot \SI{80}{\kilo\watt}}{0.85\left(\SI{1.225}{\kilogram\per\cubic\metre}~ \SI{1.2}{\square\metre}\right)}\right)^{\frac{1}{3}} = \SI{50}{\metre\per\second} = \SI{181.4}{\kilo\metre\per\hour}
-    \intertext{however, given the ruleset a forecasted maximum of $\SI{110}{\kilo\metre\per\hour}$ allows a much larger drag coefficient $C_D$:}
+    \intertext{however, given the ruleset a forecasted maximum of $\SI{110}{\kilo\metre\per\hour}$ allows a much larger drag coefficient $C_D$:\fxnote{insert source}}
     C_D &= \frac{2 P}{\dot{x}^3 \left(\rho A \right)}
     = \frac{2 \cdot \SI{80}{\kilo\watt}}{(\SI{120}{\kilo\metre\per\hour})^3 \left(\SI{1.225}{\kilogram\per\cubic\metre}~ \SI{1.2}{\square\metre} \right)} = 2.82
   \end{align}
@@ -35,6 +35,23 @@
   From this derivation, it is clear that the car's abilities at maximum speeds far exceed the requirement of the track. Therefore, the next step is to improve cornering speeds which depend strongly on the tyre's grip on the surface of the road \cite{jkatz}.
 
 \subsection{Downforce Effects on Cornering}
+
+  Shown before, drag does not limit the car's performance on straights. During cornering, drag is not an issue either, but the grip of the tyres limits the maximum velocity before the vehicle loses traction due to the centripetal force which is given by:\cite{taylor2005classical}
+  \begin{align}
+    F_\text{centripetal} &= \frac{m\dot{x}^2}{r}
+    \intertext{where $r$ is the distance to the center of the cornering circle. The frictional force the car exerts due to downforce and tyre grip is given by:}
+    F_\text{friction} &= \mu F_\text{normal}
+    \intertext{where the normal force is given by both the weight and (negative) lift of the car, which serves as an effective mass increase:}
+    F_\text{friction} &= \mu \left(mg + \frac{1}{2}\rho C_L A \dot{x}^2 \right)
+    \intertext{The vehicle will lose traction when the frictional force is less than the centripetal force.}
+    \frac{m\dot{x}^2}{r} &> \mu \left(mg + \frac{1}{2}\rho C_L A \dot{x}^2 \right)
+    \intertext{Giving the maximum velocity for a given corner radius before the car skids out:}
+    \Rightarrow \dot{x} &< \left(\frac{2\mu mg r}{m - \mu C_L \rho r  A}\right)^{\frac{1}{2}}
+  \end{align}
+  Again, the forecasted variation in radii of corners is prescribed by the rules to be between \SIrange{3}{50}{\metre}. Plotting this for various $C_L$ values between $1.5$ to $2.6$\cite{CLvalues}, assuming $m=\SI{300}{\kilogram}$, $\mu = 1.5$\cite{tyrefriction} and $A = \SI{0.99}{\square\metre}$ as previously used. The result can be seen in figure \ref{fig:cornerspeedvslift}.
+
+  \fxnote{insert figure here}
+
 \subsection{Load Distribution}
 
 %Check https://uta-ir.tdl.org/uta-ir/bitstream/handle/10106/24176/Merkel_uta_2502M_%2012503.pdf?sequence=1
