@@ -8,6 +8,27 @@ Verifying the simulated aerodynamic effects is crucial to ensuring the correctne
 
 In figure \ref{fig:scalewing} the down-scaled wing can be seen with pressure-taps along the centerpiece.
 
+\section{Aerodynamics}
+  \subsection{Similarity of Flows}
+  \label{sec:similarflows}
+
+    In order to perform tests on the rear wing, it has to be scaled down to fit inside the wind tunnel. This reduces the physical size of the wing, which under equal circumstances changes the flow around it. In order to correctly emulate the simulated flow inside a wind tunnel, the Reynolds number and Euler number have to be the same, assuming incompressible flows:
+    \begin{align}
+      \text{Re}_\text{m} &= \text{Re}\\
+      \text{Eu}_\text{m} &= \text{Eu}
+      \intertext{Mathematically, the Reynolds- and Euler number are defined as:}
+      \text{Eu} &= \frac{p_u - p_d}{pv^2}
+      \intertext{where $v$ is the characteristic velocity of the flow, $p_u$ denotes upstream pressure, and $p_d$ denotes downstream pressure, and:}
+      \text{Re} &= \frac{u L}{\nu}
+    \end{align}
+    where $u$ is the velocity relative to the object, $L$ is the characteristic length and $\nu$ is the kinematic viscosity of the fluid.
+
+    For a down-scaled model, matching Reynolds- and Euler number requires an increase in velocity, inversely proportional to the increase in length \fxnote{skriv det her ud plx.}
+
+    \begin{align}
+      \frac{u_\text{m} L_\text{m}}{\nu} &= \frac{u L}{\nu} \nonumber \\
+      \Rightarrow u_\text{m} &= \frac{L}{L_\text{m}} u \label{eq:windtunnelspeed}
+    \end{align}
 
 
 \section{Equipment}
@@ -35,6 +56,5 @@ Given the nature of the competition, the average cornering speeds are around $\S
 \end{align*}
 
 Which in accordance to the range of The Red wind tunnel.
-
 
 \section{Results}
