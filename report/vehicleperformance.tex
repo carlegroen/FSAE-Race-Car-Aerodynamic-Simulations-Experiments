@@ -3,6 +3,8 @@
 
   The first argument to the importance of aerodynamics is based around two facts: The fact that drag is neglible in regards to the Formula Student vehicle's top speed on straights, and the fact that aerodynamically increasing the vehicle's \emph{effective} mass due to downforce increases tyre grip, which in turn allows for higher cornering velocities.
 
+  The second part of this chapter covers the importance of centering the effective mass increase due to aerodynamic devices close to the center of gravity -- otherwise handling characteristics becomes a function of velocity.
+
 \section{Drag Effects on Straights}
 \label{sec:topspeed}
 
@@ -34,6 +36,8 @@
 
   From this derivation, it is clear that the car's abilities at maximum speeds far exceed the requirement of the track. Therefore, the next step is to improve cornering speeds which depend strongly on the tyre's grip on the surface of the road \cite{jkatz}.
 
+
+
 \subsection{Downforce Effects on Cornering}
 
   Shown before, drag does not limit the car's performance on straights. During cornering, drag is not an issue either, but the grip of the tyres limits the maximum velocity before the vehicle loses traction due to the centripetal force which is given by:\cite{taylor2005classical}
@@ -48,10 +52,18 @@
     \intertext{Giving the maximum velocity for a given corner radius before the car skids out:}
     \Rightarrow \dot{x} &< \left(\frac{2\mu mg r}{m - \mu C_L \rho r  A}\right)^{\frac{1}{2}}
   \end{align}
-  Again, the forecasted variation in radii of corners is prescribed by the rules to be between \SIrange{3}{50}{\metre}. Plotting this for various $C_L$ values between $1.5$ to $2.6$\cite{CLvalues}, assuming $m=\SI{300}{\kilogram}$, $\mu = 1.5$\cite{tyrefriction} and $A = \SI{0.99}{\square\metre}$ as previously used. The result can be seen in figure \ref{fig:cornerspeedvslift}.
+  Again, the forecasted variation in radii of corners is prescribed by the rules to be between \SIrange{3}{50}{\metre}. Plotting this for various $C_L$ values between $1.5$ to $2.6$ \cite{CLvalues}, assuming $m=\SI{300}{\kilogram}$, $\mu = 1.5$\cite{tyrefriction} and $A = \SI{0.99}{\square\metre}$ as previously used. The result can be seen in figure \ref{fig:cornerspeedvslift}.
 
-  \fxnote{insert figure here}
+  \begin{figure}
+    \includegraphics[width=\textwidth]{corneringspeedperCL.png}
+    \caption{Cornering speed as a function of turn radius for various lift coefficients.}
+    \label{fig:cornerspeedvslift}
+  \end{figure}
+
+
 
 \subsection{Load Distribution}
+  Equations of equilibrium
+
 
 %Check https://uta-ir.tdl.org/uta-ir/bitstream/handle/10106/24176/Merkel_uta_2502M_%2012503.pdf?sequence=1
