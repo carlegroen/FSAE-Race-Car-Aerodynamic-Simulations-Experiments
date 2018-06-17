@@ -1,7 +1,5 @@
 % !TEX root = main.tex
 \chapter{Theory}
-
-\section{Aerodynamics}
 \section{Vehicle Performance}
 \subsection{Evaluating Top Speed}
 \label{sec:topspeed}
@@ -27,27 +25,33 @@
 
   From this derivation, it's clear that the car's abilities at maximum speeds far exceed the requirement of the track. Therefore, the next step is to improve cornering speeds which depend strongly on the tyre's grip on the surface of the road \cite{jkatz}.
 
-
 \subsection{Cornering performance}
 \subsection{Load Distribution}
 
-\section{Similarity of Flows}
-\label{sec:similarflows}
+Check https://uta-ir.tdl.org/uta-ir/bitstream/handle/10106/24176/Merkel_uta_2502M_%2012503.pdf?sequence=1
 
-  In order to perform tests on the rear wing, it has to be scaled down to fit inside the wind tunnel. This reduces the physical size of the wing, which under equal circumstances changes the flow around it. In order to correctly emulate the simulated flow inside a wind tunnel, the Reynolds number and Euler number have to be the same, assuming incompressible flows:
-  \begin{align}
-    \text{Re}_\text{m} &= \text{Re}\\
-    \text{Eu}_\text{m} &= \text{Eu}
-    \intertext{Mathematically, the Reynolds- and Euler number are defined as:}
-    \text{Eu} &= \frac{p_u - p_d}{pv^2}
-    \intertext{where $v$ is the characteristic velocity of the flow, $p_u$ denotes upstream pressure, and $p_d$ denotes downstream pressure, and:}
-    \text{Re} &= \frac{u L}{\nu}
-  \end{align}
-  where $u$ is the velocity relative to the object, $L$ is the characteristic length and $\nu$ is the kinematic viscosity of the fluid.
+\section{Aerodynamics}
+  \subsection{Similarity of Flows}
+  \label{sec:similarflows}
 
-  For a down-scaled model, matching Reynolds- and Euler number requires an increase in velocity, inversely proportional to the increase in length \fxnote{skriv det her ud plx.}
+    In order to perform tests on the rear wing, it has to be scaled down to fit inside the wind tunnel. This reduces the physical size of the wing, which under equal circumstances changes the flow around it. In order to correctly emulate the simulated flow inside a wind tunnel, the Reynolds number and Euler number have to be the same, assuming incompressible flows:
+    \begin{align}
+      \text{Re}_\text{m} &= \text{Re}\\
+      \text{Eu}_\text{m} &= \text{Eu}
+      \intertext{Mathematically, the Reynolds- and Euler number are defined as:}
+      \text{Eu} &= \frac{p_u - p_d}{pv^2}
+      \intertext{where $v$ is the characteristic velocity of the flow, $p_u$ denotes upstream pressure, and $p_d$ denotes downstream pressure, and:}
+      \text{Re} &= \frac{u L}{\nu}
+    \end{align}
+    where $u$ is the velocity relative to the object, $L$ is the characteristic length and $\nu$ is the kinematic viscosity of the fluid.
 
-  \begin{align}
-    \frac{u_\text{m} L_\text{m}}{\nu} &= \frac{u L}{\nu} \nonumber \\
-    \Rightarrow u_\text{m} &= \frac{L}{L_\text{m}} u \label{eq:windtunnelspeed}
-  \end{align}
+    For a down-scaled model, matching Reynolds- and Euler number requires an increase in velocity, inversely proportional to the increase in length \fxnote{skriv det her ud plx.}
+
+    \begin{align}
+      \frac{u_\text{m} L_\text{m}}{\nu} &= \frac{u L}{\nu} \nonumber \\
+      \Rightarrow u_\text{m} &= \frac{L}{L_\text{m}} u \label{eq:windtunnelspeed}
+    \end{align}
+
+\section{Composites}
+  \subsection{Sandwich Structure}
+  \subsection{Wing Deflection}
