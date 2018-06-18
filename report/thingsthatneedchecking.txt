@@ -1,0 +1,7 @@
+Formula student rules:
+
+Corner radius
+
+Estimated top speed of track
+
+Estimated cornering speed of track
