@@ -1,15 +1,7 @@
 % !TEX root = main.tex
-\chapter{Experiment}
+\chapter{Wind Tunnel Experiment}
 
-Verifying the simulated aerodynamic effects is crucial to ensuring the correctness of the numerical analysis. In order to assess the reliability of the previouisly conducted simulations, a physical measurement of the pressure along the down-scaled wing.
-
-In figure \ref{fig:scalewing} the down-scaled wing can be seen with pressure-taps along the centerpiece.
-
-  \begin{figure}
-    \includegraphics[width=\textwidth]{scalewingAssembled}
-    \caption{Down-scaled wing assmembled with a zoom in on the pressure taps. The length of the entire wing is approximately $\SI{250}{\milli\metre}$ with a total chord length of $\SI{150}{\milli\metre}$.}
-    \label{fig:scalewing}
-  \end{figure}
+  Verifying the simulated aerodynamic effects is crucial to ensuring the correctness of the numerical analysis. In order to assess the reliability of the previouisly conducted simulations, a physical measurement of the pressure along the down-scaled wing will provide results for comparison. \fxnote{sounds awful. fix}
 
 \section{Aerodynamics}
   \subsection{Similarity of Flows}
@@ -44,20 +36,36 @@ In figure \ref{fig:scalewing} the down-scaled wing can be seen with pressure-tap
     \item Pressure transducer
   \end{itemize}
 
-  \subsection{1/4 Scale Wing}
+  \subsection{Manufacturing the 1/4 Scale Rear Wing}
 
-    The small scale rear wing is constructed in 6 pieces. The large wing is dissected into three parts. Two regular wings, and a central part with 15 pressure taps.
+    \subsubsection{Blueprints}
+      \fxnote{Why this wing design? answer: Just a first guess that can be compared with easily later.}
 
-    Material selection is based on the ease of machinability - a CNC-miller was provided to us, along with ample amounts of aluminium. This scale wing is not to be used in the actual race car, so weight is not a concern. Construction the 1/4 scale wing is not completely trivial. High precision is required for the surface finish, and the pressure taps have to be small in diameter: $Ø\SI{0.8}{\milli\metre}$. \fxnote{insert work drawings used for producing the wing}.
+      The small scale rear wing is constructed in 6 pieces. The large wing is dissected into three parts. Two regular wings, and a central part with 15 pressure taps.
+
+      Material selection is based on the ease of machinability - a CNC-miller was provided to us, along with ample amounts of aluminium. This scale wing is not to be used in the actual race car, so weight is not a concern. Construction the 1/4 scale wing is not completely trivial. High precision is required for the surface finish, and the pressure taps have to be small in diameter: $Ø\SI{0.8}{\milli\metre}$. \fxnote{insert work drawings used for producing the wing}. \fxnote{Insert Technical Drawings}
+
+      \begin{figure}
+        \includegraphics[width=\textwidth]{scalewingAssembled}
+        \caption{Down-scaled wing assmembled with a zoom in on the pressure taps. The length of the entire wing is approximately $\SI{250}{\milli\metre}$ with a total chord length of $\SI{150}{\milli\metre}$.}
+        \label{fig:scalewing}
+      \end{figure}
+
+    \subsubsection{Tolerances}
+      \fxnote{Maybe remove this section}
+
+    \subsubsection{Manufactured parts}
+
+      In figure \ref{fig:scalewing} the down-scaled wing post-production with pressure tubes inserted can be seen with pressure-taps along the centerpiece.
 
 \section{Experimental Procedure}
 
-Given the nature of the competition, the average cornering speeds are around $\SI{55}{\kilo \meter \per \hour} = \SI{15.28}{\metre\per\second}$, which is where downforce is of most importance. As shown in section \ref{sec:similarflows}, the desired velocity in the wind tunnel for the scale model can be found from equation \ref{eq:windtunnelspeed}
+  Given the nature of the competition, the average cornering speeds are around $\SI{55}{\kilo \meter \per \hour} = \SI{15.28}{\metre\per\second}$, which is where downforce is of most importance. As shown in section \ref{sec:similarflows}, the desired velocity in the wind tunnel for the scale model can be found from equation \ref{eq:windtunnelspeed}
 
-\begin{align*}
-  u_\text{m} &= \frac{\SI{0.6}{\metre}}{\SI{0.15}{\metre}} \SI{15.28}{\metre\per\second} = \SI{61.12}{\metre\per\second}
-\end{align*}
+  \begin{align*}
+    u_\text{m} &= \frac{\SI{0.6}{\metre}}{\SI{0.15}{\metre}} \SI{15.28}{\metre\per\second} = \SI{61.12}{\metre\per\second}
+  \end{align*}
 
-Which in accordance to the range of The Red wind tunnel.
+  Which in accordance to the range of The Red wind tunnel.
 
 \section{Results}
