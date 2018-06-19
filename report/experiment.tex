@@ -53,15 +53,27 @@
 
   \subsection{Instrumentation}
 
+    Instrumentation to perform the experiments were graciously provided to us by DTU Wind Energy. The following contains a description of the wind tunnel, datalogging devices and software used to perform the measurements.
+
     \subsubsection{The Red Wind Tunnel}
 
-      The red wind tunnel is an open loop wind tunnel located at DTU Lyngby. It measures $\SI{0.5}{\metre} \times \SI{0.5}{\metre} \times \SI{1.3}{\metre}$ in the test section, with a maximum wind speed of \SI{65}{\metre\per\second}. The wind tunnel functions in low Reynolds number, which fits with the chosen MSHD aerofoil. The system employs a hot wire velocity probe.
+      The red wind tunnel is an open loop wind tunnel located at DTU Lyngby. A picture of the wind tunnel with our supervisor Robert Mikkelsen can be seen in figure \ref{fig:theredwindtunnel}. It measures $\SI{0.5}{\metre} \times \SI{0.5}{\metre} \times \SI{1.3}{\metre}$ in the test section, with a maximum wind speed of \SI{65}{\metre\per\second}. The wind tunnel functions in low Reynolds number, which fits with the chosen MSHD aerofoil.
 
-    \fxnote{What'd we use to collect data?}
+      \begin{figure}
+        \includegraphics[width=\textwidth, rotate=180]{scalewing}
+        \caption{Robert Mikkelsen posing in front of the Red wind tunnel. To the left is the air inlet, followed by the test section.}
+        \label{fig:theredwindtunnel}
+      \end{figure}
+
+    \subsubsection{Pressure Measurements}
+
+      The Red wind tunnel is equipped with data logging equipment measuring up to 64 pressure probes on a wing profile, the Angle of Attack (AOA), a force gauge measuring the lift forces, a pitot rake measuring the pressure in the wing's wake, the dynamic pressure in the wind tunnel, the operational speed of the wind tunnel, the air density and the time of measurement. The measurement equipment was connected to a \fxnote{unsure here. Check document} connected to the data-logging software LabVIEW on a nearby computer.
 
   \subsection{Manufacturing the 1/4 Scale Rear Wing}
 
-    The 1/4 scale rear wing was machined at Philips Lighting by Rasmus Himborg.
+    After the initial analysis of airfoils, this design was chosen based on preliminary research. From CITE SOMETHING HERE  \fxnote{Insert source}, a rule of thumb for multi element design is that the first element should be around $70\%$ of the total chord length, and the second element around $30\%$. From \cite{jkatz}, the initial position of the elements was chosen. Having the perfect position is not essential, as the experiment is a simply a verification method of the computational method, which will be used to optimize the final deisng.
+
+    The 1/4 scale rear wing was machined at Philips Lighting by Rasmus Himborg based on the technical drawings presented below.
 
     \subsubsection{Blueprints}
 
@@ -73,34 +85,27 @@
         \label{fig:scalewingblueprint}
       \end{figure}\fxnote{maybe fix blueprint to be more sexy/english}
 
-      \fxnote{Why this wing design? answer: Just a first guess that can be compared with easily later.}
+      Material selection is based on the ease of machinability - a CNC-miller was provided to us, along with ample amounts of aluminium. This scale wing is not to be used in the actual race car, so weight is not a concern. Construction the 1/4 scale wing is not completely trivial. High precision is required for the surface finish, and the pressure taps have to be small in diameter: $Ø\SI{0.8}{\milli\metre}$.
 
-      Material selection is based on the ease of machinability - a CNC-miller was provided to us, along with ample amounts of aluminium. This scale wing is not to be used in the actual race car, so weight is not a concern. Construction the 1/4 scale wing is not completely trivial. High precision is required for the surface finish, and the pressure taps have to be small in diameter: $Ø\SI{0.8}{\milli\metre}$. 
-
-
-
-      \subsubsection{Tolerances}
-        \fxnote{Maybe remove this section}
-
-      \subsubsection{Manufactured parts}
-
-
-
-        \subsubsection{3D-printed parts}
-        \subsubsection{Assembly}
-
-        In figure \ref{fig:scalewing} the down-scaled wing post-production with pressure tubes inserted can be seen with pressure-taps along the centerpiece.
+      The manufactured parts can be seen in \ref{fig:scalewingparts}, taken shortly after receiving the parts back from Rasmus Himborg. The width of the centerpiece is based around the fact that potential upstream interference from misalignment of the wing profile sections would not cause issues around the pressure taps.
 
         \begin{figure}
-          \includegraphics[width=\textwidth]{scalewingAssembled}
-          \caption{Down-scaled wing assmembled with a zoom in on the pressure taps. The length of the entire wing is approximately $\SI{250}{\milli\metre}$ with a total chord length of $\SI{150}{\milli\metre}$.}
-          \label{fig:scalewing}
+          \includegraphics[width=\textwidth, rotate=180]{scalewing}
+          \caption{Pieces of the downscaled wing before assembly. Additional H7 holes had to be drilled in order to mount the wing to the force gauge securely.}
+          \label{fig:scalewingparts}
         \end{figure}
 
+      \subsubsection{3D-printed parts}
+      \subsubsection{Assembly}
+
+      In figure \ref{fig:scalewing} the down-scaled wing post-production with pressure tubes inserted can be seen with pressure-taps along the centerpiece.
+
+      \begin{figure}
+        \includegraphics[width=\textwidth]{scalewingAssembled}
+        \caption{Down-scaled wing assmembled with a zoom in on the pressure taps. The length of the entire wing is approximately $\SI{250}{\milli\metre}$ with a total chord length of $\SI{150}{\milli\metre}$.}
+        \label{fig:scalewing}
+      \end{figure}
+
 \section{Experimental Procedure}
-
-  \section{Calibration of External Forces}
-
-    \fxnote{How is the downforce measurement measured and how do you take outside factors into account}
 
 \section{Results}
