@@ -1,0 +1,27 @@
+%clear all
+close all
+
+%V=10m/s
+data = importdata('CarWing_V10_A00.lvm');
+meanPressureReadingsV10 = mean(data(:,1:15));
+locationNumber = 1:15;
+
+%V=20m/s
+data = importdata('CarWing_V20_A00.lvm');
+meanPressureReadings = mean(data(:,1:15));
+
+%V=30m/s
+data = importdata('CarWing_V30_A00.lvm');
+meanPressureReadings = mean(data(:,1:15));
+
+
+
+figure
+plot(locationNumber,meanPressureReadings,'r.');
+xlabel('Pressure port number')
+ylabel('C_{p}')
+title('Mean of pressure distrubution at Re = 89.000')
+set(gca,'FontSize',15)
+
+
+
