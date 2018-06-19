@@ -3,7 +3,12 @@
 
   Verifying the simulated aerodynamic effects is crucial to ensuring the correctness of the numerical analysis. In order to assess the reliability of the previouisly conducted simulations, a physical measurement of the pressure along the down-scaled wing will provide results for comparison. \fxnote{sounds awful. fix}
 
-\section{Aerodynamics}
+  Measurements and tests have been carried out at the DTU Wind laboratory's Red wind tunnel with the help of our supervisor Robert Flemming Mikkelsen the 19\textsuperscript{th} of June.
+
+\section{Aerodynamical Theory}
+
+  The theories explaining how fluid effects scale between varying wing sizes is explained, in order to justify using a down-scaled model as evaluation to a real size wing.
+
   \subsection{Similarity of Flows}
   \label{sec:similarflows}
 
@@ -35,6 +40,7 @@
 
 \section{Equipment}
 
+  The equipment required for performing a wind tunnel test can be seen below:
   \begin{itemize}
     \item The Red wind tunnel ($\SIrange{60}{65}{\metre\per\second}$)
     \item 1/4 scale wing
@@ -42,6 +48,8 @@
     \item Rubber tubing
     \item Pressure transducer
   \end{itemize}
+
+  The instrumentation and the Red wind tunnel is described below, along with a thorough description of the scale wing designed and produced for the experiment.
 
   \subsection{Instrumentation}
 
@@ -51,30 +59,43 @@
 
     \fxnote{What'd we use to collect data?}
 
-    \subsection{Manufacturing the 1/4 Scale Rear Wing}
+  \subsection{Manufacturing the 1/4 Scale Rear Wing}
 
-      \subsubsection{Blueprints}
-        \fxnote{Why this wing design? answer: Just a first guess that can be compared with easily later.}
+    The 1/4 scale rear wing was machined at Philips Lighting by Rasmus Himborg.
 
-        The small scale rear wing is constructed in 6 pieces. The large wing is dissected into three parts. Two regular wings, and a central part with 15 pressure taps.
+    \subsubsection{Blueprints}
 
-        Material selection is based on the ease of machinability - a CNC-miller was provided to us, along with ample amounts of aluminium. This scale wing is not to be used in the actual race car, so weight is not a concern. Construction the 1/4 scale wing is not completely trivial. High precision is required for the surface finish, and the pressure taps have to be small in diameter: $Ø\SI{0.8}{\milli\metre}$. \fxnote{insert work drawings used for producing the wing}. \fxnote{Insert Technical Drawings}
+      The wing requires a series of special holes for the measurements needed. 15 holes have to be made along the very narrow wing profile, in order to measure the pressure on the wing's surface. The pressure taps have to be $Ø\SI{0.8}{\milli\metre}$ on the outside, with an inner bore hole with $Ø\SI{1.2}{\milli\metre}$, in order to have a syringe inserted. Secondly, the wing needs to be separated into smaller parts, as drilling pressure outlets through the entire wing is very difficult. Thus, the large wing is dissected into three parts. Two regular wings, and a central part with 15 pressure taps. The middle section contains the pressure outlets, where syringes serves as a connectors to rubber pressure tubes, which has to be lead out through the center of the wings adjacent of the pressure-measuring wing. Furthermore, aligning the three wing sections has to be fairly accurate. The center wing thus carries threaded holes, and the adjacent wings has M4 holes where a threaded rod can pass through and be tightened. The final design of the centerpiece can be seen in figure \ref{fig:scalewingblueprint}.
 
-        \begin{figure}
-          \includegraphics[width=\textwidth]{scalewingAssembled}
-          \caption{Down-scaled wing assmembled with a zoom in on the pressure taps. The length of the entire wing is approximately $\SI{250}{\milli\metre}$ with a total chord length of $\SI{150}{\milli\metre}$.}
-          \label{fig:scalewing}
-        \end{figure}
+      \begin{figure}
+        \includegraphics[width=\textwidth]{arbejdstegningvindtunnel}
+        \caption{Blueprints of the centerpiece of the wing containing the pressure taps for generating a pressure distribution profile.}
+        \label{fig:scalewingblueprint}
+      \end{figure}\fxnote{maybe fix blueprint to be more sexy/english}
+
+      \fxnote{Why this wing design? answer: Just a first guess that can be compared with easily later.}
+
+      Material selection is based on the ease of machinability - a CNC-miller was provided to us, along with ample amounts of aluminium. This scale wing is not to be used in the actual race car, so weight is not a concern. Construction the 1/4 scale wing is not completely trivial. High precision is required for the surface finish, and the pressure taps have to be small in diameter: $Ø\SI{0.8}{\milli\metre}$. 
+
+
 
       \subsubsection{Tolerances}
         \fxnote{Maybe remove this section}
 
       \subsubsection{Manufactured parts}
 
-        In figure \ref{fig:scalewing} the down-scaled wing post-production with pressure tubes inserted can be seen with pressure-taps along the centerpiece.
+
 
         \subsubsection{3D-printed parts}
         \subsubsection{Assembly}
+
+        In figure \ref{fig:scalewing} the down-scaled wing post-production with pressure tubes inserted can be seen with pressure-taps along the centerpiece.
+
+        \begin{figure}
+          \includegraphics[width=\textwidth]{scalewingAssembled}
+          \caption{Down-scaled wing assmembled with a zoom in on the pressure taps. The length of the entire wing is approximately $\SI{250}{\milli\metre}$ with a total chord length of $\SI{150}{\milli\metre}$.}
+          \label{fig:scalewing}
+        \end{figure}
 
 \section{Experimental Procedure}
 
