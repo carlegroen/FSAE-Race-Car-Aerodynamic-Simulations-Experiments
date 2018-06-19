@@ -1,0 +1,18 @@
+NI Setup 
+Force gauge og vinkel encoder på NI: USB-6218
+
+Force Gauge er hjemmelavet af Robert - Strain gauge og DIY
+
+
+
+LabView til målinger af tryk
+PSI: Pressure Systems 
+
+1-64: tryk
+65 AOA
+66:gage
+67: flap
+68: pdyn
+69: Vtun
+70: rho
+71: tid
