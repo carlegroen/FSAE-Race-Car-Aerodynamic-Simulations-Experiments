@@ -3,6 +3,10 @@ Force gauge og vinkel encoder på NI: USB-6218
 
 Force Gauge er hjemmelavet af Robert - Strain gauge og DIY
 
+25 mm over floor
+
+
+
 
 
 LabView til målinger af tryk
@@ -15,4 +19,4 @@ PSI: Pressure Systems
 68: pdyn
 69: Vtun
 70: rho
-71: tid
+71: tid 
