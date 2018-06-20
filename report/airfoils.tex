@@ -18,7 +18,7 @@ Theory of airfoils from katz book, to be written tuesday 19.
 
 
   \subsection{Pressure distribution}
-    
+
 
   \fxnote{Where does downforce come from? Where does drag come from?}
 
@@ -30,7 +30,18 @@ Theory of airfoils from katz book, to be written tuesday 19.
 
   \subsection{Ground Effects}\fxnote{unsure}
 
-  \subsection{End Plates}
+  \subsection{Aspect Ratio and End Plates}
+
+    An important identifyer when describing the entire wing is, apart from chord length and airfoil design, the width. The definition used for describing the physical span is called Aspect Ratio, and for a rectangular wing is:
+    \begin{align}
+        \AR_\text{actual} &= \frac{b}{c}
+        \label{eq:ARactual}
+    \end{align}
+    The end plates adds a virtual additional length, by reducing the vortices that usually go around the wing and reduce lift. A corrected aspect ratio can be found for wings with side plates as:
+    \begin{align}
+      \AR &= AR_\text{actual}\left(1+1.9\frac{h}{b}\right)
+    \end{align}
+    where $h$ is the height of the end plate, and $b$ is the width of the wing as in equation \ref{eq:ARactual} \cite{jkatz}.
 
   \fxnote{something about Navier Stokes equations.}
 
