@@ -120,7 +120,7 @@ AOA_force_speed = [AOA_force_speed; mean(data(:,[65:66, 69]))];
 AOA_force_speed = [round(AOA_force_speed(:,1)) round(AOA_force_speed(:,2),1) round(AOA_force_speed(:,3),2)];
 
 
-
+%V10 A0
 figure
 errorbar(pressureportnumber,meanPressureReadingsV10,standardDeviationV10,'bo');
 xlabel('Pressure port number')
@@ -128,7 +128,7 @@ ylabel('Pressure [Pa]')
 title('Mean of pressure distrubution at V_{wind} = 10 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
-
+%V20 A0
 figure
 errorbar(pressureportnumber,meanPressureReadingsV20,standardDeviationV20,'bo');
 xlabel('Pressure port number')
@@ -136,6 +136,7 @@ ylabel('Pressure [Pa]')
 title('Mean of pressure distrubution at V_{wind} = 20 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
+%V30 A0
 figure
 errorbar(pressureportnumber,meanPressureReadingsV30,standardDeviationV30,'bo');
 xlabel('Pressure port number')
@@ -143,6 +144,7 @@ ylabel('Pressure [Pa]')
 title('Mean of pressure distrubution at V_{wind} = 30 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
+%V40 A0
 figure
 errorbar(pressureportnumber,meanPressureReadingsV40,standardDeviationV40,'bo');
 xlabel('Pressure port number')
@@ -150,6 +152,7 @@ ylabel('Pressure [Pa]')
 title('Mean of pressure distrubution at V_{wind} = 40 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
+%V50 A0
 figure
 errorbar(pressureportnumber,meanPressureReadingsV50,standardDeviationV50,'bo');
 xlabel('Pressure port number')
@@ -157,9 +160,59 @@ ylabel('Pressure [Pa]')
 title('Mean of pressure distrubution at V_{wind} = 50 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
+%V60 A0
 figure
 errorbar(pressureportnumber,meanPressureReadingsV60,standardDeviationV60,'bo');
 xlabel('Pressure port number')
 ylabel('Pressure [Pa]')
 title('Mean of pressure distrubution at V_{wind} = 60 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
+
+% AOA sweep 20 m/s
+figure
+plot(AOA_force_speed(2:8,1),AOA_force_speed(2:8,2),'bo');
+xlabel('Angle of Attack')
+ylabel('Downforce [N]')
+title('Downforce readout from Loadcell at AOA sweep, V = 20 ms^{-1}')
+set(gca,'FontSize',15)
+
+% AOA sweep 40 m/s
+figure
+plot(AOA_force_speed(10:16,1),AOA_force_speed(10:16,2),'bo');
+xlabel('Angle of Attack')
+ylabel('Downforce [N]')
+title('Downforce readout from Loadcell at AOA sweep, V = 40 ms^{-1}')
+set(gca,'FontSize',15)
+
+
+%V40 A-10
+figure
+errorbar(pressureportnumber,meanPressureReadingsV40_A10m,standardDeviationV40_A10m,'ro');
+xlabel('Pressure port number')
+ylabel('Pressure [Pa]')
+title('Mean of pressure distrubution at V_{wind} = 40 ms^{-1}, AOA = -10 and +10')
+set(gca,'FontSize',15)
+hold on
+
+%V40 A10
+%figure
+errorbar(pressureportnumber,meanPressureReadingsV40_A10p,standardDeviationV40_A10p,'bo');
+legend('AOA = -10','AOA = 10')
+%xlabel('Pressure port number')
+%ylabel('Pressure [Pa]')
+%title('Mean of pressure distrubution at V_{wind} = 40 ms^{-1}, AOA = 10')
+%set(gca,'FontSize',15)
+
+
+
+% subplot V40 A-10 and A10
+figure
+ax1 = subplot(2,1,1);
+errorbar(pressureportnumber,meanPressureReadingsV40_A10m,standardDeviationV40_A10m,'bo');
+title(ax1,'V=40 ms^{-1}, AOA = -10')
+ylabel(ax1,'Pressure [Pa]')
+
+ax2 = subplot(2,1,2);
+errorbar(pressureportnumber,meanPressureReadingsV40_A10p,standardDeviationV40_A10p,'bo');
+title(ax2,'V=40 ms^{-1}, AOA = 10')
+ylabel(ax2,'Pressure [Pa]')
