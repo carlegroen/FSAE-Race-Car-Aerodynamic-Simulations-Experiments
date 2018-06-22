@@ -4,6 +4,10 @@ close all
 
 %General information
 pressureportnumber = 1:15;
+pressureportFrontDistance = [65 52 38.7 27 16.7 9.4 5.2 1 0.9 3.6 10.9 22 32.6 43.8 57.7];
+chordLength = 154;
+relativePortLocation = pressureportFrontDistance./chordLength;
+
 %AOA, Straingauge Force, wind speed matrix:
 AOA_force_speed = [];
 
@@ -216,3 +220,12 @@ ax2 = subplot(2,1,2);
 errorbar(pressureportnumber,meanPressureReadingsV40_A10p,standardDeviationV40_A10p,'bo');
 title(ax2,'V=40 ms^{-1}, AOA = 10')
 ylabel(ax2,'Pressure [Pa]')
+
+
+% %V60 A0 Relativ port placering
+% figure
+% errorbar(relativePortLocation,meanPressureReadingsV60,standardDeviationV60,'bo');
+% xlabel('x/c')
+% ylabel('Pressure [Pa]')
+% title('Mean of pressure distrubution at V_{wind} = 60 ms^{-1}, AOA = 0')
+% set(gca,'FontSize',15)
