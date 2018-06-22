@@ -71,6 +71,12 @@
 
   \subsection{Manufacturing the 1/4 Scale Rear Wing}
 
+    \begin{figure}
+      \includegraphics[width=\textwidth]{arbejdstegningvindtunnel}
+      \caption{Blueprints of the centerpiece of the wing containing the pressure taps for generating a pressure distribution profile.}
+      \label{fig:scalewingblueprint}
+    \end{figure}\fxnote{maybe fix blueprint to be more sexy/english}
+
     After the initial analysis of airfoils, this design was chosen based on preliminary research. From CITE SOMETHING HERE  \fxnote{Insert source}, a rule of thumb for multi element design is that the first element should be around $70\%$ of the total chord length, and the second element around $30\%$. From \cite{jkatz}, the initial position of the elements was chosen. Having the perfect position is not essential, as the experiment is a simply a verification method of the computational method, which will be used to optimize the final deisng.
 
     The 1/4 scale rear wing was machined at Philips Lighting by Rasmus Himborg based on the technical drawings presented below.
@@ -78,12 +84,6 @@
     \subsubsection{Blueprints}
 
       The wing requires a series of special holes for the measurements needed. 15 holes have to be made along the very narrow wing profile, in order to measure the pressure on the wing's surface. The pressure taps have to be $Ø\SI{0.8}{\milli\metre}$ on the outside, with an inner bore hole with $Ø\SI{1.2}{\milli\metre}$, in order to have a syringe inserted. Secondly, the wing needs to be separated into smaller parts, as drilling pressure outlets through the entire wing is very difficult. Thus, the large wing is dissected into three parts. Two regular wings, and a central part with 15 pressure taps. The middle section contains the pressure outlets, where syringes serves as a connectors to rubber pressure tubes, which has to be lead out through the center of the wings adjacent of the pressure-measuring wing. Furthermore, aligning the three wing sections has to be fairly accurate. The center wing thus carries threaded holes, and the adjacent wings has M4 holes where a threaded rod can pass through and be tightened. The final design of the centerpiece can be seen in figure \ref{fig:scalewingblueprint}.
-
-      \begin{figure}
-        \includegraphics[width=\textwidth]{arbejdstegningvindtunnel}
-        \caption{Blueprints of the centerpiece of the wing containing the pressure taps for generating a pressure distribution profile.}
-        \label{fig:scalewingblueprint}
-      \end{figure}\fxnote{maybe fix blueprint to be more sexy/english}
 
       Material selection is based on the ease of machinability - a CNC-miller was provided to us, along with ample amounts of aluminium. This scale wing is not to be used in the actual race car, so weight is not a concern. Construction the 1/4 scale wing is not completely trivial. High precision is required for the surface finish, and the pressure taps have to be small in diameter: $Ø\SI{0.8}{\milli\metre}$.
 
@@ -96,9 +96,10 @@
         \end{figure}
 
       \subsubsection{3D-printed parts}
-      \subsubsection{Assembly}
 
-      In figure \ref{fig:scalewing} the down-scaled wing post-production with pressure tubes inserted can be seen with pressure-taps along the centerpiece.
+        Due to machining cost and production time, the second element was 3D-printed on Zortrax M200 3D printers at DTU Skylab.
+
+      \subsubsection{Assembly}
 
       \begin{figure}
         \includegraphics[width=\textwidth]{scalewingAssembled2}
@@ -106,8 +107,18 @@
         \label{fig:scalewing}
       \end{figure}
 
+      In figure \ref{fig:scalewing} the down-scaled wing post-production with pressure tubes inserted can be seen with pressure-taps along the centerpiece. The wing is assembled by lasercutting the two end plates with holes for mounting, as well as the H7 mounting hole and exits for the pressure tubes.
+
+      In order to strengthen the construction and smoothen the surface, the 3D-printed rearwing was reinforced using tape. The tape is red (as seen in figure \ref{fig:scalewing}), and is additionally supported by a wooden centerpiece holding the two wings together at the right distance. Lastly, the small wing is reinforced further by attaching screws through the end plate, ensuring the wing does not flex.
+
 \section{Experimental Procedure}
 
-  The model wing's $Ø\SI{8}{\milli\metre}$ hole is fitted with a rod at the end, which is then attached to the force gauge at he bottom of the wind tunnel as seen to the left in figure \ref{fig:scalewing}. The pressure measurement tubes are passed through a hole in the bottom of the test section, and the pressure rake's height is adjusted to measure the wing's wake. Connection is established to the LabVIEW software running on a nearby computer. A picture of the data collection UI can be found in appendix \ref{app:labviewview}
+  The model wing's $Ø\SI{8}{\milli\metre}$ hole is fitted with a rod at the end as seen to the left in figure \ref{fig:scalewing}, which is then mounted to the force gauge at he bottom of the wind tunnel. The pressure measurement tubes are passed through a hole in the bottom of the test section, and the pressure rake's height is adjusted to measure the wing's wake. Connection is established to the LabVIEW software running on a nearby computer. A picture of the data collection UI can be found in appendix %\ref{app:labviewview}.
+
+  The wing is positioned with a $0^\circ$ angle of attack. Measurements are taken with $\SI{10}{\metre\per\second}$ increments in the range of $\SIrange{10}{60}{\metre\per\second}$, with an angular sweep at $\SI{20}{\metre\per\second}$ and $\SI{40}{\metre\per\second}$, in order to compare the optimum angle of attack with litterature.
+
+  However, due to the wing covering a relatively large area of the wind tunnel, the final test could only go to $\SI{59.2}{\metre\per\second}$.
+
+  \fxnote{what's the level of obstruction?}
 
 \section{Results}
