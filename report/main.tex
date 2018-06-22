@@ -1,5 +1,5 @@
 % !TEX root = main.tex
-\documentclass[english,a4paper,11pt,oneside]{memoir}
+\documentclass[english,a4paper,11pt,oneside,table]{memoir}
 \usepackage{amsmath}
 \usepackage{lipsum}
 \newtheorem{lemma}{Lemma}
@@ -216,6 +216,20 @@ appendices
         commentstyle=\color[rgb]{0.133,0.545,0.133},
         stringstyle=\color[rgb]{0.627,0.126,0.941},
 }
+%%%%% BEAUTIFUL TABLES %%%%%
+\usepackage{xcolor}
+\definecolor{seablue}{HTML}{4C72B0}
+\definecolor{seagreen}{HTML}{55A868}
+\definecolor{seared}{HTML}{C44E52}
+\definecolor{seapurple}{HTML}{8172B2}
+\definecolor{seayellow}{HTML}{CCB974}
+\definecolor{seacyan}{HTML}{64B5CD}
+\usepackage{tabularx}
+\usepackage[margin=1in]{geometry}
+
+\renewcommand{\arraystretch}{1.5}
+\setlist{nolistsep}
+
 
 %%%%% BEGIN DOCUMENT %%%%%
 \begin{document}
