@@ -7,36 +7,62 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
 \section{Airfoil theory}
 
-  An airfoils is the 2-dimensional cross section of a wing, that's characteristic of the wing's lifting characteristics. It is important to know the nomenclature: The leading edge is  the most forward point of the wing, the trailing edge is the most rearward point of the wing. Camber is how much the wing ''flexes''.
+  An airfoils is the 2-dimensional cross section of a wing, that's characteristic of the wing's lifting characteristics. It is important to know the nomenclature: The leading edge is  the most forward point of the wing, the trailing edge is the most rearward point of the wing. Camber is how much the wing the wing \emph{bends}.
 
+  \begin{figure}
+    \includegraphics[width=\textwidth]{airfoilstreamlines}
+    \caption{A figure showing the streamlines around a slightly cambered airfoil, along with its pressure distribution below.}
+    \label{fig:airfoilstreamlines}
+  \end{figure}
 
+  When an airfoil moves in a fluid, the streamlines of the particles move as seen in figure \ref{fig:airfoilstreamlines}. The streamline stops at the stagnation point, which is usually the leading edge. The other can be divided into two categories, as the flow can only go to two places: The \emph{suction surface} and the \emph{pressure surface}.
 
+  The suction surface is the surface where the flow accelerates to high velocities and the pressure drops. This can be seen on the top part of figure \ref{fig:airfoilstreamlines}, where the corresponding pressure distribution can be seen below as the (-) part. A peak of very low pressure can be found near the leading edge, which is often called the suction peak.
 
-  \fxnote{Mostly laminar flow, boundary layer mustn't trip or create bubbles,}
-Theory of airfoils from katz book, to be written tuesday 19.
+  The pressure surface is the surface where the flow decellerates to lower velocities and the pressure increases. This is the bottom part of \ref{fig:airfoilstreamlines}, which provides a much lower force from the pressure than the suction side.
 
+  The resulting changes in pressure forces the wing upwards, creating lift. It it important to note, that the suction side contributes considerably more to lift in most cases \cite{jkatz}.
 
+  \subsection{Airfoil Lift and How to Increase it}
 
-  \subsection{Pressure distribution}
+    Increasing the lifting capabilities of an airfoil can be done in several ways.
+
+    First, the angle of attack of air airfoil usually increases lifting characteristics of a wing, until reaching a certain threshold where it falls off. An airfoil carries its lifting abilities usually while flow is attached - that is, where the streamlines follow the shape of the airfoil. If the flow separates from the surface of the airfoil, the lift behaviour becomes unpredictable.
+
+    There are two types of stalling: Leading edge separation which are quite abrupt and greatly decreases lift, and trailing edge separation, which gradually reduces the lift. These are called a hard and soft stall, respectively. Thus, a soft stall is prefered in racing, as a hard stall will instantly change the car's handling abilities.
+
+    Secondly, another way of changing the lift is by creating an effective change in angle of attack: Changing the wing's camber. The trailing edge of an airfoil's camberline is the largest contributor to lift. By changing the camber geometry, the lift can be changed greatly, and the largest increase is found in the trailing edge region. This is why the introduction of flaps is prominent in both aircraft and race car wings.
+
+    Lastly, the thickness of the airfoil affects lift up to a certain point, and the optimum thickness is about $12\%$ of the camber length. For the interested ready, reference \cite{jkatz} explores this further.
 
   \subsection{Lift and Drag Coefficient}
 
-  Lift coefficient:
-  \begin{align}
-    C_L &= C_{L_\alpha} (\alpha + \alpha_{L_0})
-    \intertext{where $\alpha$ is the lift per angle of attack in radians, $alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians. $C_{L_\alpha}$ is given by:}
-    C_{L_\alpha} &= \frac{2}{1+\frac{2}{\AR}} \label{eq:liftperAR}
-  \end{align}
+    The lift coefficient is a dimensionless coefficient that relates the lift generated to the fluid the airfoil moves in, the velocity of the fluid and the reference area. This coefficient is defined as:
 
+    \begin{align}
+      C_l &\equiv \frac{l}{\frac{1}{2} \rho {\dot{x}_\infty}^2 c}
+      \intertext{Where $L$ is the lift per unit width, $\rho$ is the density of the fluid, $\dot{x_\infty}$ is the velocity of the surrounding fluid and $c$ is the chord length. For a specific wing, that is, where an airfoil has a physical extension, the lift coefficient is defined as:}
+      C_L &\equiv \frac{L}{\frac{1}{2} \rho {\dot{x}_\infty}^2 A}
+      \intertext{Where $L$ is the total lift force, and $A$ is the surface area. For a wing with both camber and angle of attack, $C_L$ is found by the following formula:}
+      C_L &= C_{L_\alpha} (\alpha + \alpha_{L_0})
+      \intertext{where $\alpha$ is the lift per angle of attack in radians, $alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians. $C_{L_\alpha}$ is given by:}
+      C_{L_\alpha} &= \frac{2}{1+\frac{2}{\AR}} \label{eq:liftperAR}
+    \end{align}\cite{nasalift}
+
+    Like lift, a dimensionless drag coefficient exist, that describes how drag is generated in a similar fashion:
+
+    \begin{align}
+      C_d &\equiv \frac{2F_d}{\rho {\dot{x}}^2 A}
+      \intertext{Where $F_d$ is the drag force - the component of the force that is parallel with the flow velocity \cite{nasadrag}. The induced drag created by the lifting force must also be added in order to find the total drag coefficient:}
+      C_D &= C_d + C_{d_\text{induced}}\\
+      \intertext{where $C_{d_\text{induced}}$ is given by:}
+      C_{d_\text{induced}} &= \frac{C_L^2}{\epsilon \pi \AR }
+    \end{align}\cite{nasainduceddrag}
+    The derivation and explanation hereof is found in the section below.
   \fxnote{something about Navier Stokes equations.}
 
-  \subsection{Which parameters does an airfoil have? What can we change}
-
-  \subsection{Angle of Attack}
-
-  \subsection{Ground Effects}\fxnote{unsure}
-
   \subsection{Aspect Ratio and End Plates}
+  \label{subsec:endplates}
 
     An important identifyer when describing an actual finite wing is, apart from chord length and airfoil design, the width. The definition used for describing the physical span is called Aspect Ratio, and for a rectangular wing is:
     \begin{align}
@@ -65,3 +91,29 @@ Theory of airfoils from katz book, to be written tuesday 19.
       \AR &= \AR_\text{actual}\left(1+1.9\frac{h}{b}\right) \label{eq:endplates}
     \end{align}
     where $h$ is the height of the end plate, and $b$ is the width of the wing as in equation \ref{eq:ARactual} \cite{jkatz}. The addition of end plates gives an increased aspect ratio. Inserting this back into \ref{eq:liftperAR} shows that end plates yields an increase in lift.
+
+    \subsection{Multiple Elements and Maximum Downforce}
+      \begin{figure}[h]
+        \includegraphics[width=\textwidth,rotate=1]{multielewing}
+        \caption{Lift coefficient as a function of effective angle of attack. The \emph{No slot} line corresponds to a single element wing, and the \emph{1 slot} corresponds to a double element wing. Figure taken from \cite{jkatz}.}
+        \label{fig:multielewing}
+      \end{figure}
+
+      As mentioned before, in order to increase downforce on a wing (made of a predefined airfoil) there is two options: Increasing the width of the wing, or increasing the camber. As the width is fixed by regulations, the camber has to be varied. Increasing camber usually causes flow separation, but by splitting the airfoil into multiple elements, this can be circumvented while gaining effective airfoil camber. The camber attained by using multiple elements is usually much higher than with a single element, and letting the high pressure from the first element transition to the low pressure zone of the secondary element results in a favorable interaction between the two elements \fxnote{is it this way that it works?}.
+
+      The lift coefficient can be seen as a function of angle of attack in figure \ref{fig:multielewing}. Notice how the angle of attack can be increased before stalling occurs and lift increases. A leading airfoil (also called a \emph{slat}) will extend the angle of attack even further, but will not increase the lift curve \cite{jkatz}.
+
+\section{Wing Parameters}
+
+  The previous sections describe which parameters can be varied in order to attain better aerodynamical properties, such as higher lift, robustness towards stall and protection against trailing tip vortices. Improving a wing has several optimization parameters, and below is a table of how these are going to be handled in the following sections:
+  \begin{tabularx}{\textwidth}[t]{>{\columncolor{seapurple!40}} l XX}
+  \arrayrulecolor{seapurple}\hline
+  \rowcolor{white}
+  \textbf{\textcolor{seapurple}{Parameter}} & \textbf{\textcolor{seapurple}{Effect}} & \textbf{\textcolor{seapurple}{Optimization Technique}}\\
+  \hline
+  Thickness & Usually predefined by airfoil & N/A\\
+  Angle of Attack & Changes lift characteristics & Finding the optimum angle of attack\\
+  Camber & Usually predefined by airfoil & Adding additional Elements\\
+  Position between elements & Changes lift characteristics & Optimizing $x,y$ position between elements\\
+  Size & Sizes directly increases lift & Finding the maximum allowed size by regulations
+  \end{tabularx}
