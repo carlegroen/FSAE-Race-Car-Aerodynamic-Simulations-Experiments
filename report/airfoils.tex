@@ -1,5 +1,5 @@
 % !TEX root = main.tex
-\chapter{Airfoils and Inverted Wings}
+\chapter{Airfoils and Inverted Wings}      \fxnote{fix the dot x to u for wind velocities}
 
 Achieving a large negative lift coefficient $C_L$ can be done in many ways. Inspecting race cars throughout the years show that airfoils have been used as early as 1966 when Jim Hall attached a rear wing to his Chaparral 2E \cite{hucho}. Since then, the inverted wings have been a staple in the racing industry with various three dimensional geometries affecting the overall performance even further.
 
@@ -40,9 +40,9 @@ This chapter covers the pressure distribution of various airfoils, the selection
     The lift coefficient is a dimensionless coefficient that relates the lift generated to the fluid the airfoil moves in, the velocity of the fluid and the reference area. This coefficient is defined as:
 
     \begin{align}
-      C_l &\equiv \frac{l}{\frac{1}{2} \rho {\dot{x}_\infty}^2 c}
+      C_l &\equiv \frac{l}{\frac{1}{2} \rho {u_\infty}^2 c}
       \intertext{Where $L$ is the lift per unit width, $\rho$ is the density of the fluid, $\dot{x_\infty}$ is the velocity of the surrounding fluid and $c$ is the chord length. For a specific wing, that is, where an airfoil has a physical extension, the lift coefficient is defined as:}
-      C_L &\equiv \frac{L}{\frac{1}{2} \rho {\dot{x}_\infty}^2 A}
+      C_L &\equiv \frac{L}{\frac{1}{2} \rho {u_\infty}^2 A}
       \intertext{Where $L$ is the total lift force, and $A$ is the surface area. For a wing with both camber and angle of attack, $C_L$ is found by the following formula:}
       C_L &= C_{L_\alpha} (\alpha + \alpha_{L_0})
       \intertext{where $\alpha$ is the lift per angle of attack in radians, $alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians. $C_{L_\alpha}$ is given by:}
@@ -52,7 +52,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
     Like lift, a dimensionless drag coefficient exist, that describes how drag is generated in a similar fashion:
 
     \begin{align}
-      C_d &\equiv \frac{2F_d}{\rho {\dot{x}}^2 A}
+      C_d &\equiv \frac{2F_d}{\rho {u}^2 A}
       \intertext{Where $F_d$ is the drag force - the component of the force that is parallel with the flow velocity \cite{nasadrag}. The induced drag created by the lifting force must also be added in order to find the total drag coefficient:}
       C_D &= C_d + C_{d_\text{induced}}\\
       \intertext{where $C_{d_\text{induced}}$ is given by:}
@@ -93,7 +93,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
     where $h$ is the height of the end plate, and $b$ is the width of the wing as in equation \ref{eq:ARactual} \cite{jkatz}. The addition of end plates gives an increased aspect ratio. Inserting this back into \ref{eq:liftperAR} shows that end plates yields an increase in lift.
 
     \subsection{Multiple Elements and Maximum Downforce}
-      \begin{figure}[h]
+      \begin{figure}[ht]
         \includegraphics[width=\textwidth,rotate=1]{multielewing}
         \caption{Lift coefficient as a function of effective angle of attack. The \emph{No slot} line corresponds to a single element wing, and the \emph{1 slot} corresponds to a double element wing. Figure taken from \cite{jkatz}.}
         \label{fig:multielewing}
@@ -106,14 +106,15 @@ This chapter covers the pressure distribution of various airfoils, the selection
 \section{Wing Parameters}
 
   The previous sections describe which parameters can be varied in order to attain better aerodynamical properties, such as higher lift, robustness towards stall and protection against trailing tip vortices. Improving a wing has several optimization parameters, and below is a table of how these are going to be handled in the following sections:
+
   \begin{tabularx}{\textwidth}[t]{>{\columncolor{seapurple!40}} l XX}
-  \arrayrulecolor{seapurple}\hline
-  \rowcolor{white}
-  \textbf{\textcolor{seapurple}{Parameter}} & \textbf{\textcolor{seapurple}{Effect}} & \textbf{\textcolor{seapurple}{Optimization Technique}}\\
-  \hline
-  Thickness & Usually predefined by airfoil & N/A\\
-  Angle of Attack & Changes lift characteristics & Finding the optimum angle of attack\\
-  Camber & Usually predefined by airfoil & Adding additional Elements\\
-  Position between elements & Changes lift characteristics & Optimizing $x,y$ position between elements\\
-  Size & Sizes directly increases lift & Finding the maximum allowed size by regulations
+    \arrayrulecolor{seapurple}\hline
+    \rowcolor{white}
+    \textbf{\textcolor{seapurple}{Parameter}} & \textbf{\textcolor{seapurple}{Effect}} & \textbf{\textcolor{seapurple}{Optimization Technique}}\\
+    \hline
+    Thickness & Usually predefined by airfoil & N/A\\
+    Angle of Attack & Changes lift characteristics & Finding the optimum angle of attack\\
+    Camber & Usually predefined by airfoil & Adding additional Elements\\
+    Position between elements & Changes lift characteristics & Optimizing $x,y$ position between elements\\
+    Size & Sizes directly increases lift & Finding the maximum allowed size by regulations
   \end{tabularx}
