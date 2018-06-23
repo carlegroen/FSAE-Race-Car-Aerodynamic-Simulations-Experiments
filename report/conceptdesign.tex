@@ -1,48 +1,98 @@
 % !TEX root = main.tex
 \chapter{Concept Design}
 
-  The following contains the conceptual design of a rear wing based on the previous chapters. First, a walkthrough of different airfoil profiles and their benefits is followed by selection of one particular. Secondly, analyzing the amount of elements the wing should consists of with regards to production time and ease of construction. A Product Design Specifiation (PDS) is set up to make sure that the design solution addresses all the problems it attempts to solve. Based on the PDS, an initial design is proposed, followed by a section describing the various possible methods of optimization.
+  The following contains the conceptual design of a rear wing based on the previous chapters. First, a walkthrough of different airfoil profiles and their benefits is followed by selection of one particular. Second, analyzing the amount of elements the wing should consists of with regards to production time and ease of construction. Third, the dimensional requirements outlined by the competition rules are given, and finally, a Product Design Specifiation (PDS) is set up to make sure that the design solution addresses all the problems it attempts to solve. Based on the PDS, an initial design is proposed, followed by a section describing the various possible methods of optimization.
 
   \section{Comparison of Airfoils}
+
     Choosing the MSHD wing.
-    To be written from MSHD article on tuesday 19.
 
-  \section{Multi elements? How many is enough}
-    From katz book, written tuesday 19.
+  \section{Multiple Elements and Maximum Downforce}
 
-    Based on the previous section, a conceptual design of an aerodynamically
+    \begin{figure}
+      \includegraphics[width=\textwidth]{multielewing}
+      \caption{Lift coefficient as a function of effective angle of attack. The \emph{No slot} line corresponds to a single element wing, and the \emph{1 slot} corresponds to a double element wing. Figure taken from \cite{jkatz}.}
+      \label{fig:multielewing}
+    \end{figure}
+
+    In order to increase downforce, there is two options: Increasing the width of the wing, or increasing the camber. As the width is fixed by regulations, the camber has to be varied. Increasing camber usually causes flow separation, but by splitting the airfoil into multiple elements, this can be circumvented while gaining effective airfoil camber. The camber attained by using multiple elements is usually much higher than with a single element, and letting the high pressure from the first element transition to the low pressure zone of the secondary element results in a favorable interaction between the two elements \fxnote{is it this way that it works?}.
+
+    The lift coefficient can be seen as a function of angle of attack in figure \ref{fig:multielewing}. Notice how the angle of attack can be increased before stalling occurs and lift increases. A leading airfoil (also called a \emph{slat}) will extend the angle of attack even further, but will not increase the lift curve \cite{jkatz}.
+
+    Finding the right amount of elements depends on the airfoil, and based on the MSHD profile and previous studies, two elements were chosen: A main element and a scaled down flap with $35\%$ of the length of the main element \cite{winginitialangle}.
+
+  \section{Dimensional Requirements}
+
+    The formula student competition has a clear ruleset dictating the dimensional requirements of aerodynamic devices. The most crucial elements are outlined below:
+
+    \begin{tcolorbox}[colframe=seapurple,colback=seapurple!1]
+      Height Restrictions:
+      \begin{itemize}
+        \item[T7.3.1] All aerodynamic devices rearward of a vertical plane through the rearmost portion of the front face of the driver head restraint support, excluding any padding, set to its most rearward position must be lower than $\SI{1.2}{\metre}$ from the ground.
+      \end{itemize}
+
+      Width Restrictions:
+      \begin{itemize}
+       \item [T7.3.2] All aerodynamic devices higher than 500 mm from the ground, must not extend outboard of the most inboard point of the rear wheel/tire.
+      \end{itemize}
+
+      Length Restrictions:
+      \begin{itemize}
+        \item [T7.3.3] All aerodynamic devices must not extend further rearward than 250 mm from the rearmost part of the rear tires
+      \end{itemize}
+
+      Minimum Edge Radii of Aerodynamic Devices:
+      \begin{itemize}
+        \item[T7.4] All forward facing edges of aerodynamic devices that could contact a pedestrian must have a
+      minimum radius of $\SI{5}{\milli\metre}$for all horizontal edges and 3 mm for vertical edges.
+      \end{itemize}
+
+      \hspace*{\fill}\tiny{Rules from Formula Student UK 2018 ruleset \cite{FSrules18}.}
+    \end{tcolorbox}
+
+    The dimensional requirements from the rules was sketched on the front plane of the car's CAD drawing. This allows positioning the wing in the square seen in figure \ref{fig:cadplacement}.
+
+    \begin{figure}
+      \includegraphics[width=\textwidth]{cadplacement}
+      \caption{The ruleset above drawn against the design of the car. The marked square is the area where the wing can be freely placed.}
+      \label{fig:cadplacement}
+    \end{figure}
 
   \section{Product Design Specification (PDS)}
 
-    \begin{tabularx}{\textwidth}[t]{l XX}
+    \begin{tabularx}{\textwidth}[t]{>{\columncolor{seapurple!40}}l XX}
     \arrayrulecolor{seapurple}\hline
+    \rowcolor{white}
     \textbf{\textcolor{seapurple}{Issue}} & \textbf{\textcolor{seapurple}{Requirement}} & \textbf{\textcolor{seapurple}{Criteria}}\\
     \hline
-    Weight & Must not move CM above halfway point & As low as possible  \\
-    Safety & Must be in compliance with FSAE rules &   \\
-    Durability & Must have no fatigue limit, has to be waterproof &   \\
-    Performance & High downforce \& soft stall characteristic & Must retain perfomance despite tripping\\
-    Dimensioning & Must be within area defined by FSAE rules & Easily mounted to current chassis\\
-    Production & Low time and monetary cost &  \\
+    Weight & Must not move CM above halfway point & As low as possible \\
+    Safety & Must be in compliance with FSAE rules & Should not make handling difficult for driver\\
+    Durability & Must have no fatigue limit. Must to be waterproof & \\
+    Performance & High downforce \& soft stall characteristic at all speeds & Must retain perfomance despite tripping. Should have end plates.\\
+    Dimensioning & Must be within area defined by FSAE rules & Should allow space for motor removal. \\
+    Production & Low time- and monetary cost & \\
     \end{tabularx}
-    %    \begin{minipage}[t]{\linewidth}%
-    %      \begin{itemize}
-    %        \item[1.1] Proportion of population below  purchasing power parity (PPP) a day
-      %      \item[1.2] Poverty Gap ratio [incidence x depth of poverty]
-      %      \item[1.3] Share of the poorest quintile in national consumption
-      %    \end{itemize}
-      %  \end{minipage}
 
   \section{Initial Design}
 
+    \begin{figure}
+      \includegraphics[width=\textwidth]{firstdraftwing1}
+      \caption{Initial design of the rear wing based on the PDS and initial research. Optimization of the wing is the next step.}
+      \label{fig:firstdraftwing}
+    \end{figure}
+
+    An initial design can be made based on the PDS and the design ideas above. The MSHD airfoil has a lot of the wanted characteristics: High downforce, both leading- and trailing edge stalls are soft, and the usable AOA-ranges are high. Furthermore, based on equation \ref{eq:endplates}, we want as large end plates as possible, which will therefore fill the entirety of the allowed area. The dimensional restrictions from the competition are shown in figure \ref{fig:cadplacement}. Finally, two elements are chosen as that gives a large amount of lift over even higher angles of attack, while being cheap timewise to construct.
+
+    A first draft of the design can be seen in \ref{fig:firstdraftwing}. As the wing is intended to be optimized, a few initial assumptions were made. The first element's tail is angled $1^\circ$ below horizontal, and the angle between the two wing elements is $36^\circ$ based on a previous study \cite{winginitialangle}. The same article provides a first guess of the relative size of the two elements, which should be a good start for the optimization process.
+
   \section{Optimization Tools}
 
-    Also from katz book to be written tuesday 19.
+    In order to optimize a design, there is three ways usually employed in aerodynamics.
 
-    Building physical models is cool, wind tunnel time is expensive though
+    Road testing might seem the easiest method of testing, but constructing full-scale rear wing and iterating is very time consuming. Furthermore, in order to measure downforce correctly, suspension vibration, varying weather and such have to be taken into account, and as is the first car that's being produced, there is no car to test on. Lastly, the driver performance is rarely repeatable, thus making actual road testing a time consuming and inaccurate method of testing the wings.
 
-    Let's use CFD!
+    Wind tunnels is another option. This allows for construction of down-scaled models, as long as Reynolds numbers are scaled accordingly. However, models can also be difficult to produce, and might not reproduce full scale results correctly. Full scale testing is expensive and wind tunnels of that size are rare.
 
-    To make sure CFD works, we need to perform experiments to verify simulations work.
+    Lastly, computational fluid dynamics offer a method of testing a wing without actually producing anything physically. Albeit the seemingly great possibilities, computer time is also expensive, and high resolution solutions require very powerful computers \cite{jkatz}. Luckily for us, we have access to the Niflheim7 Linux supercomputer cluster located at the Department of Physics at the Technical University of Denmark. The supercomputer has a total of 11368 CPU cores, with 235 Teraflops of processing power.
 
-    Let's make a small scale wind tunnel test and simulate the rest!
+    In order to verify the numerical models applied to the problem, a wind tunnel test will be performed on a 1/4 scale model and be compared to simulations. Post verification, numerical optimization of the wing will follow in Star-CCM+.
