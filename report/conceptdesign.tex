@@ -5,10 +5,25 @@
 
   \section{Comparison of Airfoils}
 
-    Choosing the MSHD wing.
-    
-    Finding the right amount of elements depends on the airfoil, and based on the MSHD profile and previous studies, two elements were chosen: A main element and a scaled down flap with $35\%$ of the length of the main element \cite{winginitialangle}.
+    Finding a fitting airfoil requires deep investigation of airfoil databases and articles. The requirements for this airfoil according to the PDS is a really high lift wing, operating at large ranges of Reynolds numbers:
+    \begin{align}
+      \text{Re} &= \frac{uL}{\nu} = \frac{\SI{30.56}{\metre\per\second}\SI{0.6}{\metre}}{\SI{1.491E-5}{\metre\squared\per\second}} \approx \SI{1.2E6}{}
+      \intertext{to around:}
+      \text{Re} &= \SI{3E5}{} ~\text{at}~ \SI{15}{\metre\per\second}
+    \end{align}
+    which is the speed estimated for the tightest corners in the competition \cite{FSrules18}. Thereto, the wanted airfoil should have soft stall characteristics, and be very resilient to laminar separation bubbles (LSB for short. The interested reader is refered to reference \cite{jkatz}). This is done by having a large leading edge radius.
 
+    After a thorough research, three airfoil are selected for further examination. The Eppler E423, the Motor Sport High Downforce (MSHD) and finally the S1223. The lift coefficient can be seen as a function of angle of attack in figure \ref{fig:AOAofairfoils}.
+
+    The MSHD performs incredibly well over a wide range of AOAs, with very low variation in lift coefficients. The MSHD airfoil is designed specifically for the Formula Student competition, which does make the choice rather obvious.
+
+    \begin{figure}
+      \includegraphics[width=\textwidth]{elon6}
+      \caption{A comparison of the three airfoils as a function of angle of attack. The MSHD profile shows a constantly high lifting characteristic over a wide range of angles of attack. Comparisons are from XFOIL at Reynolds numbers of $\SI{3E5}{}$, $\SI{6E5}{}$, $\SI{9E5}{}$, $\SI{1.2E6}{}$.}
+      \label{fig:AOAofairfoils}
+    \end{figure}
+
+    Lastly, finding the right amount of elements depends on the airfoil, and based on the MSHD profile and previous studies, two elements were chosen: A main element and a scaled down flap with $35\%$ of the length of the main element \cite{winginitialangle}. This makes production time shorter, monetary cost lower and (hopefully) provides ample lift for the first generation race car.
 
   \section{Dimensional Requirements}
 
