@@ -14,7 +14,7 @@
         \item [T7.5.1] Any aerodynamic device must be able to withstand a force of 200 N distributed over a minimum surface of $\SI{225}{\centi\metre\squared}$ and not deflect more than $\SI{10}{\milli\metre}$ in the load carrying direction.
         \item [T7.5.2] Any aerodynamic device must be able to withstand a force of $\SI{50}{\newton}$ applied in any direction at any point and not deflect more than $\SI{25}{\milli\metre}$.
       \end{itemize}
-      
+
       \hspace*{\fill}\tiny{Rules from Formula Student UK 2018 ruleset \cite{FSrules18}.}
     \end{tcolorbox}
 
@@ -25,9 +25,17 @@
     \end{align}
     where $u$ is the deflection at the midpoint, $F$ is the force applied, $L$ is the length of the beam (the same as $b$ for wings), $E$ is the elastic modulus of the wing and $I$ is the moment of inertia of the cross section.
 
-\section{Material Selection}\fxnote{Overvej CES (for flair jo)}
+\section{Material Selection}
 
-  Selecting a fitting material depends on the maximum deformation and weight. The car has to be as light as possible, and for
+  Selecting a fitting material depends on the maximum deformation and weight. According to the PDS (see section \ref{sec:PDS}), the wing has to be \emph{as light as possible} in order not to move the center of mass further upwards. Furthermore, it needs a high \emph{elastic modulus} in order to be stiff as to not deform by aerodynamic forces. The wing needs to be have a \emph{high yield strength}, be \emph{low cost} and easy to produce time wise.
+
+  Drawing on experience from competitors, carbon fiber- and glass fiber reinforced polymers are the weapons of choice \cite{FSwingmaterial}. However, Cambridge Engineering Selector, a material selection tool was used in order not to leave a stone unturned. The results can be seen in figure \ref{fig:CESmatchoice}, where the highly tensile strong materials are plotted against their density. Magnesium and some aluminium alloys are near the carbon fiber reinforced polymers, but machining an entire wing out of metal is incredibly time consuming and expensive. Carbon fiber reinforced polymers are chosen as a material, and the next chapter will investigate the properties and strength of the composite structure.
+
+  \begin{figure}
+    \includegraphics[width=.5\textwidth]{CESmatchoicebad}
+    \caption{Cambridge Engineering Selector (CES) showing the various aerospace grade materials usable for this application. The dark red dots are compositites, while the dark purple dots are metals such as aluminium and magnesium.}
+    \label{fig:CESmatchoice}
+  \end{figure}
 
 \section{Composites}
 
@@ -45,13 +53,17 @@
 \section{Manufacturing Final Design}
   \subsection{Polystyrene Molds}
 
-  The molds for the wings were chosen as positive molds, meaning polystyrene molds of the actual wings were cut out and overlaid with resin coated carbon fiber. In order to do this, we devised a hotwire-based specialized tool for the job. This can be seen in figure \ref{fig:hotwire}, and the name of the job is to do it slowly in order to receive a clean surface.
-
   \begin{figure}
     \includegraphics[width=\textwidth]{hotwiremethod}
     \caption{The hot wire melts the styrofoam while sliding along the wooden template.}
     \label{fig:hotwire}
   \end{figure}
+
+  The molds for the wings were chosen as positive molds, meaning polystyrene molds of the actual wings were cut out and overlaid with resin coated carbon fiber. In order to do this, we devised a hotwire-based specialized tool for the job. This can be seen in figure \ref{fig:hotwire}, where a gauge 4 wire was used at $\SI{12}{\volt}$ drawing $\SI{2.5}{\ampere}$ over a cutting length of $\SI{600}{\milli\metre}$. In order to get the correct airfoil shapes, the MSHD airfoil profile was lasercut out of 3mm plywood. The wooden profile is then mounted on the sides of the polystyrene block, where the hotwire is pulled across in a timely fashion. In order to produce a smooth surface, two people have to move very coordinated. Going too slow leaves deep melting lines, and moving too fast lets the hotwire ''slack'' in the middle because it does not melt the polystyrene quick enough, which causes the airfoil profile to be skewed.
+
+  All hotwire cutting was done by hand over several days, and we owe a special thanks to our sponsor DTU Skylab for providing the polystyrene blocks.
+
+
 
   \subsection{Hand Layup}
     \begin{figure}
