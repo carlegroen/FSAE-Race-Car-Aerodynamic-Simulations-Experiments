@@ -232,30 +232,10 @@ ylabel(ax2,'Pressure [Pa]')
 %%
 AOA20 = AOA_force_speed(2:8,1);
 DF20  = AOA_force_speed(2:8,2);
-AOA40 = AOA_force_speed(10:16,1)
-DF40  = AOA_force_speed(10:16,2)
 C_L   = DF20
 b = 0.25; %250mm
 c = 0.155; %150 mm
-ARactual =  b/c;
-h = 0.175; %175mm
-AR = ARactual*(1+1.9*(h/b));
-A = b*c
+ARactual =  b/c,
+h = 0.175, %175mm
 
-alpha = 28*pi/180;
-alphal0 = 10*pi/180;
-
-C_L_alpha = 2*pi/(1+2/AR),
-CLTheory = C_L_alpha*(alpha + alphal0)
-
-CL20 = DF20/(0.5*1.225*20^2 * A)
-CL40 = DF40/(0.5*1.225*40^2 * A)
-
-figure(20)
-plot(AOA20,CL20,'ob')
-hold on
-plot(AOA40,CL40,'or')
-xlabel('Angle of Attack [Degrees]')
-ylabel('C_L')
-title('C_L per AOA. V_{wind} = 20 ms^{-1} and 40 ms^{-1}')
-set(gca,'FontSize',15)
+AR = ARactual(1+1.9*
