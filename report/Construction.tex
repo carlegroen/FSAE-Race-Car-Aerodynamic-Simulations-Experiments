@@ -51,12 +51,34 @@
   \fxnote{Presentation of CAD Drawings and method of how we will get to this result}
   \fxnote{Rendering}
 
-  The two elements of the full scale wing will be bolted to the endplates at optimal found angle of attack. The wing elements will have two metal brackets glued to the inside of the carbon fiber, the bracket will be have holes with M10 threads in which the endplates are bolted to secure the structure.
+  The two elements of the full scale wing will be bolted to the endplates at the optimal found angle of attack. The wing elements will have two metal brackets glued to the inside of the carbon fiber wings, the bracket will be have holes with M10 threads in which the endplates are bolted to secure the structure.
 
-  \\subsection{Topology Optimization}
+  \subsection{Topology Optimization}
 
-  In order to minimise the weight of the metal bracket inserts topology optimizations where made using the build in function in \textit{Fusion 360}, where all simulations are done in the cloud.
-  
+  In order to minimise the weight of the metal bracket inserts topology optimizations where made using the build in function in \textit{Fusion 360}, in which all simulations are done in the cloud. Topology optimization tries to reduce the weight of the model by removing excess material while maintaining stiffness and strength of the model.
+  The inserts were modeled from the wing profile and the location of the inner threads was chosen. The model was then meshed with a target cell size of $\SI{1.5}{\mili\metre}$, and the target weight reduction was set to $\SI{70}{\%}$, with a downforce load of $\SI{250}{\Newton}$ at the surface.
+
+  \begin{figure}
+    \includegraphics[width=\textwidth]{Optimisedlargewinginsert}
+    \caption{The result of the topology optimization for the large insert, with a weight reduction at about $\SI{50}{\%}$.}
+    \label{fig:topology_large_insert}
+  \end{figure}
+
+  The result of the optimization for the large insert is shown in figure \ref{fig:topology_large_insert}, was then used to remove excess material from the model. The results were overlayed on the model and material could be cut from the original model as shown in figure
+  \ref{fig:meshoverlay}. The final model of the large insert was then created with a weight reduction around $\SI{40}{\%}$. A render of the final model is shown in
+  figure \ref{fig:render_large_insert}.
+
+  \begin{figure}
+    \includegraphics[width=\textwidth]{meshoverlayedlargeinsert}
+    \caption{Optimized mesh overlayed on model so excess material could be easily removed.}
+    \label{fig:meshoverlay}
+  \end{figure}
+
+  \begin{figure}
+    \includegraphics[width=\textwidth]{largeinsertrender}
+    \caption{Render of the final model for the metal insert, with a weight reduction around $\SI{40}{\%}$.}
+    \label{fig:render_large_insert}
+  \end{figure}
 
   \subsection{Blue Prints}
 
