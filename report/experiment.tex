@@ -125,14 +125,14 @@
 
   The results from the experiment is divided into two parts: A comparison with the theoretical lift values of the downscaled wing, and a comparison with the simulated results. The simulated results will be shown in section \ref{sec:simulations}, while the comparison to theory can be seen in this section.
 
-  The theoretical lift coefficient of the scale wing using a total AOA of $\alpha = 35^\circ$, an effective additional AOA from the wing's camber of $\alpha_{L_0} = 0^\circ$ CITE SOMETHING HERE and equation \cite{eq:CL} is found to be:
+  The theoretical lift coefficient at of the scale wing using a total AOA of $\alpha = 35^\circ$, an effective additional AOA from the wing's camber of $\alpha_{L_0} = 0^\circ$ CITE SOMETHING HERE and equation \cite{eq:CL} is found to be:
   \begin{align*}
     C_L &= \left(\frac{2\pi}{1+\frac{2}{\frac{b}{c}\left(1+1.9\frac{h}{b}\right)}}\right)\left(\alpha + \alpha_{L_0}\right)\\
     &\Rightarrow
     \left(\frac{2\pi}{1+\frac{2}{\frac{\SI{250}{\milli\metre}}{\SI{155}{\milli\metre}}\left(1+1.9\frac{\SI{175}{\milli\metre}}{\SI{250}{\milli\metre}}\right)}}\right)\left(\frac{35\pi}{180}\right) = 2.51
   \end{align*}
 
-  Comparing this to the lift coefficients given by figure \ref{fig:clperAOAexperiment} shows that the lift optained by the downscaled wing is near the theoretical angle of attack.
+  Comparing the theoretical lift to the lift coefficients found by the experiments is seen in figure \ref{fig:clperAOAexperiment}. The purple line is the theoretical lift, where the wing's angle is swept between $-10^\circ$ and $10^\circ$. The measured lift is slightly lower than the theoretical, which may be explained by the end plate's effect on aspect ratio. The downscaled wing has a very large $\AR$, where the end plates extend far below the bottom of the wing. While theoretically positive, the effect of the long end plates might not extend all the way up to the wing profile, artificially inflating up the theoretical lift number.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{clperAOAexperiment}
