@@ -7,6 +7,5 @@
 *.bbl
 *.blg
 *.toc
-*.CSV
 *.DS_Store
 .ipynb_checkpoints/

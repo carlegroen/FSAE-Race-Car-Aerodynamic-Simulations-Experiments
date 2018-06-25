@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE Foil_Polar>
+<Foil_Polar version="1.0">
+    <Polar>
+        <Polar_Name>T1_Re0.300_M0.00_N9.0</Polar_Name>
+        <Foil_Name>MSHD</Foil_Name>
+        <Type>FIXEDSPEEDPOLAR</Type>
+        <Fixed_Reynolds>     300000</Fixed_Reynolds>
+        <Fixed_AOA>      0.000</Fixed_AOA>
+        <Mach>   0.00</Mach>
+        <ReType>1</ReType>
+        <MaType>1</MaType>
+        <NCrit>    9.0</NCrit>
+        <Forced_Top_Transition>   1.00</Forced_Top_Transition>
+        <Forced_Bottom_Transition>   1.00</Forced_Bottom_Transition>
+    </Polar>
+</Foil_Polar>
