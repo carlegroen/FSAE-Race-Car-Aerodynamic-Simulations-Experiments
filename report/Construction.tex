@@ -11,13 +11,28 @@
     \begin{tcolorbox}[colframe=seapurple,colback=seapurple!1]
       Aerodynamic Devices Stability and Strength:
       \begin{itemize}
-        \item [T7.5.1] Any aerodynamic device must be able to withstand a force of 200 N distributed over a minimum surface of $\SI{225}{\centi\metre\squared}$ and not deflect more than $\SI{10}{\milli\metre}$ in the load carrying direction.
+        \item [T7.5.1] Any aerodynamic device must be able to withstand a force of $\SI{200}{\newton}$ distributed over a minimum surface of $\SI{225}{\centi\metre\squared}$ and not deflect more than $\SI{10}{\milli\metre}$ in the load carrying direction.
         \item [T7.5.2] Any aerodynamic device must be able to withstand a force of $\SI{50}{\newton}$ applied in any direction at any point and not deflect more than $\SI{25}{\milli\metre}$.
       \end{itemize}
 
       \hspace*{\fill}\tiny{Rules from Formula Student UK 2018 ruleset \cite{FSrules18}.}
     \end{tcolorbox}
 
+<<<<<<< HEAD
+=======
+    This constraint give us an allowed elastic modulus of:
+    \begin{align}
+      E &\equiv \frac{F/A}{\Delta L/{L_0}}
+      \Rightarrow& \frac{$\SI{200}{\newton}$/\SI{225}{\centi\metre\squared}}{\SI{3}{\milli\metre}/\SI{10}{\milli\metre}}} =
+    \end{align}
+    As the wing will be mounted against the end plates, it can be considered a simply supported beam. The elastic deflection is thus described by:
+
+    \begin{align}
+      u &= \frac{FL^3}{48EI}
+    \end{align}
+    where $u$ is the deflection at the midpoint, $F$ is the force applied, $L$ is the length of the beam (the same as $b$ for wings), $E$ is the elastic modulus of the wing and $I$ is the moment of inertia of the cross section.
+
+>>>>>>> 81b78414ef70a778fe7e0c2dda203abc08bd199a
 \section{Material Selection}
 
   Selecting a fitting material depends on the maximum deformation and weight. According to the PDS (see section \ref{sec:PDS}), the wing has to be \emph{as light as possible} in order not to move the center of mass further upwards. Furthermore, it needs a high \emph{elastic modulus} in order to be stiff as to not deform by aerodynamic forces. The wing needs to be have a \emph{high yield strength}, be \emph{low cost} and easy to produce time wise.
