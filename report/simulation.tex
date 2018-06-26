@@ -13,11 +13,7 @@ Star-CCM+ employs the finite volume method, which will be covered briefly in thi
 
 \section{Mesh Generation}
 
-The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volumemesh requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results six different mesh resolutions where used to examine the simulations for the windtunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achived and thereby allowing for more simulations to be run. 
-
-
-
-\fxnote{Noget med konvergens undersøgelse. Måske også grid sensitivity test.}.
+The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volumemesh requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results six different mesh resolutions where used to examine the simulations for the windtunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achived and thereby allowing for more simulations to be run.
 
 \section{Optimizing the Rear Wing}
 
@@ -30,6 +26,6 @@ The mesh has to be structured in accordance to best practice. Areas with high ve
   \subsubsection{Evaluation of Verification Simulation}
 
   \subsection{Multi-Element Wing Optimization}
-  Wing was moved around to optimize lift. Here's the results changing the variables.
+  The influence of the two wing elements relative position on lift was examined to optimize the downforce the rear wing provides to the car at a given velocity. This relative position optimization was performed in the software package \textit{MultiElements Airfoils} provied from \textit{Hanley Innovations}.
 
 \section{Results}
