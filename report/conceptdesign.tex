@@ -5,7 +5,7 @@
 
   \section{Comparison of Airfoils}
 
-    Finding a fitting airfoil requires deep investigation of airfoil databases and articles. The requirements for this airfoil according to the PDS is a really high lift wing, operating at large ranges of Reynolds numbers:
+    Finding a fitting airfoil requires deep investigation of airfoil databases and articles. The requirements for this airfoil according to the PDS is a really high lift wing, operating at large ranges of Reynolds numbers, where the highest (according to track regulations) is around:
     \begin{align}
       \text{Re} &= \frac{uL}{\nu} = \frac{\SI{30.56}{\metre\per\second}\SI{0.6}{\metre}}{\SI{1.491E-5}{\metre\squared\per\second}} \approx \SI{1.2E6}{}
       \intertext{to around:}
@@ -19,13 +19,11 @@
       \label{fig:AOAofairfoils}
     \end{figure}
 
-    After a thorough research, three airfoil are selected for further examination. The Eppler E423, the Motor Sport High Downforce (MSHD) and finally the S1223. The lift coefficient can be seen as a function of angle of attack in figure \ref{fig:AOAofairfoils}.
+    After a thorough research comparing high lift-low Reynolds number airfoils functioning over a wide variety of angles of attack, three airfoil are selected for further examination. The Eppler E423, the Motor Sport High Downforce (MSHD) and finally the Selig S1223. The lift coefficient can be seen as a function of angle of attack in figure \ref{fig:AOAofairfoils}.
 
-    The MSHD performs incredibly well over a wide range of AOAs, with very low variation in lift coefficients. The MSHD airfoil is designed specifically for the Formula Student competition, which does make the choice rather obvious.
+    The MSHD performs incredibly well over a wide range of AOAs, with very low variation in lift coefficients. The MSHD airfoil is designed specifically for the Formula Student competition, which does make the choice rather obvious. The MSHD is selected for further investigation, and will be the airfoil of choice.
 
-
-
-    Lastly, finding the right amount of elements depends on the airfoil, and based on the MSHD profile and previous studies, two elements were chosen: A main element and a scaled down flap with $35\%$ of the length of the main element \cite{winginitialangle}. This makes production time shorter, monetary cost lower and (hopefully) provides ample lift for the first generation race car.
+    Lastly, finding the right amount of elements depends on the airfoil, and based on the MSHD profile and previous studies, two elements were chosen: A main element and a scaled down flap with $35\%$ of the length of the main element \cite{winginitialangle}. The two elements will have an identical airfoil, as this is a classical way of generating successful multi element wings \cite{sameairfoilgoodidea}. This makes production time shorter, monetary cost lower and (hopefully) provides ample lift for the first generation race car.
 
   \section{Dimensional Requirements}
 
@@ -66,6 +64,9 @@
 
   \section{Product Design Specification (PDS)}
   \label{sec:PDS}
+
+    The PDS is a design tool created to ensure that the project solves the problems it set out to. The specifications uncovered in the previous sections are boiled down to their bare essentials, and in order to cover as large a solution space as possible, the PDS contains as few \emph{requirements} as possible. However, fulfilling the requirements is essential for a proper solution. While the criteria are not crucial, the criteria are the difference between an acceptable solution and a good one. The PDS will be revised at the discussion section, in order to verify the design solution fulfills all requirements. 
+
     \begin{tabularx}{\textwidth}[t]{>{\columncolor{seapurple!40}}l XX}
     \arrayrulecolor{seapurple}\hline
     \rowcolor{white}
