@@ -1,2 +1,23 @@
 % !TEX root = main.tex
 \chapter{Discussion}
+
+\section{Product Design Specification Review}
+
+  The finished product have to live up to the design specification, in order to be a useful solution. In table \ref{tab:designreview}, it can be seen that all reqirements are fulfilled, and all criteria except one. During the design process of the car, the removal of the engine became negligible as the battery pack is going to be removed in another way. This voids the criteria, and thus makes the solution an optimal one.
+
+  \begin{table}
+    \begin{tabularx}{\textwidth}[t]{>{\columncolor{seapurple!40}}l XX}
+      \arrayrulecolor{seapurple}\hline
+      \rowcolor{white}
+      \textbf{\textcolor{seapurple}{Issue}} & \textbf{\textcolor{seapurple}{Requirement}} & \textbf{\textcolor{seapurple}{Criteria}}\\
+      \hline
+      Weight & \cellcolor{seagreen!40}Must not move CM above halfway point & \cellcolor{seagreen!40}Should be as low as possible \\
+      Safety & \cellcolor{seagreen!40}Must be in compliance with FSAE rules & \cellcolor{seagreen!40}Should not make handling difficult for driver\\
+      Durability & \cellcolor{seagreen!40} Must have no fatigue limit. Must to be waterproof \\
+      Performance & \cellcolor{seagreen!40} High downforce \& soft stall characteristic at all speeds &\cellcolor{seagreen!40} Should retain perfomance despite tripping. Should have end plates.\\
+      Dimensioning & \cellcolor{seagreen!40} Must be within area defined by FSAE rules & \cellcolor{seayellow!40} Should allow space for motor removal. \\
+      Production & \cellcolor{seagreen!40} Low time- and monetary cost
+      \label{tab:designreview}
+    \end{tabularx}
+    \caption{The PDS table shows how the final design lives up to the proposed specifications.}
+  \end{table}
