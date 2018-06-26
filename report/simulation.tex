@@ -1,25 +1,27 @@
 % !TEX root = main.tex
 \chapter{Simulation}
 
-The simulation will run in several parts. First, the wings relative placement between eachother will be optimized in a 2-dimensional environment. This involves, size, $x$- and $y$-distance between the multi-element wings, angle of attack and height relative to the chassis to give a good estimate of the wings placement range. Secondly, a 3-dimensional analysis of the entire wing with endplates will be performed. Endplate dimensions will be optimized, and further optimization of the height relative to the entire chassis to finalize the design and placement. Lastly, a complete computational solution to the entire car will finalize the aerodynamical package, and yield the total amount of drag and downforce.
+  The simulation will run in several parts. First, the wings relative placement between eachother will be optimized in a 2-dimensional environment. This involves, size, $x$- and $y$-distance between the multi-element wings, angle of attack and height relative to the chassis to give a good estimate of the wings placement range. Secondly, a 3-dimensional analysis of the entire wing with endplates will be performed. Endplate dimensions will be optimized, and further optimization of the height relative to the entire chassis to finalize the design and placement. Lastly, a complete computational solution to the entire car will finalize the aerodynamical package, and yield the total amount of drag and downforce.
 
 \section{Star-CCM+}
-Star-CCM+ was used to run the simulations of the wing first in the windtunnel for
-verification and next on a model of the full size wing
-to produce an estimate of the performance at full scale.
-As meshing and running the simulations were heavy computational tasks, the computations were
-run on the \textit{Niflheim Linux cluster supercomputer}, which is installed at
-the Department of Physics at DTU.
+  Star-CCM+ was used to run the simulations of the wing first in the windtunnel for
+  verification and next on a model of the full size wing
+  to produce an estimate of the performance at full scale.
+  As meshing and running the simulations were heavy computational tasks, the computations were
+  run on the \textit{Niflheim Linux cluster supercomputer}, which is installed at
+  the Department of Physics at DTU.
 
 
 \section{Finite Volume method}
 
-Star-CCM+ employs the finite volume method, which will be covered briefly in this report.
+  Star-CCM+ employs the finite volume method, which will be covered briefly in this report.
 
 \section{Mesh Generation}
 
-The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh shows us where the wing requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the meshg with the flow improves accuracy and rate of convergence.
-\fxnote{Noget med konvergens undersøgelse. Måske også grid sensitivity test.}.
+  The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh shows us where the wing requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the meshg with the flow improves accuracy and rate of convergence.
+  \fxnote{Noget med konvergens undersøgelse. Måske også grid sensitivity test.}.
+
+  Generating a mesh of correct size is done by sampling downforce over a range of mesh sizes. In figure \ref{fig:DFprmeshsize}, the downforce plotted as a function of the mesh size shows a tendency towards $\SI{125}{\newton}$ for the downscaled wing. The function converges to acceptable levels near the mesh size $\SI{4E6}{}$, and serves to be a good compromise
 
 \section{Optimizing the Rear Wing}
 
