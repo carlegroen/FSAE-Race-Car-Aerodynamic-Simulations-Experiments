@@ -7,8 +7,11 @@
 \usepackage[export]{adjustbox}
 \usepackage{enumitem}
 %\usepackage{pgfplots}
-
-
+\usepackage{nomencl}
+\makenomenclature
+\newcommand{\nomunit}[1]{%
+  \renewcommand{\nomentryend}{\hspace*{\fill}[#1]\nolinebreak\hspace*{2cm}\mbox{}}%
+}
 
 %\usepackage{fontspec}
 %\defaultfontfeatures{Ligatures={TeX}}
@@ -238,6 +241,10 @@ appendices
 \setcounter{page}{3}
 \input{preface}
 \input{abstract}
+\input{nomenclature}
+
+
+
 \newpage\thispagestyle{empty}\mbox{}\newpage
 \tableofcontents*
 %\newpage\thispagestyle{empty}\mbox{}\newpage
