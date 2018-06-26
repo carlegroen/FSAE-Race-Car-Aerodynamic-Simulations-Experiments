@@ -4,12 +4,16 @@
   The simulation will run in several parts. First, the wings relative placement between eachother will be optimized in a 2-dimensional environment. This involves, size, $x$- and $y$-distance between the multi-element wings, angle of attack and height relative to the chassis to give a good estimate of the wings placement range. Secondly, a 3-dimensional analysis of the entire wing with endplates will be performed. Endplate dimensions will be optimized, and further optimization of the height relative to the entire chassis to finalize the design and placement. Lastly, a complete computational solution to the entire car will finalize the aerodynamical package, and yield the total amount of drag and downforce.
 
 \section{Star-CCM+}
+<<<<<<< HEAD
   Star-CCM+ was used to run the simulations of the wing first in the windtunnel for
   verification and next on a model of the full size wing
   to produce an estimate of the performance at full scale.
   As meshing and running the simulations were heavy computational tasks, the computations were
   run on the \textit{Niflheim Linux cluster supercomputer}, which is installed at
   the Department of Physics at DTU.
+=======
+Star-CCM+ was used to run the simulations of the wing first in the windtunnel for verification and next on a model of the full size wing to produce an estimate of the performance at full scale. As meshing and running the simulations were heavy computational tasks, the computations were run on the \textit{Niflheim Linux cluster supercomputer}, which is installed at the Department of Physics at DTU.
+>>>>>>> f095ae55e7c166f37a89e1954bd718f58d7b7784
 
 
 \section{Finite Volume method}
@@ -18,10 +22,14 @@
 
 \section{Mesh Generation}
 
+<<<<<<< HEAD
   The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh shows us where the wing requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the meshg with the flow improves accuracy and rate of convergence.
   \fxnote{Noget med konvergens undersøgelse. Måske også grid sensitivity test.}.
 
   Generating a mesh of correct size is done by sampling downforce over a range of mesh sizes. In figure \ref{fig:DFprmeshsize}, the downforce plotted as a function of the mesh size shows a tendency towards $\SI{125}{\newton}$ for the downscaled wing. The function converges to acceptable levels near the mesh size $\SI{4E6}{}$, and serves to be a good compromise
+=======
+The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volumemesh requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results six different mesh resolutions where used to examine the simulations for the windtunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achived and thereby allowing for more simulations to be run.
+>>>>>>> f095ae55e7c166f37a89e1954bd718f58d7b7784
 
 \section{Optimizing the Rear Wing}
 
@@ -34,6 +42,6 @@
   \subsubsection{Evaluation of Verification Simulation}
 
   \subsection{Multi-Element Wing Optimization}
-  Wing was moved around to optimize lift. Here's the results changing the variables.
+  The influence of the two wing elements relative position on lift was examined to optimize the downforce the rear wing provides to the car at a given velocity. This relative position optimization was performed in the software package \textit{MultiElements Airfoils} provied from \textit{Hanley Innovations}.
 
 \section{Results}

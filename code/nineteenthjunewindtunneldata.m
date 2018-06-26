@@ -290,7 +290,7 @@ set(gca,'FontSize',15)
 
 %%
 
-meshsize_downforce = [22.8E6 6.36E5 1.03E6 3.87E6; 126.2 123.1 123.13 125.12]
+meshsize_downforce = [22.8E6 6.36E5 1.03E6 3.87E6 5.8E5; 126.2 123.1 123.13 125.12 122.8]
 
 figure
 plot(meshsize_downforce(1,:),meshsize_downforce(2,:),'ro')
