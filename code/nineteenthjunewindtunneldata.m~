@@ -80,7 +80,7 @@ AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 data = importdata('day1test/CarWing_V40_A00.lvm');
 meanPressureReadingsV40 = mean(data(:,1:15));
 standardDeviationV40 = std(data(:,1:15));
-Cp_V40 = ((100900-meanPressureReadingsV40)-100900)./(0.5.*1.19581.*(mean(data(:,69))).^2);
+Cp_V40 = (meanPressureReadingsV40-100900)./(0.5.*1.19581.*(mean(:,69)).^2);
 AOA_force_speed = [AOA_force_speed; mean(data(:,[65:66, 69]))];
 AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 
@@ -170,8 +170,8 @@ set(gca,'FontSize',15)
 
 %V40 A0
 figure
-plot(relativePortLocation,meanPressureReadingsV40,'bo'); %Pressure coefficient
-xlabel('x/ch')
+errorbar(relativePortLocation,meanPressureReadingsV40,standardDeviationV40,'bo');
+xlabel('Pressure port number')
 ylabel('Pressure [Pa]')
 title('Mean of pressure distrubution at V_{wind} = 40 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
