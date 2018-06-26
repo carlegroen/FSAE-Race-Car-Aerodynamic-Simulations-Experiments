@@ -287,3 +287,17 @@ xlabel('Angle of Attack [Degrees]')
 ylabel('C_L')
 title('C_L per AOA. V_{wind} = 20 ms^{-1} and 40 ms^{-1}')
 set(gca,'FontSize',15)
+
+%%
+
+meshsize_downforce = [22.8E6 6.36E5 1.03E6 3.87E6; 126.2 123.1 123.13 125.12]
+
+figure
+plot(meshsize_downforce(1,:),meshsize_downforce(2,:),'ro')
+xlabel('Mesh size [Number of cells]')
+ylabel('Downforce')
+
+
+
+
+
