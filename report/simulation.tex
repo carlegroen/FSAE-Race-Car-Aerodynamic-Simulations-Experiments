@@ -24,14 +24,13 @@
 \section{Mesh Generation}
   The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volumemesh requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results six different mesh resolutions where used to examine the simulations for the windtunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achived and thereby allowing for more simulations to be run.
 
-
   \begin{figure}
-    \includegraphics[width=\textwidth]{elon6}
+    \includegraphics[width=\textwidth]{DFprmeshsize}
     \label{fig:DFprmeshsize}
-    \caption{Downforce as a function of mesh size. Plotted to see the convergence towards the same force.}
+    \caption{Normalized downforce as a function of mesh size. Plotted to see the convergence towards the same force.}
   \end{figure}
 
-  Generating a mesh of correct size is done by sampling downforce over a range of mesh sizes. In figure \ref{fig:DFprmeshsize}, the normalized downforce is plotted as a function of the mesh size. The mesh independence study shows that the function converges to acceptable levels near the mesh size $\SI{4E6}{}$, and serves to be a good compromise between results and computing time.
+  Generating a mesh of correct size is done by sampling downforce over a range of mesh sizes. In figure \ref{fig:DFprmeshsize}, the normalized downforce is plotted as a function of the mesh size. The mesh independence study shows that the function converges to acceptable levels near the mesh size $\SI{.4E7}{}$, and serves to be a good compromise between results and computing time.
 
 \section{Optimizing the Rear Wing}
 
