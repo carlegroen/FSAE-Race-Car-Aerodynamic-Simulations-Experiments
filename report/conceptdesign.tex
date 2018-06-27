@@ -9,7 +9,7 @@
     \begin{align}
       \text{Re} &= \frac{uL}{\nu} = \frac{\SI{30.56}{\metre\per\second}\SI{0.6}{\metre}}{\SI{1.491E-5}{\metre\squared\per\second}} \approx \SI{1.2E6}{}
       \intertext{to around:}
-      \text{Re} &= \SI{3E5}{} ~\text{at}~ \SI{15}{\metre\per\second}
+      \text{Re} &\approx \SI{3E5}{} ~\text{at}~ \SI{15}{\metre\per\second}
     \end{align}
     which is the speed estimated for the tightest corners in the competition \cite{FSrules18}. Thereto, the wanted airfoil should have soft stall characteristics, and be very resilient to laminar separation bubbles (LSB for short. The interested reader is refered to reference \cite{jkatz}). This is done by having a large leading edge radius.
 
@@ -47,10 +47,10 @@
 
       Minimum Edge Radii of Aerodynamic Devices:
       \begin{itemize}
-        \item[T7.4] All forward facing edges of aerodynamic devices that could contact a pedestrian must have a
+        \item[T7.4\hphantom{.0}] All forward facing edges of aerodynamic devices that could contact a pedestrian must have a
       minimum radius of $\SI{5}{\milli\metre}$for all horizontal edges and 3 mm for vertical edges.
       \end{itemize}
-
+      \vspace{5pt}
       \hspace*{\fill}\tiny{Rules from Formula Student UK 2018 ruleset \cite{FSrules18}.}
     \end{tcolorbox}
 
@@ -101,6 +101,6 @@
 
     Wind tunnels is another option. This allows for construction of down-scaled models, as long as Reynolds numbers are scaled accordingly. However, models can also be difficult to produce, and might not reproduce full scale results correctly. Full scale testing is expensive and wind tunnels of that size are rare.
 
-    Lastly, computational fluid dynamics offer a method of testing a wing without actually producing anything physically. Albeit the seemingly great possibilities, computer time is also expensive, and high resolution solutions require very powerful computers \cite{jkatz}. Luckily for us, we have access to the Niflheim7 Linux supercomputer cluster located at the Department of Physics at the Technical University of Denmark. The supercomputer has a total of 11368 CPU cores, with 235 Teraflops of processing power.
+    Lastly, computational fluid dynamics offer a method of testing a wing without actually producing anything physically. Albeit the seemingly great possibilities, computer time is also expensive, and high resolution solutions require very powerful computers \cite{jkatz}. Luckily for us, we have access to the Niflheim Linux supercomputer cluster located at the Department of Physics at the Technical University of Denmark. The supercomputer has a total of 11368 CPU cores, with 235 Teraflops of processing power.
 
     In order to verify the numerical models applied to the problem, a wind tunnel test will be performed on a 1/4 scale model and be compared to simulations. Post verification, numerical optimization of the wing will follow in Star-CCM+.
