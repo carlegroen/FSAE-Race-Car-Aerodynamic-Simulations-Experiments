@@ -51,6 +51,9 @@
   \item [{$F_\text{normal}$}]\begingroup Normal force\nomeqref {0.0}
 		\nompageref{v}
   \item [{$F_d$}]\begingroup Drag force\nomeqref {0.0}\nompageref{v}
+  \item [{$F_L$}]\begingroup Lift force\nomeqref {0.0}\nompageref{v}
+  \item [{$f_l$}]\begingroup Lift force per unit width\nomeqref {0.0}
+		\nompageref{v}
   \item [{$F_x$}]\begingroup Sum of forces in $x$ direction\nomeqref {0.0}
 		\nompageref{v}
   \item [{$g$}]\begingroup Force due to gravity\nomeqref {0.0}
@@ -59,8 +62,7 @@
 		\nompageref{v}
   \item [{$I$}]\begingroup Second moment of inertia\nomeqref {0.0}
 		\nompageref{v}
-  \item [{$L$}]\begingroup Lift force\nomeqref {0.0}\nompageref{v}
-  \item [{$l$}]\begingroup Lift force per unit width\nomeqref {0.0}
+  \item [{$L$}]\begingroup Characteristic length of item\nomeqref {0.0}
 		\nompageref{v}
   \item [{$L_m$}]\begingroup Characteristic length of model\nomeqref {0.0}
 		\nompageref{v}
@@ -73,6 +75,7 @@
 		\nompageref{v}
   \item [{$x$}]\begingroup $x$-position\nomeqref {0.0}\nompageref{v}
   \item [{AOA}]\begingroup Angle of Attack\nomeqref {0.0}\nompageref{v}
+  \item [{CM}]\begingroup Center of Mass\nomeqref {0.0}\nompageref{v}
   \item [{PDS}]\begingroup Product Design Specification\nomeqref {0.0}
 		\nompageref{v}
 
