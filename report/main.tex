@@ -16,6 +16,8 @@
 \usepackage{babel}
 \usepackage{slantsc}
 \usepackage{array}
+\usepackage{pdfpages}
+
 %\setkomafont{subsection}{\usefont{T1}{fvm}{m}{n}}
 %\setkomafont{section}{\usefont{T1}{fvs}{b}{n}\Large}
 %\setcounter{secnumdepth}{0}
@@ -242,7 +244,8 @@ appendices
 \begin{document}
 \pagenumbering{roman}
 \pagestyle{plain}
-\input{frontpage}
+%\input{frontpage}
+\includepdf[pages={1}]{frontpage.pdf}
 \setcounter{page}{3}
 \input{preface}
 \input{abstract}
