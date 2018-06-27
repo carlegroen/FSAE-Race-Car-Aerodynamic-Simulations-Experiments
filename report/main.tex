@@ -1,5 +1,5 @@
 % !TEX root = main.tex
-\documentclass[english,a4paper,11pt,twoside,table]{memoir}
+\documentclass[english,a4paper,12pt,twoside,table]{memoir}
 \usepackage{amsmath}
 \usepackage{lipsum}
 \newtheorem{lemma}{Lemma}
@@ -13,9 +13,25 @@
   \renewcommand{\nomentryend}{\hspace*{\fill}[#1]\nolinebreak\hspace*{2cm}\mbox{}}%
 }
 
-%\usepackage{fontspec}
-%\defaultfontfeatures{Ligatures={TeX}}
-%\setmainfont{Arno Pro}
+\usepackage{babel}
+\usepackage{slantsc}
+\usepackage{array}
+%\setkomafont{subsection}{\usefont{T1}{fvm}{m}{n}}
+%\setkomafont{section}{\usefont{T1}{fvs}{b}{n}\Large}
+%\setcounter{secnumdepth}{0}
+%\pagestyle{empty}
+
+
+\usepackage{graphicx}		%Tillader indsættelse af billeder
+\usepackage{dcolumn}		%Bruges til at lave matematiske tabelsøjler... se datatabel
+\usepackage{mathtools}		%Ekstra matematik... bare lad den være, du får muligvis brug for den.
+\usepackage{siunitx}
+\sisetup{mode=text,range-phrase = {\text{~to~}}}
+\usepackage{microtype}
+%\usepackage{amssymb}
+\usepackage{rotating}
+\usepackage{ar}
+\usepackage{tcolorbox}
 
 % ting til memoir
 \setlrmarginsandblock{4.2cm}{*}{1}
@@ -118,21 +134,6 @@
     text width=10em, text centered, rounded corners, minimum height=4em]
 \tikzstyle{line} = [draw, -latex']
 
-
-\usepackage[T1]{fontenc}	%Tillader danske tegn
-\usepackage{graphicx}		%Tillader indsættelse af billeder
-\usepackage{dcolumn}		%Bruges til at lave matematiske tabelsøjler... se datatabel
-\usepackage{mathtools}		%Ekstra matematik... bare lad den være, du får muligvis brug for den.
-\usepackage{siunitx}
-\sisetup{mode=text,range-phrase = {\text{~to~}}}
-\usepackage{microtype}
-\usepackage{amssymb}
-\usepackage{rotating}
-\usepackage{ar}
-\usepackage{tcolorbox}
-
-
-
 \usepackage{booktabs}
 \setlength{\heavyrulewidth}{0.15em}
 \setlength{\lightrulewidth}{0.08em}
@@ -232,6 +233,10 @@ appendices
 \renewcommand{\arraystretch}{1.5}
 \setlist{nolistsep}
 
+%%% Makes fonts work
+\usepackage[cmintegrals,cmbraces]{newtxmath}
+\usepackage{ebgaramond-maths}
+\usepackage[T1]{fontenc}
 
 %%%%% BEGIN DOCUMENT %%%%%
 \begin{document}
