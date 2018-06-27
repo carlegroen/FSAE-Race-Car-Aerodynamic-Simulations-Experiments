@@ -107,15 +107,17 @@ This chapter covers the pressure distribution of various airfoils, the selection
 \section{Wing Parameters}
 
   The previous sections describe which parameters can be varied in order to attain better aerodynamical properties, such as higher lift, robustness towards stall and protection against trailing tip vortices. Improving a wing has several optimization parameters, and below is a table of how these are going to be handled in the following sections:
-
-  \begin{tabularx}{\textwidth}[t]{>{\columncolor{seapurple!40}} l XX}
-    \arrayrulecolor{seapurple}\hline
-    \rowcolor{white}
-    \textbf{\textcolor{seapurple}{Parameter}} & \textbf{\textcolor{seapurple}{Effect}} & \textbf{\textcolor{seapurple}{Optimization Technique}}\\
-    \hline
-    Thickness & Usually predefined by airfoil & N/A\\
-    Angle of Attack & Changes lift characteristics & Finding the optimum angle of attack\\
-    Camber & Usually predefined by airfoil & Adding additional Elements\\
-    Position between elements & Changes lift characteristics & Optimizing $x,y$ position between elements\\
-    Size & Sizes directly increases lift & Finding the maximum allowed size by regulations
-  \end{tabularx}
+  \begin{table}
+    \begin{tabularx}{\textwidth}[t]{>{\columncolor{seapurple!40}} l XX}
+      \arrayrulecolor{seapurple}\hline
+      \rowcolor{white}
+      \textbf{\textcolor{seapurple}{Parameter}} & \textbf{\textcolor{seapurple}{Effect}} & \textbf{\textcolor{seapurple}{Optimization Technique}}\\
+      \hline
+      Thickness & Usually predefined by airfoil & N/A\\
+      Angle of Attack & Changes lift characteristics & Finding the optimum angle of attack\\
+      Camber & Usually predefined by airfoil & Adding additional Elements\\
+      Position between elements & Changes lift characteristics & Optimizing $x,y$ position between elements\\
+      Size & Sizes directly increases lift & Finding the maximum allowed size by regulations
+    \end{tabularx}
+    \caption{Table of parameters that can vary and how to optimize the parameter.}
+  \end{table}
