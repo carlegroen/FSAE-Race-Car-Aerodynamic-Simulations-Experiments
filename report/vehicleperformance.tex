@@ -27,7 +27,7 @@
   \end{figure}\fxnote{missing radiators}
 
   \begin{align}
-    \dot{x}_\text{max} &= \left(\frac{2\cdot \SI{80}{\kilo\watt}}{0.85\left(\SI{1.225}{\kilogram\per\cubic\metre}~ \SI{0.9}{\square\metre}\right)}\right)^{\frac{1}{3}} = \SI{53.7}{\metre\per\second} = \SI{193.5}{\kilo\metre\per\hour}
+    \dot{x}_\text{max} &= \left(\frac{2\cdot \SI{80}{\kilo\watt}}{0.85\left(\SI{1.225}{\kilogram\per\cubic\metre}~ \SI{0.99}{\square\metre}\right)}\right)^{\frac{1}{3}} = \SI{53.7}{\metre\per\second} = \SI{193.5}{\kilo\metre\per\hour}
     \intertext{however, given the ruleset a forecasted maximum of $\SI{110}{\kilo\metre\per\hour}$ allows a much larger drag coefficient $C_D$:}
     C_D &= \frac{2 P}{\dot{x}^3 \left(\rho A \right)}
     = \frac{2 \cdot \SI{80}{\kilo\watt}}{(\SI{110}{\kilo\metre\per\hour})^3 \left(\SI{1.225}{\kilogram\per\cubic\metre}~ \SI{0.99}{\square\metre} \right)} = 4.62
@@ -50,7 +50,7 @@
       \intertext{Giving the maximum velocity for a given corner radius before the car skids out:}
       \Rightarrow \dot{x} &< \left(\frac{2\mu mg r}{m - \mu C_L \rho r  A}\right)^{\frac{1}{2}}
     \end{align}
-    Again, the forecasted variation in radii of corners is prescribed by the rules to be between \SIrange{3}{50}{\metre}\cite{FSrules18}. Plotting this for various $C_L$ values between $1.5$ to $2.6$ \cite{CLvalues}, assuming $m=\SI{300}{\kilogram}$, $\mu = 1.5$ \cite{tyrefriction} and $A = \SI{0.99}{\square\metre}$ as previously used. The result can be seen in figure \ref{fig:cornerspeedvslift}.
+    Again, the forecasted variation in radii of corners is prescribed by the rules to be between \SIrange{3}{50}{\metre}\cite{FSrules18}. Plotting this for various $C_L$ values between $1.5$ to $2.6$ \cite{CLvalues}, assuming $m=\SI{300}{\kilogram}$, $\mu = 1.5$ \cite{tyrefriction} and $A = \SI{0.99}{\square\metre}$ as previously used. The results are shown in figure \ref{fig:cornerspeedvslift}.
     \begin{figure}
       \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{turnspeedperCL2}}%
       \caption{Cornering speed as a function of turn radius for various lift coefficients.}
