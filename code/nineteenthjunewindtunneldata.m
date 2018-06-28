@@ -24,6 +24,7 @@ AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 data = importdata('day1test/CarWing_V20_A00.lvm');
 meanPressureReadingsV20 = mean(data(:,1:15));
 standardDeviationV20 = std(data(:,1:15));
+C_pV20 = meanPressureReadingsV20./(0.5*1.225*mean(data(:,69))^2);
 AOA_force_speed = [AOA_force_speed; mean(data(:,[65:66, 69]))];
 AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 
@@ -31,6 +32,7 @@ AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
     data = importdata('day2test/CarWing_V20_A04m.lvm');
     meanPressureReadingsV20_A04m = mean(data(:,1:15));
     standardDeviationV20_A04m = std(data(:,1:15));
+    C_pV20A4m = meanPressureReadingsV20_A04m./(0.5*1.225*mean(data(:,69))^2);
     AOA_force_speed = [AOA_force_speed; mean(data(:,[65:66, 69]))];
     AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 
@@ -38,6 +40,7 @@ AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
     data = importdata('day2test/CarWing_V20_A07m.lvm');
     meanPressureReadingsV20_A07m = mean(data(:,1:15));
     standardDeviationV20_A07m = std(data(:,1:15));
+    C_pV20 = meanPressureReadingsV20./(0.5*1.225*mean(data(:,69))^2);
     AOA_force_speed = [AOA_force_speed; mean(data(:,[65:66, 69]))];
     AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 
@@ -80,7 +83,7 @@ AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 data = importdata('day1test/CarWing_V40_A00.lvm');
 meanPressureReadingsV40 = mean(data(:,1:15));
 standardDeviationV40 = std(data(:,1:15));
-Cp_V40 = ((100900-meanPressureReadingsV40)-100900)./(0.5.*1.19581.*(mean(data(:,69))).^2);
+C_pV40 = meanPressureReadingsV40./(0.5*1.225*mean(data(:,69))^2);
 AOA_force_speed = [AOA_force_speed; mean(data(:,[65:66, 69]))];
 AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 
@@ -137,6 +140,11 @@ AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 data = importdata('day2test/CarWing_V60_A00p.lvm');
 meanPressureReadingsV60 = mean(data(:,1:15));
 standardDeviationV60 = std(data(:,1:15));
+
+pdynV60 = mean(data(:,68));
+stdpdynV60 = std(data(:,68));
+
+C_pV60 = meanPressureReadingsV60./(0.5*1.225*mean(data(:,69))^2);
 AOA_force_speed = [AOA_force_speed; mean(data(:,[65:66, 69]))];
 AOA_force_speed_std = [AOA_force_speed_std; std(data(:,[65:66, 69]))];
 
@@ -145,7 +153,7 @@ AOA_force_speed = [round(AOA_force_speed(:,1)) round(AOA_force_speed(:,2),1) rou
 
 
 %V10 A0
-figure
+figure(1)
 errorbar(pressureportnumber,meanPressureReadingsV10,standardDeviationV10,'bo');
 xlabel('Pressure port number')
 ylabel('Pressure [Pa]')
@@ -153,15 +161,15 @@ title('Mean of pressure distrubution at V_{wind} = 10 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
 %V20 A0
-figure
-errorbar(pressureportnumber,meanPressureReadingsV20,standardDeviationV20,'bo');
+figure(2)
+plot(pressureportnumber,C_pV20,'bo');
 xlabel('Pressure port number')
 ylabel('Pressure [Pa]')
 title('Mean of pressure distrubution at V_{wind} = 20 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
 %V30 A0
-figure
+figure(3)
 errorbar(pressureportnumber,meanPressureReadingsV30,standardDeviationV30,'bo');
 xlabel('Pressure port number')
 ylabel('Pressure [Pa]')
@@ -169,15 +177,15 @@ title('Mean of pressure distrubution at V_{wind} = 30 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
 %V40 A0
-figure
-plot(relativePortLocation,meanPressureReadingsV40,'bo'); %Pressure coefficient
+figure(4)
+plot(relativePortLocation,C_pV40,'bo'); %Pressure coefficient
 xlabel('x/ch')
 ylabel('Pressure [Pa]')
-title('Mean of pressure distrubution at V_{wind} = 40 ms^{-1}, AOA = 0')
+title('C_{p} distrubution at V_{wind} = 40 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
 %V50 A0
-figure
+figure(5)
 errorbar(pressureportnumber,meanPressureReadingsV50,standardDeviationV50,'bo');
 xlabel('Pressure port number')
 ylabel('Pressure [Pa]')
@@ -185,15 +193,15 @@ title('Mean of pressure distrubution at V_{wind} = 50 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
 %V60 A0
-figure
-errorbar(relativePortLocation,meanPressureReadingsV60,standardDeviationV60,'bo');
-xlabel('Pressure port number')
-ylabel('Pressure [Pa]')
-title('Mean of pressure distrubution at V_{wind} = 60 ms^{-1}, AOA = 0')
+figure(6)
+plot(relativePortLocation,C_pV60,'bo');
+xlabel('x/chord')
+ylabel('Normalized Pressure C_{p}')
+title('Pressure coefficient distrubution at V_{wind} = 60 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
 % AOA sweep 20 m/s
-figure
+figure(7)
 plot(AOA_force_speed(2:8,1),AOA_force_speed(2:8,2),'bo');
 xlabel('Angle of Attack')
 ylabel('Downforce [N]')
@@ -201,7 +209,7 @@ title('Downforce readout from Loadcell at AOA sweep, V = 20 ms^{-1}')
 set(gca,'FontSize',15)
 
 % AOA sweep 40 m/s
-figure
+figure(8)
 plot(AOA_force_speed(10:16,1),AOA_force_speed(10:16,2),'bo');
 xlabel('Angle of Attack')
 ylabel('Downforce [N]')
@@ -210,7 +218,7 @@ set(gca,'FontSize',15)
 
 
 %V40 A-10
-figure
+figure(9)
 errorbar(pressureportnumber,meanPressureReadingsV40_A10m,standardDeviationV40_A10m,'ro');
 xlabel('Pressure port number')
 ylabel('Pressure [Pa]')
@@ -219,7 +227,7 @@ set(gca,'FontSize',15)
 hold on
 
 %V40 A10
-%figure
+figure(10)
 errorbar(pressureportnumber,meanPressureReadingsV40_A10p,standardDeviationV40_A10p,'bo');
 legend('AOA = -10','AOA = 10')
 %xlabel('Pressure port number')
@@ -230,7 +238,7 @@ legend('AOA = -10','AOA = 10')
 
 
 % subplot V40 A-10 and A10
-figure
+figure(11)
 ax1 = subplot(2,1,1);
 errorbar(pressureportnumber,meanPressureReadingsV40_A10m,standardDeviationV40_A10m,'bo');
 title(ax1,'V=40 ms^{-1}, AOA = -10')
@@ -280,7 +288,7 @@ CLTheory = C_L_alpha*(alpha + alphal0)
 CL20 = DF20/(0.5*1.225*20^2 * A)
 CL40 = DF40/(0.5*1.225*40^2 * A)
 
-figure(20)
+figure(12)
 plot(AOA20,CL20,'ob')
 hold on
 plot(AOA40,CL40,'or')
@@ -293,7 +301,7 @@ set(gca,'FontSize',15)
 
 meshsize_downforce = [22.8E6 6.36E5 1.03E6 3.87E6 5.8E5; 126.2 123.1 123.13 125.12 122.8]
 
-figure
+figure(13)
 plot(meshsize_downforce(1,:),meshsize_downforce(2,:),'ro')
 xlabel('Mesh size [Number of cells]')
 ylabel('Downforce')
