@@ -60,17 +60,19 @@
     \intertext{Where $E_f$ is the elastic module of the fiber and $E_m$ is the elastic modulus of the matrix. The \text{Vol}_{f\%} is the fiber volume fraction of the composite. For a transverse load, which is what rule T7.5.1 and T7.5.2, the strength of the sandwich construction is found as:}
     \frac{1}{E_\text{transverse} &= \frac{\text{Vol}_{f\%}}{E_f} + \left(1-\frac{\text{Vol}_{f\%}}{E_m}\right)}
   \end{align}
-  For the biaxial carbon fiber weave used in this construction, the strength is almost $50\%$ less in the transverse direction. The effective elastic modulus is found to be ~$\SI{60}{\giga\pascal}$. Using the beam approximation, the deflection of the rear wing as a supported beam in both ends is found to be:
+  For the biaxial carbon fiber weave used in this construction, the strength is almost $50\%$ less in the transverse direction \cite{DIAB}. The effective elastic modulus is found to be ~$\SI{60}{\giga\pascal}$. Using the beam approximation that the deflection of the rear wing functions as a beam with a core supported in both ends is found to be: \cite{styrke1}
 
   \begin{align}
     \dealta_\text{max} &= \frac{PL^3}{24EI} = \SI{0.11}{\milli\metre}
   \end{align}
-  
+
+  Which is far below the maximum allowed by a factor of $100$.
+
 \section{Final Design of Rear Wing}
   \fxnote{Presentation of CAD Drawings and method of how we will get to this result}
   \fxnote{Rendering}
 
-  Designing the final design can be done based on the investigations produced in the previous chapters. First, the FSUK rules restrict the cross sectional dimensions, as seen in figure \ref{fig:cadplacement}. Thereto, the rule \emph{T7.3.2   All aerodynamic devices higher than 500 mm from the ground, must not extend outboard of the most inboard point of the rear wheel/tire} dictaces the width of the wing. According to the car's current design, the inner dimension from wheel to wheel is $\SI{1100}{\milli\metre}$, and thus serves as the maximum width of the wing.
+  Designing the final design can be done based on the investigations produced in the previous chapters. First, the FSUK rules restrict the cross sectional dimensions, as seen in figure \ref{fig:cadplacement}. Thereto, the rule \emph{T7.3.2   All aerodynamic devices higher than 500 mm from the ground, must not extend outboard of the most inboard point of the rear wheel/tire} dictates the width of the wing. According to the car's current design, the inner dimension from wheel to wheel is $\SI{1100}{\milli\metre}$, and thus serves as the maximum width of the wing.
 
   The simulations performed in chapter \ref{sec:simulations} provide us with the AOA, the element's relative position and the end plates size.
 
