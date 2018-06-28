@@ -12,16 +12,13 @@
   \subsection{Similarity of Flows}
   \label{sec:similarflows}
 
-    In order to perform tests on the rear wing, it has to be scaled down to fit inside the wind tunnel. This reduces the physical size of the wing, which under equal circumstances changes the flow around it. In order to correctly emulate the simulated flow inside a wind tunnel, the Reynolds number and Euler number have to be the same, assuming incompressible flows:
+    In order to perform tests on the rear wing, it has to be scaled down to fit inside the wind tunnel. This reduces the physical size of the wing, which under equal circumstances changes the flow around it. In order to correctly emulate the simulated flow inside a wind tunnel, the Reynolds number of the full scale flow and the model scale flow has to be the same.
     \begin{align}
       \text{Re}_\text{m} &= \text{Re}\\
-      \text{Eu}_\text{m} &= \text{Eu}
-      \intertext{Mathematically, the Reynolds- and Euler number are defined as:}
-      \text{Eu} &= \frac{p_u - p_d}{pv^2}
-      \intertext{where $v$ is the characteristic velocity of the flow, $p_u$ denotes upstream pressure, and $p_d$ denotes downstream pressure, and:}
+      \intertext{Mathematically, the Reynolds number are defined as:}
       \text{Re} &= \frac{u L}{\nu}
     \end{align}
-    where $u$ is the velocity relative to the object, $L$ is the characteristic length and $\nu$ is the kinematic viscosity of the fluid.
+    where $u_\infty$ is the velocity of the fluid in motion, $L$ is the characteristic length and $\nu$ is the kinematic viscosity of the fluid.
 
     For a down-scaled model, matching Reynolds- and Euler number requires an increase in velocity, inversely proportional to the increase in length \fxnote{skriv det her ud plx.}
 
@@ -71,7 +68,7 @@
 
   \subsection{Manufacturing the 1/4 Scale Rear Wing}
 
-  \fxnote{Something about area of obstruction in a wind tunnel. This is why we made it 1/4 not 1/2 or something else.}
+    When producing the small scale model, obstruction of the total area has to be taken into account. The blockage ratio is optimally below $5\%$, with up to $10\%$ compensation. Problematically, getting pressure outlets out of a very small wing is very difficult, and drilling pressure taps along the leading edge also proves to be tedious if made too small. Therefore, a quarter scale wing was chosen with a frontal area of $\SI{0.01375}{\meters\squared}$. Given the tunnel area of $\SI{0.25}{\metre\squared}$, that gives us a blockage ratio of $5.5\%$ - just slightly above the recommended obstruction ratio.
 
     \begin{figure}
       \includegraphics[width = \textwidth]{arbejdstegningvindtunnel}
@@ -99,9 +96,9 @@
       \label{fig:scalewingparts}
     \end{figure}
 
-    After the initial analysis of airfoils, this design was chosen based on preliminary research. From CITE SOMETHING HERE  \fxnote{Insert source}, a rule of thumb for multi element design is that the first element should be around $70\%$ of the total chord length, and the second element around $30\%$. From \cite{jkatz}, the initial position of the elements was chosen. Having the perfect position is not essential, as the experiment is a simply a verification method of the computational method, which will be used to optimize the final deisng.
+    After the initial analysis of airfoils, this design was chosen based on preliminary research. From \cite{winginitialangle}, a rule of thumb for multi element design is that the first element should be around $70\%$ of the total chord length, and the second element around $30\%$. From \cite{jkatz}, the initial position of the elements was chosen. Having the perfect position is not essential, as the experiment is a simply a verification method of the computational method, which will be used to optimize the final design.
 
-    The 1/4 scale rear wing was machined at Philips Lighting by Rasmus Himborg based on the technical drawings presented below.
+    The 1/4 scale rear wing was machined at Philips Lighting by Rasmus Himborg based on the technical drawings presented in the following section.
 
     \subsubsection{Blueprints}
 
@@ -141,6 +138,12 @@
 
   The results from the experiment is divided into two parts: A comparison with the theoretical lift values of the downscaled wing, and a comparison with the simulated results. The simulated results will be shown in section \ref{sec:simulationcomparison}, while the comparison to theory can be seen in this section.
 
+  \begin{figure}
+    \includegraphics[width=\textwidth]{clperAOAexperiment}
+    \caption{The lift coefficient plotted as a function of the wing's overall AOA. The wing's own angle of attack is $35^\circ$, which is beyond the theoretical optimum as seen in figure \ref{fig:AOAofairfoils}.}
+    \label{fig:clperAOAexperiment}
+  \end{figure}
+
   The theoretical lift coefficient at of the scale wing using a total AOA of $\alpha = 37^\circ$, an effective additional AOA from the wing's camber of $\alpha_{L_0} = 0^\circ$ CITE SOMETHING HERE and equation \ref{eq:CL} is found to be:
   \begin{align*}
     C_L &= \left(\frac{2\pi}{1+\frac{2}{\frac{b}{c}\left(1+1.9\frac{h}{b}\right)}}\right)\left(\alpha + \alpha_{L_0}\right)\\
@@ -148,11 +151,10 @@
     \left(\frac{2\pi}{1+\frac{2}{\frac{\SI{250}{\milli\metre}}{\SI{150}{\milli\metre}}\left(1+1.9\frac{\SI{175}{\milli\metre}}{\SI{250}{\milli\metre}}\right)}}\right)\left(\frac{37\pi}{180}\right) = 2.68
   \end{align*}
 
-  Comparing the theoretical lift to the lift coefficients found by the experiments is seen in figure \ref{fig:clperAOAexperiment}. The purple line is the theoretical lift, where the wing's angle is swept between $-10^\circ$ and $10^\circ$. The measured lift is slightly lower than the theoretical, which may be explained by the end plate's effect on aspect ratio. The downscaled wing has a very large $\AR$, where the end plates extend far below the bottom of the wing. While theoretically positive, the effect of the long end plates might not extend all the way up to the wing profile, artificially inflating up the theoretical lift number.
-
+  Comparing the theoretical lift to the lift coefficients found by the experiments is seen in figure \ref{fig:clperAOAexperiment}. The purple line is the theoretical lift, where the wing's angle is swept between $-10^\circ$ and $10^\circ$. The measured lift is slightly lower than the theoretical, which may be explained by the end plate's effect on aspect ratio. The downscaled wing has a very large $\AR$, where the end plates extend far below the bottom of the wing. While theoretically positive, the effect of the long end plates might not extend all the way up to the wing profile, artificially inflating up the theoretical lift number. Another effect is seen in figure \ref{fig:endplatesbending}, albeit a bit difficult to see, the end plates bend down due to the suction force. This might have reduced flow underneath the wing, constricting airflow and reducing the overall lift. The deflection was approximately $\SI{10}{\milli\metre}$ on each end plate.
 
   \begin{figure}
-    \includegraphics[width=\textwidth]{clperAOAexperiment}
-    \caption{The lift coefficient plotted as a function of the wing's overall AOA. The wing's own angle of attack is $35^\circ$, which is beyond the theoretical optimum as seen in figure \ref{fig:AOAofairfoils}.}
-    \label{fig:clperAOAexperiment}
+    \includegraphics[width=\textwidth]{endplatesbending}
+    \caption{The upper end plate can be seen deflecting slightly downward due to the suction force the wing exerts. }
+    \label{fig:endplatesbending}
   \end{figure}
