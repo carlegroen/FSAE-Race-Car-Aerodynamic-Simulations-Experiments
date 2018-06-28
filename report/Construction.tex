@@ -60,13 +60,13 @@
     \intertext{Where $E_f$ is the elastic module of the fiber and $E_m$ is the elastic modulus of the matrix. The \text{Vol}_{f\%} is the fiber volume fraction of the composite. For a transverse load, which is what rule T7.5.1 and T7.5.2, the strength of the sandwich construction is found as:}
     \frac{1}{E_\text{transverse} &= \frac{\text{Vol}_{f\%}}{E_f} + \left(1-\frac{\text{Vol}_{f\%}}{E_m}\right)}
   \end{align}
-  For the biaxial carbon fiber weave used in this construction, the strength is almost $50\%$ less in the transverse direction \cite{DIAB}. The effective elastic modulus is found to be ~$\SI{60}{\giga\pascal}$. Using the beam approximation that the deflection of the rear wing functions as a beam with a core supported in both ends is found to be: \cite{styrke1}
+  For the biaxial carbon fiber weave used in this construction, the strength is almost $50\%$ less in the transverse direction \cite{DIAB}. The effective elastic modulus is found to be ~$\SI{60}{\giga\pascal}$. Using the beam approximation that the deflection of the rear wing functions as a beam with a core supported in both ends is found to be: \cite{tekniskstabi}
 
   \begin{align}
-    \dealta_\text{max} &= \frac{PL^3}{24EI} = \SI{0.11}{\milli\metre}
+    \dealta_\text{max} &= \frac{PL^3}{192EI} = \SI{0.03}{\milli\metre}
   \end{align}
 
-  Which is far below the maximum allowed by a factor of $100$.
+  Which is far below the maximum allowed by a factor of more than $300$. This also ensures the wing keeps its dimensions even though a high downforce is present. 
 
 \section{Final Design of Rear Wing}
   \fxnote{Presentation of CAD Drawings and method of how we will get to this result}
@@ -150,20 +150,12 @@
     The wing laying flat under pressure with the convex shape pointing upwards: This was highly successful, giving a very smooth surface with the right amount of epoxy covering it. No additional treatment was required.
     The concave shape pointing upwards: The results was not good, but workable. The results can be seen in figure \ref{fig:roughsurface}. The epoxy pooled due to gravity forcing the epoxy down towards the center of the cambered wing. Getting a proper surface finish from this is handled in the section below.
 
-
-
   \subsection{Surface Finish}
 
-    Curing \emph{should} occur by securing the wing \emph{vertically} or with the convex shape pointing upwards, as to not let epoxy pool up on the concave surfaces. This knowledge was forgotten on one of the wings, as seen in figure \ref{fig:roughsurface}, where the surface has become very rough due to epoxy pooling. Albeit not optimal, the wing can be salvaged by sanding.
+    Curing \emph{should} occur by securing the wing \emph{vertically} or with the convex shape pointing upwards, as to not let epoxy pool up on the concave surfaces. This knowledge was forgotten on one of the wings, as seen in figure \ref{fig:roughsurface}, where the surface has become very rough due to epoxy pooling. Albeit not optimal, the wing can be salvaged by sanding. The finished product after sanding and preparing the surface is shown in figure \ref{fig:wingaftersanding}. The surface finish is done with a thin layer of extra epoxy. Using a clear lacquer was also investigated, but the reduced durability of the lacquer is not optimal \cite{lacquersucks}. The wing has to survive transport to England, which can damage a soft surface.
 
     \begin{figure}
       \includegraphics[width=\textwidth]{wingaftersandingperfect}
       \caption{Sanding the wing clears the surface roughness, but requires a new layer of sealant. Using epoxy or a lacquer was investigated before settling on epoxy.}
       \label{fig:wingaftersanding}
     \end{figure}
-
-  \subsection{Implementation and Testing}
-
-\section{Testing and Inspection}
-
- \fxnote{Carbon fiber inspection?}
