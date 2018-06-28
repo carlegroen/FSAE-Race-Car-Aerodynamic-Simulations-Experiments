@@ -9,6 +9,6 @@ Scanning style file c:/texlive/2017/texmf-dist/makeindex/nomencl/nomencl.ist....
 ...done (10 attributes redefined, 3 ignored).
 Scanning input file main.nlo....done (43 entries accepted, 0 rejected).
 Sorting entries....done (241 comparisons).
-Generating output file main.nls....done (82 lines written, 0 warnings).
+Generating output file main.nls....done (84 lines written, 0 warnings).
 Output written in main.nls.
 Transcript written in main.nlg.
