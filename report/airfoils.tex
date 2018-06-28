@@ -1,5 +1,5 @@
 % !TEX root = main.tex
-\chapter{Airfoils and Inverted Wings}      \fxnote{fix the dot x to u for wind velocities}
+\chapter{Airfoils and Inverted Wings}
 
 Achieving a large negative lift coefficient $C_L$ can be done in many ways. Inspecting race cars throughout the years show that airfoils have been used as early as 1966 when Jim Hall attached a rear wing to his Chaparral 2E \cite{hucho}. Since then, the inverted wings have been a staple in the racing industry with various three dimensional geometries affecting the overall performance even further.
 
@@ -13,7 +13,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
     \label{fig:camberAOA}
   \end{figure}
 
-  An airfoil is the 2-dimensional cross section of a wing, that is defining of the wing's lifting characteristics. It is important to know the nomenclature, which is shown on figure \ref{fig:camberAOA}: The leading edge is  the most forward point of the wing, the trailing edge is the most rearward point of the wing. Camber is how much the wing the wing \emph{bends}. \fxnote{consider figure here}
+  An airfoil is the 2-dimensional cross section of a wing, that is defining of the wing's lifting characteristics. It is important to know the nomenclature, which is shown on figure \ref{fig:camberAOA}: The leading edge is  the most forward point of the wing, the trailing edge is the most rearward point of the wing. Camber is how much the wing the wing \emph{bends}.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{airfoilstreamlines}
@@ -47,10 +47,10 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
     \begin{align}
       Re \equiv \frac{u_{\infty}L}{\nu},
-      \intertext{where $\infty$ is the velocity of the fluid, $L$ is an characteristic Length, for an airfoil this would typically be the chord, and $\nu$ is the kinematic viscosity of the fluid.} \label{ReynoldsNumber}
+      \intertext{where $\infty$ is the velocity of the fluid, $L$ is the characteristic Length, for an airfoil this would typically be the chord, and $\nu$ is the kinematic viscosity of the fluid.} \label{eq:ReynoldsNumber}
     \end{align}
 
-      The usage of Reynolds number when designing an airfoil is the fact that the flow is similar for different scales of the same model if the Reynolds number is the same. There by a smaller model can be built and tested at a higher velocity that the full scale, thereby amounting to the same Reynolds number and fluid flow characteristics.
+    The usage of Reynolds number when designing an airfoil is the fact that the flow is similar for different scales of the same model if the Reynolds number is the same. Thereby a smaller model can be built and tested at a higher velocity that the full scale, thereby amounting to the same Reynolds number and fluid flow characteristics. \fxnote{When is it turbulent, when is it laminar? says so in jkatz}
 
     The lift coefficient is a dimensionless coefficient that relates the lift generated to the fluid the airfoil moves in, the velocity of the fluid and the reference area. This coefficient is defined as:
 

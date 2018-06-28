@@ -8,6 +8,9 @@
   The formula student competition has a clear ruleset dictating the strength requirements of aerodynamic devices. The most crucial elements are outlined below:
 
   \subsection{Strength Requirements}
+
+    The competition rules set up strength requirements for the aerodynamic devices, making sure wobbling or unsafe structures are prohibited. The rules are seen below:
+
     \begin{tcolorbox}[colframe=seapurple,colback=seapurple!1]
       Aerodynamic Devices Stability and Strength:
       \begin{itemize}
@@ -18,20 +21,7 @@
       \hspace*{\fill}\tiny{Rules from Formula Student UK 2018 ruleset \cite{FSrules18}.}
     \end{tcolorbox}
 
-    This constraint give us an allowed elastic modulus of:
-    \begin{align}
-      E &\equiv \frac{F/A}{\Delta L/{L_0}}
-      \Rightarrow&
-      \frac{\SI{200}{\newton}
-      /
-      \SI{225}{\centi\metre\squared}}
-      {\SI{3}{\milli\metre}/\SI{10}{\milli\metre}}
-    \end{align}
-    As the wing will be mounted against the end plates, it can be considered a simply supported beam. The elastic deflection is thus described by:
-    \begin{align}
-      u &= \frac{FL^3}{48EI}
-    \end{align}
-    where $u$ is the deflection at the midpoint, $F$ is the force applied, $L$ is the length of the beam (the same as $b$ for wings), $E$ is the elastic modulus of the wing and $I$ is the moment of inertia of the cross section.
+    Thus, deflection of the wing has to be calculated, in order to comply with the rules.
 
 \section{Material Selection}
 
