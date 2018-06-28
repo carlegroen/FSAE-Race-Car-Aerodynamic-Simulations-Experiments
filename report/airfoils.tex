@@ -41,7 +41,16 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
     Lastly, the thickness of the airfoil affects lift up to a certain point, and the optimum thickness is about $12\%$ of the camber length. For the interested ready, reference \cite{jkatz} explores this further.
 
-  \subsection{Lift and Drag Coefficient}
+  \subsection{Reynolds Number, Lift and Drag Coefficient}
+
+    The Reynolds number is an dimensionless number that is used to predict the flow of fluids in different flow configurations. In general the Reynolds number is used to predict if a flow is laminar or turbulent. The Reynolds number is defined as:
+
+    \begin{align}
+      Re \equiv \frac{u_{\infty}L}{\nu},
+      \intertext{where $\infty$ is the velocity of the fluid, $L$ is an characteristic Length, for an airfoil this would typically be the chord, and $\nu$ is the kinematic viscosity of the fluid.} \label{ReynoldsNumber}
+    \end{align}
+
+      The usage of Reynolds number when designing an airfoil is the fact that the flow is similar for different scales of the same model if the Reynolds number is the same. There by a smaller model can be built and tested at a higher velocity that the full scale, thereby amounting to the same Reynolds number and fluid flow characteristics.
 
     The lift coefficient is a dimensionless coefficient that relates the lift generated to the fluid the airfoil moves in, the velocity of the fluid and the reference area. This coefficient is defined as:
 
