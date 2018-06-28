@@ -1,0 +1,43 @@
+\nomenclatureentry{a$A$@[{$A$}]\begingroup Frontal area or planform area\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$F_x$@[{$F_x$}]\begingroup Sum of forces in $x$ direction\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$m$@[{$m$}]\begingroup Mass\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$x$@[{$x$}]\begingroup $x$-position\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\dot{x}$@[{$\dot{x}$}]\begingroup Velocity in $x$-direction\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\dot{\dot{x}}$@[{$\dot{\dot{x}}$}]\begingroup Acceleration in $x$-direction\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$C_d$@[{$C_d$}]\begingroup Drag coefficient of air resistance\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\rho$@[{$\rho$}]\begingroup Fluid Density\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$P$@[{$P$}]\begingroup Motor effect\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$F_\text{centripetal}$@[{$F_\text{centripetal}$}]\begingroup Centripetal force\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$F_\text{friction}$@[{$F_\text{friction}$}]\begingroup Force due to friction\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$F_\text{normal}$@[{$F_\text{normal}$}]\begingroup Normal force\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\mu$@[{$\mu$}]\begingroup Friction coefficient\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$C_L$@[{$C_L$}]\begingroup Lift coefficient\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$C_l$@[{$C_l$}]\begingroup Lift coefficient for 2D airfoils\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$r$@[{$r$}]\begingroup Turn radius\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$g$@[{$g$}]\begingroup Force due to gravity\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$u_\infty$@[{$u_\infty$}]\begingroup Velocity of fluid\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$f_l$@[{$f_l$}]\begingroup Lift force per unit width\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$F_L$@[{$F_L$}]\begingroup Lift force\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$L$@[{$L$}]\begingroup Characteristic length of item\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\alpha$@[{$\alpha$}]\begingroup Angle of attack\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{aAOA@[{AOA}]\begingroup Angle of Attack\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$C_{L_\alpha}$@[{$C_{L_\alpha}$}]\begingroup DONT KNOW HELP\fxnote{fix this}\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\alpha_0$@[{$\alpha_0$}]\begingroup Effective angle of attack due to airfoil camber\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\AR$@[{$\AR$}]\begingroup The effective aspect ratio of the wing\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$F_d$@[{$F_d$}]\begingroup Drag force\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$C_{d_\text{induced}}$@[{$C_{d_\text{induced}}$}]\begingroup Drag coefficient of induced drag\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$C_D$@[{$C_D$}]\begingroup Total drag force\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\epsilon$@[{$\epsilon$}]\begingroup Wing tip geometry constant\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\AR_\text{actual}$@[{$\AR_\text{actual}$}]\begingroup The actual aspect ratio of the wing\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$h$@[{$h$}]\begingroup Height of end plate\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$b$@[{$b$}]\begingroup width of the wing\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$c$@[{$c$}]\begingroup Chord length\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{aPDS@[{PDS}]\begingroup Product Design Specification\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\text{Re}$@[{$\text{Re}$}]\begingroup Reynolds number\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\text{Eu}$@[{$\text{Eu}$}]\begingroup Eulers number\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\nu$@[{$\nu$}]\begingroup Kinematic viscosity\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$u_m$@[{$u_m$}]\begingroup Fluid velocity of model\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$L_m$@[{$L_m$}]\begingroup Characteristic length of model\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$E$@[{$E$}]\begingroup Young's Modulus\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$I$@[{$I$}]\begingroup Second moment of inertia\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{aCM@[{CM}]\begingroup Center of Mass\nomeqref {0.0}|nompageref}{vii}

@@ -10,8 +10,6 @@
 
 \section{Product Design Specification Review}
 
-  The finished product have to live up to the design specification, in order to be a useful solution. In table \ref{tab:designreview}, it can be seen that all reqirements are fulfilled, and all criteria except one. During the design process of the car, the removal of the engine became negligible as the battery pack is going to be removed in another way. This voids the criteria, and thus makes the solution an optimal one.
-
   \begin{table}
     \begin{tabularx}{\textwidth}[t]{>{\columncolor{seapurple!40}}l XX}
       \arrayrulecolor{seapurple}\hline
@@ -24,26 +22,21 @@
       Performance & \cellcolor{seagreen!40} High downforce \& soft stall characteristic at all speeds &\cellcolor{seagreen!40} Should retain perfomance despite tripping. Should have end plates.\\
       Dimensioning & \cellcolor{seagreen!40} Must be within area defined by FSAE rules & \cellcolor{seayellow!40} Should allow space for motor removal. \\
       Production & \cellcolor{seagreen!40} Low time- and monetary cost
-      \label{tab:designreview}
     \end{tabularx}
     \caption{The PDS table shows how the final design lives up to the proposed specifications.}
+    \label{tab:designreview}
   \end{table}
+
+  The finished product have to live up to the design specification, in order to be a useful solution. In table \ref{tab:designreview}, it can be seen that all reqirements are fulfilled, and all criteria except one. During the design process of the car, the removal of the engine became negligible as the battery pack is going to be removed in another way. This voids the criteria, and thus makes the solution an optimal one.
 
   \section{Factual Improvements}
 
-  The theoretical lift coefficient found from simulations is shown to be $C_L = -2.8$. For a complete lap time simulation the entire aerodynamics package has to be finished. Numbers from the initial calculations of the front wing and undertray provide an estimated total lift coefficient of the car to be around $C_L = -2.4$ \cite{lcdesign}. As seen in figure \ref{fig:cornerspeedvsliftrelative}, this should increase the tight cornering speed from with $4-5\%$, while for larger radius corners upwards $20-45\%$!
+  The theoretical lift coefficient found from simulations is shown to be $C_L = -2.8$. For a complete lap time simulation the entire aerodynamics package has to be finished. Numbers from the initial calculations of the front wing and undertray provide an estimated total lift coefficient of the car to be around $C_L = -2.4$ \cite{CLvalues}. As seen in figure \ref{fig:cornerspeedvsliftrelative}, this should increase the tight cornering speed from with $4-5\%$, while for larger radius corners upwards $20-45\%$!
 
   \begin{figure}
     \makebox[\textwidth][c]{\includegraphics[width=1.2\textwidth]{turnspeedperCLrelative}}%
     \caption{Cornering speed as a function of turn radius for various lift coefficients, relative to a $C_L = 0$.}
     \label{fig:cornerspeedvsliftrelative}
   \end{figure}
-
-
-  %Based on equation \ref{eq:downforcetocorneringspeed}, the cornering speed due to the added downforce of the wing can be found to give
-  %\begin{align}
-%    \dot{x} &< \left(\frac{r}{m} \mu (mg + F_L)\right)^{\frac{1}{2}}
-%    \intertext{which for a  turn }
-%  \end{align}
 
   While fulfilling the PDS, the ease of prodution and being a first design ever restricted the scope of the project. Great improvements can be expected in the coming years. The extend of the theory required in order to produce a rear wing has been uncovered, and this project serves as a guide line for future iterations of the rear wing.  In chapter \ref{chap:perspective}, a series of possible improvements are evaluated and proposed for increasing the aerodynamic contribution to increasing lap times.
