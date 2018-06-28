@@ -191,6 +191,8 @@ ylabel('Normalized Surface Pressure C_{p}')
 title('C_{p} distrubution at V_{wind} = 40 ms^{-1}, AOA = 0')
 set(gca,'FontSize',15)
 
+
+
 %V50 A0
 figure(5)
 plot(relativePortLocation,C_pV50,'bo');
@@ -320,5 +322,10 @@ title('Convergence of downforce for varitations of mesh size')
 
 
 
-
+figure(14)
+errorbar(relativePortLocation,meanPressureReadingsV40,standardDeviationV40,'bo'); %Pressure coefficient
+xlabel('Distance from leading edge / Chord Length')
+ylabel('Surface Pressure [Pa]')
+title('C_{p} distrubution at V_{wind} = 40 ms^{-1}, AOA = 0')
+set(gca,'FontSize',15)
 

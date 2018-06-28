@@ -2,7 +2,7 @@
 \chapter{Simulation}
 \label{chap:simulations}
 
-  The simulation will run in several parts. First, the wings relative placement between eachother will be optimized in a 2-dimensional environment. This involves, size, $x$- and $y$-distance between the multi-element wings, angle of attack and height relative to the chassis to give a good estimate of the wings placement range. Secondly, a 3-dimensional analysis of the entire wing with endplates will be performed. Endplate dimensions will be optimized, and further optimization of the height relative to the entire chassis to finalize the design and placement. Lastly, a complete computational solution to the entire car will finalize the aerodynamical package, and yield the total amount of drag and downforce.
+  The simulation will run in several parts. First, the wings relative placement between each other will be optimized in a 2-dimensional environment. This involves, $x$- and $y$-distance between the multi-element wings, angle of attack and height relative to the chassis to give a good estimate of the wings placement range. Secondly, a 3-dimensional analysis of the entire wing with endplates will be performed. Endplate dimensions will be optimized, and further optimization of the height relative to the entire chassis to finalize the design and placement.
 
 \section{Star-CCM+}
   Star-CCM+ was used to run the simulations of the wing first in the windtunnel for verification and next on a model of the full size wing to produce an estimate of the performance at full scale. As meshing and running the simulations were heavy computational tasks, the computations were run on the \emph{Niflheim Linux cluster supercomputer}, which is installed at the Department of Physics at DTU.
@@ -22,6 +22,7 @@
   The interested reader of how Star-CCM+ works is referred to the \emph{User Guide Star-CCM+, version 13.02}.
 
 \section{Mesh Generation}
+\label{sec:mesh}
   The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volumemesh requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results six different mesh resolutions where used to examine the simulations for the windtunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achived and thereby allowing for more simulations to be run.
 
   \begin{figure}
@@ -40,15 +41,46 @@
   \subsection{Verification of Simulation Results}
   \label{sec:simulationcomparison}
 
-  Comparison with wind tunnel test.
-
-  \subsubsection{Evaluation of Verification Simulation}
+  The data from the experimental test with the $\frac{1}{4}$ scale was first plotted to obtain a picture of the surface pressure on the test wing. An example of a mean over 3000 pressure readouts for a wind speed of $\SI{40}{\metre\per\second}$ is shown in figure \ref{fig:surfacepressureint}, with the standard deviation shown as errorbars. Measurements were run in wind tunnel from $\SI{10}{\metre\per\second}$ to $\SI{60}{\metre\per\second}$ in steps of $\SI{10}{\metre\per\second}$.
 
   \begin{figure}
-    \includegraphics[width=\textwidth]{elon6}
-    \caption{The simulation of the down scaled wing in the wind tunnel.}
-    \label{fig:scalewingwindtunnelsim}
+    \includegraphics[width=.8\textwidth]{surfacepressureint}
+    \caption{Surface pressure readout from the 15 pressure taps at wind speed $\SI{40}{\metre\per\second}$ in the wind tunnel. Pressure readout is meaned over 3000 measurements and shown with errorbars representing the standard deviation of the measurements.}
+    \label{fig:surfacepressureint}
   \end{figure}
+
+  Simulations were then run in \emph{Star-CCM+}. Firstly the CAD model of the $\frac{1}{4}$-scaled wing was imported in the software, then the dimensions of the Red wind tunnel was drawn and the CAD model was placed in the same location as in the real tunnel test. The setup was then volume mesheded with a cell count of around $0.4 \cdot 10^{7}$ million cells as found in section \ref{sec:mesh}. A 2D view of the 3D mesh is shown in figure \ref{fig:mesh3point8mill}. After meshing the physics model for the simulation is set, and simulations are run for the different wind velocities.
+
+  \begin{figure}
+    \includegraphics[width=\textwidth]{mesh3point8millcells}
+    \caption{2D cut through of the 3D mesh used for simulations of the wind tunnel test.}
+    \label{fig:mesh3point8mill}
+  \end{figure}
+
+  The simulations are run until the simulation reseults converges to a result. Monitors of the dragforce and downforce for the wing found by the simulation were used to the convergence of the results, an example is shown in figure \ref{fig:downforcemonitor}. Furthermore scalar views and vector views of the pressure distribution and wind velocity around the wing profile can visually help verify that the solutions does not have any obvious faults, such as areas with extremly high velocity og pressure indicating the solutions is not realistic. Examples of a scalar view for the pressure distribution and a vector view of the wind velocity are shown in \ref{fig:pressureScalarV40} and \ref{fig:velocityScalarV40}.
+
+  \begin{figure}
+    \includegraphics[width=\textwidth]{downforcemonitor}
+    \caption{Monitor of the convergence of the downforce over number of iterations in Star-CCM+, here it is shown for a wind velocity of $\SI{40}{\metre\per\second}$.}
+    \label{fig:downforcemonitor}
+  \end{figure}
+
+  \begin{figure}
+    \includegraphics[width=\textwidth]{pressureScalarV40}
+    \caption{Scalar view of the pressure distribution surrounding the two elements of the wing, here at a wind tunnel velocity of $\SI{40}{\metre\per\second}$.}
+    \label{fig:pressureScalarV40}
+  \end{figure}
+
+  \begin{figure}
+    \includegraphics[width=\textwidth]{velocityScalarV40}
+    \caption{Vector view of the wind velocity surrounding the wing, here at a wind tunnel velocity of $\SI{40}{\metre\per\second}$.}
+    \label{fig:velocityScalarV40}
+  \end{figure}
+
+  From the simulations the surface pressure of the airfoils was also found, and saved to compare with the measurements of the surface pressure from the real wind tunnel test.
+
+  
+
 
   \subsection{Multi-Element Wing Optimization}
   The influence of the two wing elements relative position on lift was examined to optimize the downforce the rear wing provides to the car at a given velocity. This relative position optimization was performed in the software package \emph{MultiElements Airfoils} provided from \emph{Hanley Innovations}. A scatterplot of the relative position is seen in figure \ref{fig:multieleoptimization}. The trailing edge of the first element is seem as the dark lines, and the position of the second elements leading edge is plotted, where the resulting lift coefficient is embedded as color. The redder the better lift coefficient. After sweeping, a maximum lift of $C_L = 2.60$  at $u = \SI{15}{\metre\per\second}$. is found with the leading edge of the secondary element placed at $x=\SI{0.5}{\metre},y=\SI{-0.01}{\metre}$ relative to the leading edge of the main element.
@@ -59,4 +91,4 @@
     \label{fig:multieleoptimization}
   \end{figure}
 
-\section{Results}
+\section{Downforce Estimate of Full Scale Wing}
