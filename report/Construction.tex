@@ -47,14 +47,25 @@
 
 \section{Composites}
 
-  The strength of composites come from the fiber.
+  The geometrical shape of a composite structure can be highly varied, which can increase strength dramatically. The second moment of inertia of a simple beam can be increased by moving material from the neutral axis, as is done in a standard I-beam. The same thing applies to composites: A soft, but light core can be added with a hard shell (in this case carbon fiber) surrounding the core.
 
-  \subsection{Sandwich Structure}
+  An approximation of the wing profile is a box shape, where the moment of inertia is much easier calculated. From \cite{composites}, the strength of the sandwich material can be mathematically described as:
+  \begin{align}
+    D &= EI = E_{cs} \frac{bh^3 - ec^3}{12} + E_c \frac{ec^3}{12}
+  \end{align}
+  Where $E_cs$ is the elastic modulus of the composite shell, $E_c$ is the elastic modulus of the core, $b$ is the width of the beam, $h$ is the height of the beam, $e$ is the width of the core and $c$ is the height of the core.
+  The strength of a fiber composite depends on the fiber direction, the relationship between the fiber and matrix, and the porosity of the composite. The load bearing properties in the fiber direction is given by:
+  \begin{align}
+    E_\text{long} &= E_f \text{Vol}_{f\%} + E_m (1-\text{Vol}_{f\%})
+    \intertext{Where $E_f$ is the elastic module of the fiber and $E_m$ is the elastic modulus of the matrix. The \text{Vol}_{f\%} is the fiber volume fraction of the composite. For a transverse load, which is what rule T7.5.1 and T7.5.2, the strength of the sandwich construction is found as:}
+    \frac{1}{E_\text{transverse} &= \frac{\text{Vol}_{f\%}}{E_f} + \left(1-\frac{\text{Vol}_{f\%}}{E_m}\right)}
+  \end{align}
+  For the biaxial carbon fiber weave used in this construction, the strength is almost $50\%$ less in the transverse direction. The effective elastic modulus is found to be ~$\SI{60}{\giga\pascal}$. Using the beam approximation, the deflection of the rear wing as a supported beam in both ends is found to be:
 
-    The bending stiffness for a simple sandwich panel
-
-  \subsection{Wing Deflection}
-
+  \begin{align}
+    \dealta_\text{max} &= \frac{PL^3}{24EI} = \SI{0.11}{\milli\metre}
+  \end{align}
+  
 \section{Final Design of Rear Wing}
   \fxnote{Presentation of CAD Drawings and method of how we will get to this result}
   \fxnote{Rendering}
