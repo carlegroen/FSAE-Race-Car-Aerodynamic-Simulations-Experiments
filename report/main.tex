@@ -34,6 +34,7 @@
 \usepackage{rotating}
 \usepackage{ar}
 \usepackage{tcolorbox}
+\usepackage{subcaption}
 
 % ting til memoir
 \setlrmarginsandblock{4.2cm}{*}{1}
@@ -248,10 +249,18 @@ appendices
 \includepdf[pages={1}]{frontpage.pdf}
 \setcounter{page}{3}
 \input{preface}
+\input{acknowledgement}
 \input{abstract}
 \input{nomenclature}
 
-
+%%%%% Signature page
+\newcommand{\namesigdate}[2][5cm]{%
+  \begin{tabular}{@{}p{#1}@{}}
+    #2 \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Signature}} \\[2\normalbaselineskip] \hrule \\[0pt]
+    {\small \textit{Date}}
+  \end{tabular}
+}
 
 \newpage\thispagestyle{empty}\mbox{}\newpage
 \tableofcontents*

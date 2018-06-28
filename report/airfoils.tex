@@ -7,7 +7,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
 \section{Airfoil theory}
 
-  An airfoil is the 2-dimensional cross section of a wing, that is defining of the wing's lifting characteristics. It is important to know the nomenclature: The leading edge is  the most forward point of the wing, the trailing edge is the most rearward point of the wing. Camber is how much the wing the \emph{bends}. Furthermore the the chord of the wing is defined as the horizontal distance between the leading edge and the trailing edge. Angle of attack (AOA) is the angle between the wing chord and the direction of the incoming fluid.  \fxnote{definition figure here}
+  An airfoil is the 2-dimensional cross section of a wing, that is defining of the wing's lifting characteristics. It is important to know the nomenclature: The leading edge is  the most forward point of the wing, the trailing edge is the most rearward point of the wing. Camber is how much the wing the wing \emph{bends}. \fxnote{consider figure here}
 
   \begin{figure}
     \includegraphics[width=\textwidth]{airfoilstreamlines}
@@ -19,7 +19,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
   The suction surface is the surface where the flow accelerates to high velocities and the pressure drops. This can be seen on the top part of figure \ref{fig:airfoilstreamlines}, where the corresponding pressure distribution can be seen below as the (-) part. A peak of very low pressure can be found near the leading edge, which is often called the suction peak.
 
-  The pressure surface is the surface where the flow decellerates to lower velocities and the pressure increases. This is the lower side of the wings shown in \ref{fig:airfoilstreamlines}.
+  The pressure surface is the surface where the flow decellerates to lower velocities and the pressure increases. This is the bottom part of \ref{fig:airfoilstreamlines}, which provides a much lower force from the pressure than the suction side.
 
   The resulting changes in pressure forces the wing upwards, creating lift. It it important to note, that the suction side contributes considerably more to lift in most cases \cite{jkatz}.
 
@@ -27,13 +27,13 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
     Increasing the lifting capabilities of an airfoil can be done in several ways.
 
-    First, increasing the AOA of the airfoil usually increases lifting characteristics of a wing, until reaching a certain threshold where it falls off. An airfoil carries its lifting abilities usually while flow is attached - that is, where the streamlines follow the shape of the airfoil. If the flow separates from the surface of the airfoil, the lift behaviour becomes unpredictable. This effect is called \emph{stalling}.
+    First, the angle of attack of air airfoil usually increases lifting characteristics of a wing, until reaching a certain threshold where it falls off. An airfoil carries its lifting abilities usually while flow is attached - that is, where the streamlines follow the shape of the airfoil. If the flow separates from the surface of the airfoil, the lift behaviour becomes unpredictable. This effect is called \emph{stalling}.
 
     There are two types of stalling: Leading edge separation which are quite abrupt and greatly decreases lift, and trailing edge separation, which gradually reduces the lift. These are called a hard and soft stall, respectively. Thus, a soft stall is prefered in racing, as a hard stall will instantly change the car's handling abilities.
 
-    Secondly, another way of changing the lift is by creating an effective change in angle of attack: Changing the wing's camber. By changing the camber geometry, the lift can be changed greatly, and the largest increase is found in the trailing edge region. This is why the introduction of flaps is prominent in both aircraft and race car wings.
+    Secondly, another way of changing the lift is by creating an effective change in angle of attack: Changing the wing's camber. The trailing edge of an airfoil's camberline is the largest contributor to lift. By changing the camber geometry, the lift can be changed greatly, and the largest increase is found in the trailing edge region. This is why the introduction of flaps is prominent in both aircraft and race car wings.
 
-    Lastly, the thickness of the airfoil affects lift up to a certain point, and the optimum thickness is about $12\%$ of the camber length. For the interested reader, reference \cite{jkatz} explores this further.
+    Lastly, the thickness of the airfoil affects lift up to a certain point, and the optimum thickness is about $12\%$ of the camber length. For the interested ready, reference \cite{jkatz} explores this further.
 
   \subsection{Lift and Drag Coefficient}
 
@@ -60,7 +60,6 @@ This chapter covers the pressure distribution of various airfoils, the selection
       C_{d_\text{induced}} &= \frac{C_L^2}{\epsilon \pi \AR }
     \end{align}
     The derivation and explanation hereof is found in the section below.
-  \fxnote{something about Navier Stokes equations.}
 
   \subsection{Aspect Ratio and End Plates}
   \label{subsec:endplates}
@@ -95,7 +94,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
     \subsection{Multiple Elements and Maximum Downforce}
       \begin{figure}[ht]
-        \includegraphics[width=\textwidth,rotate=1]{multielewing}
+        \includegraphics[width=\textwidth,rotate=1.5]{multielewing}
         \caption{Lift coefficient as a function of effective angle of attack. The \emph{No slot} line corresponds to a single element wing, and the \emph{1 slot} corresponds to a double element wing. Figure taken from \cite{jkatz}.}
         \label{fig:multielewing}
       \end{figure}
