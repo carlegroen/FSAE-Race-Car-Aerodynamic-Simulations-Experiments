@@ -314,18 +314,18 @@ set(gca,'FontSize',15)
 
 meshsize_downforce = [22.8E6 6.36E5 1.03E6 3.87E6 5.8E5; 126.2 123.1 123.13 125.12 122.8]
 
-figure(13)
-plot(meshsize_downforce(1,:),meshsize_downforce(2,:),'ro')
-xlabel('Mesh size [Number of cells]')
-ylabel('Downforce [N]')
-title('Convergence of downforce for varitations of mesh size')
-
-
-
-figure(14)
-errorbar(relativePortLocation,meanPressureReadingsV40,standardDeviationV40,'bo'); %Pressure coefficient
-xlabel('Distance from leading edge / Chord Length')
-ylabel('Surface Pressure [Pa]')
-title('C_{p} distrubution at V_{wind} = 40 ms^{-1}, AOA = 0')
-set(gca,'FontSize',15)
-
+% figure(13)
+% plot(meshsize_downforce(1,:),meshsize_downforce(2,:),'ro')
+% xlabel('Mesh size [Number of cells]')
+% ylabel('Downforce [N]')
+% title('Convergence of downforce for varitations of mesh size')
+% 
+% 
+% 
+% figure(14) 
+% errorbar(relativePortLocation,meanPressureReadingsV40,standardDeviationV40,'bo'); %Pressure coefficient
+% xlabel('Distance from leading edge / Chord Length')
+% ylabel('Surface Pressure [Pa]')
+% title('C_{p} distrubution at V_{wind} = 40 ms^{-1}, AOA = 0')
+% set(gca,'FontSize',15)
+% 
