@@ -1,0 +1,48 @@
+\babel@toc {english}{}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {1.1}{\ignorespaces The teams' race car with the conceptual design of the rear wing.\relax }}{1}{figure.caption.6}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Frontal area of the car with a dummy wing inserted into the CAD model, in order to get an estimate of the drag coefficient $C_D$.\relax }}{6}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Cornering speed as a function of turn radius for various lift coefficients.\relax }}{8}{figure.caption.8}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Figure explaining angle of attack, chord line, camber line, upper surface (suction surface), lower surface (pressure side), leading edge and trailing edge. Figure taken from \cite {wikicamberAOA}.\relax }}{12}{figure.caption.9}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces A figure showing the streamlines around a slightly cambered airfoil, along with its pressure distribution below. Figure taken from \cite {jkatz}.\relax }}{13}{figure.caption.10}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces The trailing tip vortex is clearly seen to the right. Thanks to the NASA's Wake Vortex Study for the photo \cite {nasatipvortex}.\relax }}{16}{figure.caption.11}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Lift coefficient as a function of effective angle of attack. The \emph {No slot} line corresponds to a single element wing, and the \emph {1 slot} corresponds to a double element wing. Figure taken from \cite {jkatz}.\relax }}{17}{figure.caption.12}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces A comparison of the three airfoils as a function of angle of attack. The MSHD profile shows high lifting characteristics over a wide range of angles of attack. Comparisons are from XFOIL at $\text {Re} = \SI {3E5}{}$.\relax }}{20}{figure.caption.14}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces The ruleset above drawn against the design of the car. The marked square is the area where the wing can be freely placed.\relax }}{22}{figure.caption.15}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Initial design of the rear wing based on the PDS and initial research. Optimization of the wing is the next step.\relax }}{24}{figure.caption.17}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Robert Mikkelsen posing in front of the Red wind tunnel. To the left is the air inlet, followed by the test section.\relax }}{29}{figure.caption.18}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Blueprints of the centerpiece of the wing containing the pressure taps for generating a pressure distribution profile.\relax }}{30}{figure.caption.19}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Pieces of the downscaled wing before assembly. Additional H7 holes had to be drilled in order to mount the wing to the force gauge securely.\relax }}{32}{figure.caption.21}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Down-scaled wing assmembled with a zoom in on the pressure taps. The length of the entire wing is approximately $\SI {250}{\milli \metre }$ with a total chord length of $\SI {150}{\milli \metre }$.\relax }}{33}{figure.caption.23}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces The lift coefficient plotted as a function of the wing's overall AOA. The wing's own angle of attack is $35^\circ $, which is beyond the theoretical optimum as seen in figure \ref {fig:AOAofairfoils}.\relax }}{35}{figure.caption.24}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces The upper end plate can be seen deflecting slightly downward due to the suction force the wing exerts. \relax }}{36}{figure.caption.25}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Normalized downforce as a function of mesh size. Plotted to see the convergence towards the same force.\relax }}{39}{figure.caption.26}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Surface pressure readout from the 15 pressure taps located on the model at wind speed $\SI {40}{\metre \per \second }$ in the wind tunnel. Pressure readout is meaned over 3000 measurements and shown with errorbars representing the standard deviation of the measurements.\relax }}{40}{figure.caption.27}
+\contentsline {figure}{\numberline {6.3}{\ignorespaces 2D cut through of the volume mesh used for simulations of the wind tunnel test. Mesh size is approximately $0.4 \cdot 10^{7}$ cells.\relax }}{40}{figure.caption.28}
+\contentsline {figure}{\numberline {6.4}{\ignorespaces Monitor of the convergence of the downforce over the number of iterations in Star-CCM+, here shown for a wind velocity of $\SI {40}{\metre \per \second }$.\relax }}{41}{figure.caption.29}
+\contentsline {figure}{\numberline {6.5}{\ignorespaces Scalar view of the pressure distribution surrounding the two elements of the wing, here at a wind velocity of $\SI {40}{\metre \per \second }$.\relax }}{41}{figure.caption.30}
+\contentsline {figure}{\numberline {6.6}{\ignorespaces Vector view of the wind velocity surrounding the wing, here at a wind velocity of $\SI {40}{\metre \per \second }$.\relax }}{42}{figure.caption.31}
+\contentsline {figure}{\numberline {6.7}{\ignorespaces Simulated surface pressure on both elements of the wing. To the left the larger element surface pressure and the smaller elements surface pressure is shown right. Simulated at wind velocity of $\SI {40}{\metre \per \second }$.\relax }}{42}{figure.caption.32}
+\contentsline {figure}{\numberline {6.8}{\ignorespaces Comparison of simulated and test found $C_p$ values at a wind velocity of $\SI {40}{\metre \per \second }$.\relax }}{43}{figure.caption.33}
+\contentsline {figure}{\numberline {6.9}{\ignorespaces Visualization by streamlines of the simulated airflow around the wing. Vortex generation at the rear of the wing is visiable.\relax }}{44}{figure.caption.34}
+\contentsline {figure}{\numberline {6.10}{\ignorespaces Optimization of the two element wing. The redder the dots, the higher the lift coefficient.\relax }}{45}{figure.caption.35}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {7.1}{\ignorespaces Cambridge Engineering Selector (CES) showing the various aerospace grade materials usable for this application. The dark red dots are compositites, while the dark purple dots are metals such as aluminium and magnesium.\relax }}{49}{figure.caption.36}
+\contentsline {figure}{\numberline {7.2}{\ignorespaces Render of the final design of the rear wing in exploded view.\relax }}{50}{figure.caption.37}
+\contentsline {figure}{\numberline {7.3}{\ignorespaces The result of the topology optimization for the large insert, with a weight reduction at about $\SI {50}{\%}$.\relax }}{51}{figure.caption.38}
+\contentsline {figure}{\numberline {7.4}{\ignorespaces Optimized mesh overlayed on model so excess material could be easily removed.\relax }}{52}{figure.caption.39}
+\contentsline {figure}{\numberline {7.5}{\ignorespaces Render of the final model for the metal insert, with a weight reduction around $\SI {40}{\%}$.\relax }}{52}{figure.caption.40}
+\contentsline {figure}{\numberline {7.6}{\ignorespaces The hot wire melts the styrofoam while sliding along the wooden template.\relax }}{53}{figure.caption.41}
+\contentsline {figure}{\numberline {7.7}{\ignorespaces Steffan and Nicolai performing a hand layup of the carbon fiber mats around a polystyrene foam core.\relax }}{54}{figure.caption.42}
+\contentsline {figure}{\numberline {7.8}{\ignorespaces Curing the wing in a flat position lets the resin pool in the center of the wing. This causes the surface to be very rough, potentially causing the boundary layer to trip early. A very unwanted effect that requires mending.\relax }}{55}{figure.caption.43}
+\contentsline {figure}{\numberline {7.9}{\ignorespaces Sanding the wing clears the surface roughness, but requires a new layer of sealant. Using epoxy or a lacquer was investigated before settling on epoxy.\relax }}{56}{figure.caption.44}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {8.1}{\ignorespaces Cornering speed as a function of turn radius for various lift coefficients, relative to a $C_L = 0$.\relax }}{59}{figure.caption.46}
+\addvspace {10pt}
+\addvspace {10pt}
+\contentsline {figure}{\numberline {A.1}{\ignorespaces Picture of the LabVIEW program used to receive data\relax }}{68}{figure.caption.49}
