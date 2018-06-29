@@ -50,7 +50,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
       \intertext{where $u_\infty$ is the velocity of the fluid, $L$ is a characteristic length, for an airfoil this would typically be the chord length, and $\nu$ is the kinematic viscosity of the fluid.} \label{ReynoldsNumber}
     \end{align}
 
-    The usage of Reynolds number when designing an airfoil is the fact that the flow is similar for different scales of the same model if the Reynolds number is the same. Thereby a smaller model can be built and tested at a higher velocity that the full scale, thereby amounting to the same Reynolds number and fluid flow characteristics. \fxnote{When is it turbulent, when is it laminar? says so in jkatz}
+    The usage of Reynolds number when designing an airfoil is the fact that the flow is similar for different scales of the same model if the Reynolds number is the same. Thereby a smaller model can be built and tested at a higher velocity that the full scale, thereby amounting to the same Reynolds number and fluid flow characteristics.
 
     The lift coefficient is a dimensionless coefficient that relates the lift generated to the fluid the airfoil moves in, the velocity of the fluid and the reference area. This coefficient is defined as:
 
@@ -59,11 +59,19 @@ This chapter covers the pressure distribution of various airfoils, the selection
         \intertext{Where $F_l$ is the lift per unit width, $\rho$ is the density of the fluid, $\dot{x_\infty}$ is the velocity of the surrounding fluid and $c$ is the chord length. For a specific wing, that is, where an airfoil has a physical extension, the lift coefficient is defined as:}
         C_L &\equiv \frac{F_L}{\frac{1}{2} \rho {u_\infty}^2 A}
         \intertext{Where $F_L$ is the total lift force, and $A$ is the surface area. For a wing with both camber and angle of attack, $C_L$ is found by the following formula:}
-        C_L &= C_{L_\alpha} (\alpha + \alpha_{L_0})\label{eq:CL}
+        C_{L0} &= C_{L_\alpha} (\alpha + \alpha_{L_0})\label{eq:CL}
         \intertext{where $\alpha$ is the lift per angle of attack in radians, $\alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians. $C_{L_\alpha}$ is given by: \cite{nasalift}}
         C_{L_\alpha} &= \frac{2\pi}{1+\frac{2}{\AR}} \label{eq:liftperAR}
     \end{align}
-    However, it is important to note that equation \ref{eq:liftperAR} is derived for elliptical wings and is thus an approximation \cite{jkatz2}.
+    %\begin{align}
+    %    C_l &\equiv \frac{F_l}{\frac{1}{2} \rho {u_\infty}^2 c}
+    %    \intertext{Where $F_l$ is the lift per unit width, $\rho$ is the density of the fluid, $\dot{x_\infty}$ is the velocity of the surrounding fluid and $c$ is the chord length. For a specific wing, that is, where an airfoil has a physical extension, the lift coefficient is defined as:}
+    %    C_L &\equiv \frac{F_L}{\frac{1}{2} \rho {u_\infty}^2 A}
+    %    \intertext{Where $F_L$ is the total lift force, and $A$ is the surface area. For a wing with both camber and angle of attack, $C_L$ is found by the following formula:}
+    %    C_{L0} &= 2\pi (\alpha + \alpha_{L_0})\ref{eq:liftperCL}
+    %    \intertext{where $\alpha$ is the lift per angle of attack in radians, $\alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians.
+    %\end{align}
+    However, it is important to note that equation \ref{eq:liftperAR} is derived for elliptical wings and is thus an approximation \cite{jkatz2}. A correction of the lift due to downwash effects is found in the section below.
 
     Like lift, a dimensionless drag coefficient exist, that describes how drag is generated in a similar fashion:
 
@@ -101,11 +109,17 @@ This chapter covers the pressure distribution of various airfoils, the selection
     \end{align}
     Where $\epsilon = 1$ for an ellipse, and generally $\epsilon < 1$ for anything else. For a rectangular wing, $\epsilon = 0.7$ \cite{nasainduceddrag}.
 
-    A way to combat this phenomenon is the addition of end plates. End plates adds a virtual additional length by adding a physical wall between the low- and high pressure surfaces. The vortices that usually go around the wing and reduce lift is severely hindered. A corrected aspect ratio can be found for wings with side plates as:
+    For a small aspect ratio wing, the lift coefficient has to be scaled down due to the effect of downwash.
+      \begin{align}
+        C_L &= \frac{C_{L0}}{1+\frac{C_{L0}}{\pi \AR}} \label{eq:liftperAR2}
+        \intertext{Where $C_{L0}$ is the lift for a thin flat plate, as given in equation \ref{eq:CL} and \AR is the wing's aspect ratio \cite{nasalift2}.}
+      \end{align}
+
+    A way to combat this lift-reducing phenomenon is the addition of end plates. End plates adds a virtual additional length by adding a physical wall between the low- and high pressure surfaces. The vortices that usually go around the wing and reduce lift is severely hindered. A corrected aspect ratio can be found for wings with side plates as:
     \begin{align}
       \AR &= \AR_\text{actual}\left(1+1.9\frac{h}{b}\right) \label{eq:endplates}
     \end{align}
-    where $h$ is the height of the end plate, and $b$ is the width of the wing as in equation \ref{eq:ARactual} \cite{jkatz}. The addition of end plates gives an increased aspect ratio. Inserting this back into \ref{eq:liftperAR} shows that end plates yields an increase in lift.
+    where $h$ is the height of the end plate, and $b$ is the width of the wing as in equation \ref{eq:ARactual} \cite{jkatz}. The addition of end plates gives an increased aspect ratio. Inserting this back into \ref{eq:liftperAR2} shows that end plates yields an increase in lift.
 
     \subsection{Multiple Elements and Maximum Downforce}
       \begin{figure}[ht]
