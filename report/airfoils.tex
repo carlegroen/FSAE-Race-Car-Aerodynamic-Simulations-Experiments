@@ -47,11 +47,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
     \begin{align}
       Re \equiv \frac{u_{\infty}L}{\nu},
-<<<<<<< HEAD
-      \intertext{where $\infty$ is the velocity of the fluid, $L$ is the characteristic Length, for an airfoil this would typically be the chord, and $\nu$ is the kinematic viscosity of the fluid.} \label{eq:ReynoldsNumber}
-=======
       \intertext{where $u_\infty$ is the velocity of the fluid, $L$ is a characteristic length, for an airfoil this would typically be the chord length, and $\nu$ is the kinematic viscosity of the fluid.} \label{ReynoldsNumber}
->>>>>>> 211c7af5ffdfca05378206709183b3d72580df42
     \end{align}
 
     The usage of Reynolds number when designing an airfoil is the fact that the flow is similar for different scales of the same model if the Reynolds number is the same. Thereby a smaller model can be built and tested at a higher velocity that the full scale, thereby amounting to the same Reynolds number and fluid flow characteristics. \fxnote{When is it turbulent, when is it laminar? says so in jkatz}
@@ -64,7 +60,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
         C_L &\equiv \frac{F_L}{\frac{1}{2} \rho {u_\infty}^2 A}
         \intertext{Where $F_L$ is the total lift force, and $A$ is the surface area. For a wing with both camber and angle of attack, $C_L$ is found by the following formula:}
         C_L &= C_{L_\alpha} (\alpha + \alpha_{L_0})\label{eq:CL}
-        \intertext{where $\alpha$ is the lift per angle of attack in radians, $\alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians. $C_{L_\alpha}$ is given by \cite{nasalift}:}
+        \intertext{where $\alpha$ is the lift per angle of attack in radians, $\alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians. $C_{L_\alpha}$ is given by: \cite{nasalift}}
         C_{L_\alpha} &= \frac{2\pi}{1+\frac{2}{\AR}} \label{eq:liftperAR}
     \end{align}
     However, it is important to note that equation \ref{eq:liftperAR} is derived for elliptical wings and is thus an approximation \cite{jkatz2}.
@@ -73,7 +69,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
     \begin{align}
       C_d &\equiv \frac{2F_d}{\rho {u}^2 A}
-      \intertext{Where $F_d$ is the viscous drag force - the component of the force that is parallel with the flow velocity \cite{nasadrag}. The induced drag created by the lifting force must also be added in order to find the total drag coefficient \cite{nasainduceddrag}:}
+      \intertext{Where $F_d$ is the drag force - the component of the force that is parallel with the flow velocity \cite{nasadrag}. The induced drag created by the lifting force must also be added in order to find the total drag coefficient \cite{nasainduceddrag}:}
       C_D &= C_d + C_{d_\text{induced}}\\
       \intertext{where $C_{d_\text{induced}}$ is given by:}
       C_{d_\text{induced}} &= \frac{C_L^2}{\epsilon \pi \AR }
@@ -98,7 +94,7 @@ This chapter covers the pressure distribution of various airfoils, the selection
 
     The effect of having a finite length is very important in race aerodynamics. As pressure is lowered and increased on the different sides, air is going to travel around the edge of the wing in a rolling motion. This creates a vortex, which is shown in figure \ref{fig:trailingtipvortices}. The phenomenon is called tip vortices, and the magnitude of the vortex is proportional to the lift coefficient of the wing. The area these vortices cover is very large and for wings with a small span will greatly reduces the lifting powers.
 
-    These vortices are created by an effect called \emph{downwash} when talking aeroplanes. As the wing bends the air slightly downwards, it creates an opposite force due to Newton's second law which is lift. However, the sheet of air that passes over the length of the wing has a downward velocity component and will thus force air in that direction. This presses other air out of the way, allowing air above it to rush downwards to fill the gap. The same phenomenom is what happens at the edge of the wing, and again is what is shown in figure \ref{fig:trailingtipvortices}. When the wing \emph{bends} the airflow downward, drag is induced. While drag is almost negligible in our case, it is never wanted \cite{peterkampf}. For an elliptical wing, the induced drag coefficient is given by:
+    These vortices are created by an effect called \emph{downwash} when talking aeroplanes. As the wing bends the air slightly downwards, it creates an \emph{opposite force} due to Newton's second law: Lift. However, the sheet of air that passes over the length of the wing has a downward velocity component and will thus force air in that direction. This presses other air out of the way, allowing air above it to rush downwards to fill the gap. The same phenomenom is what happens at the edge of the wing, and again is what is shown in figure \ref{fig:trailingtipvortices}. When the wing \emph{bends} the airflow downward, drag is induced. While drag is almost negligible in our case, it is never wanted \cite{peterkampf}. For an elliptical wing, the induced drag coefficient is given by:
 
     \begin{align}
       C_{d_\text{induced}} &= \frac{C_L^2}{\epsilon \pi \AR }
@@ -118,13 +114,13 @@ This chapter covers the pressure distribution of various airfoils, the selection
         \label{fig:multielewing}
       \end{figure}
 
-      As mentioned before, in order to increase downforce on a wing (made of a predefined airfoil) there is two options: Increasing the width of the wing, or increasing the camber. As the width is fixed by regulations, the camber has to be varied. Increasing camber usually causes flow separation, but by splitting the airfoil into multiple elements, this can be circumvented while gaining effective airfoil camber. The camber attained by using multiple elements is usually much higher than with a single element, and letting the high pressure from the first element transition to the low pressure zone of the secondary element results in a favorable interaction between the two elements \fxnote{is it this way that it works?}.
+      As mentioned before, in order to increase downforce on a wing (made of a predefined airfoil) there is two options: Increasing the width of the wing, or increasing the camber. As the width is fixed by regulations, the camber has to be varied. Increasing camber usually causes flow separation, but by splitting the airfoil into multiple elements, this can be circumvented while gaining effective airfoil camber. The camber attained by using multiple elements is usually much higher than with a single element, and letting the high pressure from the first element transition to the low pressure zone of the secondary element results in a favorable interaction between the two elements.
 
-      The lift coefficient can be seen as a function of angle of attack in figure \ref{fig:multielewing}. Notice how the angle of attack can be increased before stalling occurs and lift increases. A leading airfoil (also called a \emph{slat}) will extend the angle of attack even further, but will not increase the lift curve \cite{jkatz}.
+      The lift coefficient can be seen as a function of (effective) angle of attack in figure \ref{fig:multielewing}. Notice how the combined camber can be increased before stalling occurs and lift increases. A leading airfoil (also called a \emph{slat}) will extend the range of possible camber even further, but will not increase the lift curve \cite{jkatz}.
 
 \section{Wing Parameters}
 
-  The previous sections describe which parameters can be varied in order to attain better aerodynamical properties, such as higher lift, robustness towards stall and protection against trailing tip vortices. Improving a wing has several optimization parameters, and below is a table of how these are going to be handled in the following sections:
+  The previous sections describe which parameters can be varied in order to attain better aerodynamical properties, such as higher lift, robustness towards stall and protection against trailing tip vortices. Improving a wing has several optimization parameters and in table \ref{tab:optimizationvars} is a list of how these are going to be handled in the following sections.
   \begin{table}
     \begin{tabularx}{\textwidth}[t]{>{\columncolor{seapurple!40}} l XX}
       \arrayrulecolor{seapurple}\hline
@@ -138,4 +134,5 @@ This chapter covers the pressure distribution of various airfoils, the selection
       Size & Sizes directly increases lift & Finding the maximum allowed size by regulations
     \end{tabularx}
     \caption{Table of parameters that can vary and how to optimize the parameter.}
+    \label{tab:optimizationvars}
   \end{table}

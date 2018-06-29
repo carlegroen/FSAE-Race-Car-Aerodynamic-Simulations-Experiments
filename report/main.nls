@@ -10,7 +10,9 @@
 		\nompageref{vii}
   \item [{$\AR_\text{actual}$}]\begingroup The actual aspect ratio of the wing\nomeqref {0.0}
 		\nompageref{vii}
-  \item [{$\dot{\dot{x}}$}]\begingroup Acceleration in $x$-direction\nomeqref {0.0}
+  \item [{$\ddot{x}$}]\begingroup Acceleration in $x$-direction\nomeqref {0.0}
+		\nompageref{vii}
+  \item [{$\delta_\text{max}$}]\begingroup Maximum deflection distance\nomeqref {0.0}
 		\nompageref{vii}
   \item [{$\dot{x}$}]\begingroup Velocity in $x$-direction\nomeqref {0.0}
 		\nompageref{vii}
@@ -22,9 +24,11 @@
 		\nompageref{vii}
   \item [{$\rho$}]\begingroup Fluid Density\nomeqref {0.0}
 		\nompageref{vii}
-  \item [{$\text{Eu}$}]\begingroup Eulers number\nomeqref {0.0}
+  \item [{$\text{Eu}$}]\begingroup Euler number\nomeqref {0.0}
 		\nompageref{vii}
   \item [{$\text{Re}$}]\begingroup Reynolds number\nomeqref {0.0}
+		\nompageref{vii}
+  \item [{$\text{Vol}_{f\%}$}]\begingroup Volume fraction of fiber\nomeqref {0.0}
 		\nompageref{vii}
   \item [{$A$}]\begingroup Frontal area or planform area\nomeqref {0.0}
 		\nompageref{vii}
@@ -41,9 +45,21 @@
 		\nompageref{vii}
   \item [{$C_{d_\text{induced}}$}]\begingroup Drag coefficient of induced drag\nomeqref {0.0}
 		\nompageref{vii}
-  \item [{$C_{L_\alpha}$}]\begingroup DONT KNOW HELP\fxnote{fix this}\nomeqref {0.0}
+  \item [{$C_{L_\alpha}$}]\begingroup Ideal lift coefficient\nomeqref {0.0}
 		\nompageref{vii}
   \item [{$E$}]\begingroup Young's Modulus\nomeqref {0.0}
+		\nompageref{vii}
+  \item [{$E_\text{long}$}]\begingroup Young's modulus along the direction of the fiber\nomeqref {0.0}
+		\nompageref{vii}
+  \item [{$E_\text{transverse}$}]\begingroup Young's modulus in the transverse direction\nomeqref {0.0}
+		\nompageref{vii}
+  \item [{$E_c$}]\begingroup Young's modulus of core\nomeqref {0.0}
+		\nompageref{vii}
+  \item [{$E_f$}]\begingroup Young's modulus of fiber\nomeqref {0.0}
+		\nompageref{vii}
+  \item [{$E_m$}]\begingroup Young's modulus of matrix\nomeqref {0.0}
+		\nompageref{vii}
+  \item [{$E_{cs}$}]\begingroup Young's modulus of composite shell\nomeqref {0.0}
 		\nompageref{vii}
   \item [{$F_\text{centripetal}$}]\begingroup Centripetal force\nomeqref {0.0}
 		\nompageref{vii}

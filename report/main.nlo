@@ -3,7 +3,7 @@
 \nomenclatureentry{a$m$@[{$m$}]\begingroup Mass\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$x$@[{$x$}]\begingroup $x$-position\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$\dot{x}$@[{$\dot{x}$}]\begingroup Velocity in $x$-direction\nomeqref {0.0}|nompageref}{vii}
-\nomenclatureentry{a$\dot{\dot{x}}$@[{$\dot{\dot{x}}$}]\begingroup Acceleration in $x$-direction\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\ddot{x}$@[{$\ddot{x}$}]\begingroup Acceleration in $x$-direction\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$C_d$@[{$C_d$}]\begingroup Drag coefficient of air resistance\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$\rho$@[{$\rho$}]\begingroup Fluid Density\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$P$@[{$P$}]\begingroup Motor effect\nomeqref {0.0}|nompageref}{vii}
@@ -21,7 +21,7 @@
 \nomenclatureentry{a$L$@[{$L$}]\begingroup Characteristic length of item\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$\alpha$@[{$\alpha$}]\begingroup Angle of attack\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{aAOA@[{AOA}]\begingroup Angle of Attack\nomeqref {0.0}|nompageref}{vii}
-\nomenclatureentry{a$C_{L_\alpha}$@[{$C_{L_\alpha}$}]\begingroup DONT KNOW HELP\fxnote{fix this}\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$C_{L_\alpha}$@[{$C_{L_\alpha}$}]\begingroup Ideal lift coefficient\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$\alpha_0$@[{$\alpha_0$}]\begingroup Effective angle of attack due to airfoil camber\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$\AR$@[{$\AR$}]\begingroup The effective aspect ratio of the wing\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$F_d$@[{$F_d$}]\begingroup Drag force\nomeqref {0.0}|nompageref}{vii}
@@ -34,10 +34,18 @@
 \nomenclatureentry{a$c$@[{$c$}]\begingroup Chord length\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{aPDS@[{PDS}]\begingroup Product Design Specification\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$\text{Re}$@[{$\text{Re}$}]\begingroup Reynolds number\nomeqref {0.0}|nompageref}{vii}
-\nomenclatureentry{a$\text{Eu}$@[{$\text{Eu}$}]\begingroup Eulers number\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\text{Eu}$@[{$\text{Eu}$}]\begingroup Euler number\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$\nu$@[{$\nu$}]\begingroup Kinematic viscosity\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$u_m$@[{$u_m$}]\begingroup Fluid velocity of model\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$L_m$@[{$L_m$}]\begingroup Characteristic length of model\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$E$@[{$E$}]\begingroup Young's Modulus\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{a$I$@[{$I$}]\begingroup Second moment of inertia\nomeqref {0.0}|nompageref}{vii}
 \nomenclatureentry{aCM@[{CM}]\begingroup Center of Mass\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\delta_\text{max}$@[{$\delta_\text{max}$}]\begingroup Maximum deflection distance\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$E_{cs}$@[{$E_{cs}$}]\begingroup Young's modulus of composite shell\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$E_c$@[{$E_c$}]\begingroup Young's modulus of core\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$E_f$@[{$E_f$}]\begingroup Young's modulus of fiber\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$E_m$@[{$E_m$}]\begingroup Young's modulus of matrix\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$\text{Vol}_{f\%}$@[{$\text{Vol}_{f\%}$}]\begingroup Volume fraction of fiber\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$E_\text{long}$@[{$E_\text{long}$}]\begingroup Young's modulus along the direction of the fiber\nomeqref {0.0}|nompageref}{vii}
+\nomenclatureentry{a$E_\text{transverse}$@[{$E_\text{transverse}$}]\begingroup Young's modulus in the transverse direction\nomeqref {0.0}|nompageref}{vii}
