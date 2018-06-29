@@ -142,9 +142,10 @@
 
   The theoretical lift coefficient at of the scale wing using a total AOA of $\alpha = 37^\circ$, an effective additional AOA from the wing's camber of $\alpha_{L_0} = 0^\circ$ and equation \ref{eq:CL} is found to be:
   \begin{align*}
-    C_L &= \left(\frac{2\pi}{1+\frac{2}{\frac{b}{c}\left(1+1.9\frac{h}{b}\right)}}\right)\left(\alpha + \alpha_{L_0}\right)\\
-    &\Rightarrow
-    \left(\frac{2\pi}{1+\frac{2}{\frac{\SI{250}{\milli\metre}}{\SI{150}{\milli\metre}}\left(1+1.9\frac{\SI{175}{\milli\metre}}{\SI{250}{\milli\metre}}\right)}}\right)\left(\frac{37\pi}{180}\right) = 2.68
+    C_L &= \frac{C_{L0}}{1+\frac{C_{L0}}{\pi \AR}}
+    \intertext{and remember that:}
+    C_{L0} &= 2\pi (\alpha + \alpha_{L_0})\\
+    \Rightarrow C_L &= \frac{2\pi \left(\frac{38\pi}{180}\right)}{1+\frac{2\pi \left(\frac{38\pi}{180}\right)}{\pi \frac{\SI{250}{\milli\metre}}{\SI{150}{\milli\metre}}\left(1+1.9\frac{\SI{175}{\milli\metre}}{\SI{250}{\milli\metre}}\right)}} = 3.1
   \end{align*}
 
   Comparing the theoretical lift to the lift coefficients found by the experiments is seen in figure \ref{fig:clperAOAexperiment}. The purple line is the theoretical lift, where the wing's angle is swept between $-10^\circ$ and $10^\circ$. The measured lift is slightly lower than the theoretical, which may be explained by the end plate's effect on aspect ratio. The downscaled wing has a very large $\AR$, where the end plates extend far below the bottom of the wing. While theoretically beneficial, the effect of the long end plates might not extend all the way up to the wing profile, artificially inflating up the theoretical lift number. Another effect is seen in figure \ref{fig:endplatesbending}, albeit a bit difficult to see, the end plates bend down due to the suction force. This might have reduced flow underneath the wing, constricting airflow and reducing the overall lift. The deflection was approximately $\SI{10}{\milli\metre}$ on each end plate.

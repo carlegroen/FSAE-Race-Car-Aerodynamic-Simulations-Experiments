@@ -53,25 +53,14 @@ This chapter covers the pressure distribution of various airfoils, the selection
     The usage of Reynolds number when designing an airfoil is the fact that the flow is similar for different scales of the same model if the Reynolds number is the same. Thereby a smaller model can be built and tested at a higher velocity that the full scale, thereby amounting to the same Reynolds number and fluid flow characteristics.
 
     The lift coefficient is a dimensionless coefficient that relates the lift generated to the fluid the airfoil moves in, the velocity of the fluid and the reference area. This coefficient is defined as:
-
     \begin{align}
         C_l &\equiv \frac{F_l}{\frac{1}{2} \rho {u_\infty}^2 c}
         \intertext{Where $F_l$ is the lift per unit width, $\rho$ is the density of the fluid, $\dot{x_\infty}$ is the velocity of the surrounding fluid and $c$ is the chord length. For a specific wing, that is, where an airfoil has a physical extension, the lift coefficient is defined as:}
         C_L &\equiv \frac{F_L}{\frac{1}{2} \rho {u_\infty}^2 A}
         \intertext{Where $F_L$ is the total lift force, and $A$ is the surface area. For a wing with both camber and angle of attack, $C_L$ is found by the following formula:}
-        C_{L0} &= C_{L_\alpha} (\alpha + \alpha_{L_0})\label{eq:CL}
-        \intertext{where $\alpha$ is the lift per angle of attack in radians, $\alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians. $C_{L_\alpha}$ is given by: \cite{nasalift}}
-        C_{L_\alpha} &= \frac{2\pi}{1+\frac{2}{\AR}} \label{eq:liftperAR}
+        C_{L0} &= 2\pi (\alpha + \alpha_{L_0})\label{eq:CL}
     \end{align}
-    %\begin{align}
-    %    C_l &\equiv \frac{F_l}{\frac{1}{2} \rho {u_\infty}^2 c}
-    %    \intertext{Where $F_l$ is the lift per unit width, $\rho$ is the density of the fluid, $\dot{x_\infty}$ is the velocity of the surrounding fluid and $c$ is the chord length. For a specific wing, that is, where an airfoil has a physical extension, the lift coefficient is defined as:}
-    %    C_L &\equiv \frac{F_L}{\frac{1}{2} \rho {u_\infty}^2 A}
-    %    \intertext{Where $F_L$ is the total lift force, and $A$ is the surface area. For a wing with both camber and angle of attack, $C_L$ is found by the following formula:}
-    %    C_{L0} &= 2\pi (\alpha + \alpha_{L_0})\ref{eq:liftperCL}
-    %    \intertext{where $\alpha$ is the lift per angle of attack in radians, $\alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians.
-    %\end{align}
-    However, it is important to note that equation \ref{eq:liftperAR} is derived for elliptical wings and is thus an approximation \cite{jkatz2}. A correction of the lift due to downwash effects is found in the section below.
+    where $\alpha$ is the lift per angle of attack in radians, $\alpha_{L_0}$ is the airfoil's camber, which acts as a additional angle of attack effect, also in radians. A correction of the lift due to downwash effects on low aspect ratio wings is found in the section below.
 
     Like lift, a dimensionless drag coefficient exist, that describes how drag is generated in a similar fashion:
 
