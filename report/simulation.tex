@@ -2,10 +2,10 @@
 \chapter{Simulation}
 \label{chap:simulations}
 
-  The simulation will run in several parts. First, the wings relative placement between each other will be optimized in a 2-dimensional environment. This involves, $x$- and $y$-distance between the multi-element wings, angle of attack and height relative to the chassis to give a good estimate of the wings placement range. Secondly, a 3-dimensional analysis of the entire wing with endplates will be performed to compare with results from the wind tunnel test. Endplate dimensions will be optimized, and further optimization of the height relative to the entire chassis to finalize the design and placement.
+  The simulation will run in several parts. First, the wings relative placement between each other will be optimized in a 2-dimensional environment. This involves, $x$- and $y$-distance between the multi-element wings, angle of attack and height relative to the chassis to give a good estimate of the wings placement range. Secondly, a 3-dimensional analysis of the entire wing with endplates will be performed. Endplate dimensions will be optimized, and further optimization of the height relative to the entire chassis to finalize the design and placement.
 
 \section{Star-CCM+}
-  Star-CCM+ was used to run the simulations of the wing first in the windtunnel for verification. As meshing and running the simulations were heavy computational tasks, the computations were run on the \emph{Niflheim Linux cluster supercomputer}, which is installed at the Department of Physics at DTU.
+  Star-CCM+ was used to run the simulations of the wing first in the windtunnel for verification and next on a model of the full size wing to produce an estimate of the performance at full scale. As meshing and running the simulations were heavy computational tasks, the computations were run on the \emph{Niflheim Linux cluster supercomputer}, which is installed at the Department of Physics at DTU.
 
   The program numerically solves the Navier-Stokes equations, which are derived by the conservation of energy, mass and momentum through a volumetric flow. As Star-CCM+ uses the finite volume method, the equations are discretized to the conservative form: The in- and outgoing flux through a control volume must be conserved. Mathematically, this is expressed as:
 
@@ -33,26 +33,31 @@
 
   Generating a mesh of correct size is done by sampling downforce over a range of mesh sizes. In figure \ref{fig:DFprmeshsize}, the normalized downforce is plotted as a function of the mesh size. The mesh independence study shows that the function converges to acceptable levels near the mesh size $\SI{.4E7}{}$, and serves to be a good compromise between results and computing time.
 
-  \section{Verification of Simulation Results}
+\section{Optimizing the Rear Wing}
+
+  As mentioned in chapter \ref{chap:conceptdesign}, there's a large variation in parameters to optimize for. Numerical optimization has been done on end plates size and relative position of the two wing elements.
+
+
+  \subsection{Verification of Simulation Results}
   \label{sec:simulationcomparison}
 
-  The data from the experimental test with the $\frac{1}{4}$ scale model was first plotted to obtain an idea of the surface pressure distribution on the test wing. An example of a mean over 3000 pressure readouts for a wind speed of $\SI{40}{\metre\per\second}$ is shown in figure \ref{fig:surfacepressureint}, with the standard deviation shown as errorbars. Measurements were run in wind tunnel from $\SI{10}{\metre\per\second}$ to $\SI{60}{\metre\per\second}$ in steps of $\SI{10}{\metre\per\second}$.
+  The data from the experimental test with the $\frac{1}{4}$ scale was first plotted to obtain a picture of the surface pressure on the test wing. An example of a mean over 3000 pressure readouts for a wind speed of $\SI{40}{\metre\per\second}$ is shown in figure \ref{fig:surfacepressureint}, with the standard deviation shown as errorbars. Measurements were run in wind tunnel from $\SI{10}{\metre\per\second}$ to $\SI{60}{\metre\per\second}$ in steps of $\SI{10}{\metre\per\second}$.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{surfacepressureint}
-    \caption{Surface pressure readout from the 15 pressure taps located on the model at wind speed $\SI{40}{\metre\per\second}$ in the wind tunnel. Pressure readout is meaned over 3000 measurements and shown with errorbars representing the standard deviation of the measurements.}
+    \caption{Surface pressure readout from the 15 pressure taps at wind speed $\SI{40}{\metre\per\second}$ in the wind tunnel. Pressure readout is meaned over 3000 measurements and shown with errorbars representing the standard deviation of the measurements.}
     \label{fig:surfacepressureint}
   \end{figure}
 
-  Simulations were then run in Star-CCM+. Firstly the CAD model of the $\frac{1}{4}$-scaled wing was imported into the software, then the dimensions of the red wind tunnel was drawn and the CAD model was placed in the same location as in the real test. The setup was then volume mesheded with a cell count of around $0.4 \cdot 10^{7}$ cells as found in section \ref{sec:mesh} to be adequaete for convergence of results. A 2D view of the volume mesh is shown in figure \ref{fig:mesh3point8mill}. After meshing, the physics model for the simulation is setup, and simulations are run for the different wind velocities.
+  Simulations were then run in \emph{Star-CCM+}. Firstly the CAD model of the $\frac{1}{4}$-scaled wing was imported in the software, then the dimensions of the Red wind tunnel was drawn and the CAD model was placed in the same location as in the real tunnel test. The setup was then volume mesheded with a cell count of around $0.4 \cdot 10^{7}$ million cells as found in section \ref{sec:mesh}. A 2D view of the 3D mesh is shown in figure \ref{fig:mesh3point8mill}. After meshing the physics model for the simulation is set, and simulations are run for the different wind velocities.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{mesh3point8millcells}
-    \caption{2D cut through of the volume mesh used for simulations of the wind tunnel test. Mesh size is approximately $0.4 \cdot 10^{7}$ cells.}
+    \caption{2D cut through of the 3D mesh used for simulations of the wind tunnel test.}
     \label{fig:mesh3point8mill}
   \end{figure}
 
-  The 3-dimensional simulations were run until the simulation results converges. Monitors of the dragforce and downforce for the wing found by the simulation were used to determine the convergence of the results, an example of the convergence plot is shown in figure \ref{fig:downforcemonitor}. Furthermore scalar views and vector views of the pressure distribution and wind velocity around the wing profile can visually help verify that the solutions does not have any obvious faults, such as areas with extremly high velocity og pressure indicating the found solutions are not realistic. Examples of a scalar view for the pressure distribution and a vector view of the wind velocity are shown in \ref{fig:pressureScalarV40} and \ref{fig:velocityScalarV40}.
+  The simulations are run until the simulation reseults converges to a result. Monitors of the dragforce and downforce for the wing found by the simulation were used to the convergence of the results, an example is shown in figure \ref{fig:downforcemonitor}. Furthermore scalar views and vector views of the pressure distribution and wind velocity around the wing profile can visually help verify that the solutions does not have any obvious faults, such as areas with extremly high velocity og pressure indicating the solutions is not realistic. Examples of a scalar view for the pressure distribution and a vector view of the wind velocity are shown in \ref{fig:pressureScalarV40} and \ref{fig:velocityScalarV40}.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{downforcemonitor}
@@ -80,17 +85,17 @@
     \label{fig:simsurfacepressurev40}
   \end{figure}
 
-  Comparing the surface pressure predicted by the simulation, figure \ref{fig:simsurfacepressurev40}, and measured in the test, figure \ref{fig:surfacepressureint}, show that the pressure values are not close. Furthermore comparing the by simulation predicted downforce and measured in the test downforce, shows that the simulated results predict a $\SI{40}{\%}$ higher amount of downforce than measured. This could be caused by several factors. One factor could be the assembly of the test wing is not a perfect replica of the full scale wing, an improvement to help this would be by producing the scaled model completely by machining with small tolerances, compared to the half machined and half handbuild model used in these test. This could cause the relative position of the two wing elements to be different from the CAD model used in simulations.
+  Comparing the surface pressure predicted by the simulation,\ref{fig:simsurfacepressurev40}, and measured in the test, \ref{fig:surfacepressureint}, show that two are not i sync. Comparing the predicted downforce and measured downforce, shows that the simulated results predict a $\SI{40}{\%}$ downforce than measured. This could be caused by several factors. One factor could be the assembly of the test wing is not a perfect replica of the full scale wing, an improement to help this would be by producing the scaled model completely by machining with small tolerances, compared to the half machined and half handbuild model used in these test. This could cause the relative position of the 2 wing elements to be diffrent from the CAD model used in simulations.
 
-  Finding the correct correlation between the estimated downforce and extact surface pressure will not be possible in this report. The simulations and measurements can however be compared by using the dimensionless number, the pressure coefficient,
+  Finding the correct correlation between the estimated downforce and extact surface pressure will not be possible in this report. The simualtions and measurements can however be compared by using the dimensionless number, the pressure coefficient,
 
   \begin{align}
-    C_p \equiv \frac{p-p_{\infty}}{\frac{1}{2}\rho_{\infty}V_{\infty}^2},
+    C_p \equiv \frac{p-p_{\infty}}{\frac{1}{2}\rho_{\infty}V_{infty}^2},
   \end{align}
 
-  where $p$ is the static pressure at the point being evaluated, $p_{\infty}$ is the static pressure in the freestream, $\rho_{\infty}$ is the freestream fluid density and $V_{\infty}$ is the freestream velocity of the fluid. The pressure coefficient describes the relative pressure throughout a fluid in movement. The highest possible for $C_p$ is $1$, which occurs at the stagnation point, where the fluid comes to a complete stop. In many situations the pressure coefficient near a body is independt of the size of the body. \fixme{Consider moving to theory}
+  where $p$ is the static pressure at the point being evaluated, $p_{\infty}$ is the static pressure in the freestream, $\rho_{\infty}$ is the freestream fluid density and $V_{\infty}$ is the freestream velocity of the fluid. The pressure coefficient describes the relative pressure throughout a fluid in movement. In many situations the pressure coefficient near a body is independt of the size of the body. \fixme{Consider moving to theory}
 
-  The pressure coefficient therefore allows us to compared the form of the relative pressure between the simulations and the experimental test. This comparison is shown in figure \ref{fig:CpV40}. When comparing the two, a difference in value is still visible due to the difference in absolute pressure, but the form of the two $C_p$ distributions, confirm the characteristics of the flow around the wing is uptain through the simulation. A higher resolution of measuring taps would help further testing, but for the smaller model is very difficult to achieve due to lack of space. \fixme{fix labels. fixed}
+  The pressure coefficient allows us to compared the form of the relative pressure between the simulations and the experimental test. This comparison is shown in figure \ref{fig:CpV40}. When comparing the two, a difference in value is still visible due to the difference in absolute pressure, but the form of the two $C_p$ distributions, confirm the characteristics of the flow around the wing is uptain through the simulation. A higher resolution of measuring taps would help further testing, but for the smaller model is very difficult to achieve due to lack of space. \fixme{fix labels. fixed}
 
   \begin{figure}
     \includegraphics[width=\textwidth]{CpV40}
