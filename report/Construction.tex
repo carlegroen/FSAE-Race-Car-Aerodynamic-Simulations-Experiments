@@ -59,18 +59,21 @@
   Which is far below the maximum allowed by a factor of more than $300$. This also ensures the wing keeps its dimensions even though a high downforce is present.
 
 \section{Final Design of Rear Wing}
-  \fxnote{Presentation of CAD Drawings and method of how we will get to this result}
-  \fxnote{Rendering}
+
+\begin{figure}
+  \includegraphics[width=\textwidth]{finaldesignrender}
+  \caption{Render of the final design of the rear wing in exploded view.}
+  \label{fig:finaldesignrender}
+\end{figure}
 
   Designing the final design can be done based on the investigations produced in the previous chapters. First, the FSUK rules restrict the cross sectional dimensions, as seen in figure \ref{fig:cadplacement}. Thereto, the rule \emph{T7.3.2   All aerodynamic devices higher than 500 mm from the ground, must not extend outboard of the most inboard point of the rear wheel/tire} dictates the width of the wing. According to the car's current design, the inner dimension from wheel to wheel is $\SI{1100}{\milli\metre}$, and thus serves as the maximum width of the wing.
 
-  The simulations performed in chapter \ref{chap:simulations} provide us with the AOA, the element's relative position and the end plates size.
+  The two elements of the full scale wing will be bolted to the endplates at the optimal found angle of attack. The wing elements will have two metal brackets glued to the inside of the carbon fiber wings, the bracket will be have holes with M10 threads in which the endplates are bolted to secure the structure. The structure can be seen in figure \ref{fig:finaldesignrender}, with end plates, brackets, wings and bolts.
 
-  The two elements of the full scale wing will be bolted to the endplates at the optimal found angle of attack. The wing elements will have two metal brackets glued to the inside of the carbon fiber wings, the bracket will be have holes with M10 threads in which the endplates are bolted to secure the structure.
-
-  \subsection{Topology Optimization}
+  \subsection{Topology Optimization of Wing Brackets}
 
   In order to minimise the weight of the metal bracket inserts topology optimizations where made using the build in function in \emph{Fusion 360}, in which all simulations are done in the cloud. Topology optimization tries to reduce the weight of the model by removing excess material while maintaining stiffness and strength of the model.
+
   The inserts were modeled from the wing profile and the location of the inner threads was chosen. The model was then meshed with a target cell size of $\SI{1.5}{\milli\metre}$, and the target weight reduction was set to $70\%$, with a downforce load of $\SI{250}{\newton}$ at the surface.
 
   \begin{figure}
@@ -81,8 +84,7 @@
 
   The result of the optimization for the large insert is shown in figure \ref{fig:topology_large_insert}, was then used to remove excess material from the model. The results were overlayed on the model and material could be cut from the original model as shown in figure
   \ref{fig:meshoverlay}. The final model of the large insert was then created with a weight reduction around $\SI{40}{\%}$. A render of the final model is shown in
-  figure \ref{fig:render_large_insert}. The same procedure was done for the smaller metal wing insert, and technical drawings of are included in following section.
-
+  figure \ref{fig:render_large_insert}. The same procedure was done for the smaller metal wing insert, and technical drawings of are included in following section. \fxnote{Not there. Where should they be?}
 
   \begin{figure}
     \includegraphics[width=\textwidth]{meshoverlayedlargeinsert}
@@ -98,11 +100,9 @@
 
   The two elements of the full scale wing will be bolted to the end plates at optimal found angle of attack. The wing elements will have two metal brackets glued to the inside of the carbon fiber, the bracket will be have holes with M10 threads in which the endplates are bolted to secure the structure.
 
-  \subsection{Blue Prints}
-
 \section{Manufacturing Final Design}
 
-  The following section describes the steps required to build the wing physically. First, templates of the MSHD airfoil are lasercut. The templates are mounted on the sides of polystyrene blocks, where a homemade hot wire cutter cuts the foam cores of the wing. The foam cores are then glued together into the appropriate lengths, where the carbon fiber mattes are draped over. The carbon fiber is then reinforced by an epoxy resin, which over a 24 hour period is hardened. The surface is then polished, and finally resealed by adding another layer of epoxy resin. The wing is then bolted to the end plates through the two metal brackets inserted into the wing ends. Lastly, brackets for mounting the wing on the chassis are inserted, where the potential buckling of the rods is accounted for.
+  The following section describes the steps required to build the wing physically. First, templates of the MSHD airfoil are lasercut. The templates are mounted on the sides of polystyrene blocks, where a homemade hot wire cutter cuts the foam cores of the wing. The foam cores are then glued together into the appropriate lengths, where the carbon fiber mattes are draped over. The carbon fiber is then reinforced by an epoxy resin, which over a 24 hour period is hardened. The surface is then polished, and finally resealed by adding another layer of epoxy resin. The wing is then bolted to the end plates through the two metal brackets inserted into the wing's ends.
 
   \subsection{Polystyrene Molds}
 
@@ -112,7 +112,8 @@
     \label{fig:hotwire}
   \end{figure}
 
-  The molds for the wings were chosen as positive molds, meaning polystyrene molds of the actual wings were cut out and overlaid with resin coated carbon fiber. In order to do this, we devised a hotwire-based specialized tool for the job. This can be seen in figure \ref{fig:hotwire}, where a gauge 4 wire was used at $\SI{12}{\volt}$ drawing $\SI{2.5}{\ampere}$ over a cutting length of $\SI{600}{\milli\metre}$. In order to get the correct airfoil shapes, the MSHD airfoil profile was lasercut out of 3mm plywood. The wooden profile is then mounted on the sides of the polystyrene block, where the hotwire is pulled across in a timely fashion. In order to produce a smooth surface, two people have to move very coordinated. Going too slow leaves deep melting lines, and moving too fast lets the hotwire ''slack'' in the middle because it does not melt the polystyrene quick enough, which causes the airfoil profile to be skewed.
+  The molds for the wings were chosen as positive molds, meaning polystyrene molds of the actual wings were cut out and overlaid with resin coated carbon fiber. In order to do this, we devised a hot wire-based specialized tool for the job. This can be seen in figure \ref{fig:hotwire}, where a $\SI{0.3}{\milli\metre}$ heat resistant
+   wire was used at $\SI{12}{\volt}$ drawing $\SI{2.5}{\ampere}$ over a cutting length of $\SI{600}{\milli\metre}$. In order to get the correct airfoil shapes, the MSHD airfoil profile was lasercut out of 3mm plywood. The wooden profile is then mounted on the sides of the polystyrene block, where the hotwire is pulled across in a timely fashion. In order to produce a smooth surface, two people have to move very coordinated. Going too slow leaves deep melting lines, and moving too fast makes the hotwire ''slack'' in the middle as it does not have enough energy to melt the polystyrene quick enough, causing the airfoil profile to be skewed.
 
   All hotwire cutting was done by hand over several days, and we owe a special thanks to our sponsor DTU Skylab for providing the polystyrene blocks.
 
@@ -124,21 +125,19 @@
       \label{fig:handlayup}
     \end{figure}
 
-    The data sheet of the carbon fiber weave can be found in appendix \ref{app:carbonfiberdatasheet}, the hardener used can be found in appendix \ref{app:hardener} and the resin used can be found in appendix \ref{app:resin}.
-
-    The finished positive molds are used both as molds where carbon fiber is applied on, as well as foam cores that reinforce the structure. The molds are then placed inside the negative forms of the molds, where carbon fiber is draped over the surface. The epoxy is then applied to the carbon fiber matte by a soft brush, and air is rolled out by spiked rollers. Nicolai Boertman is seen performing this action in figure \ref{fig:handlayup}, putting the final layer on the main element of the rear wing. The white polystyrene mold underneath the carbon fiber is the negative mold, which helps keep the shape when applying to carbon fiber to the other side. After rolling out the epoxy satisfyingly, a plastic tarp is added to the surface and rolled down neatly without air bubbles. This ensures getting a smooth surface, and lets the wing cure occur in a closed environment.
+    The finished positive molds are used both as molds where carbon fiber is applied on, as well as foam cores that reinforce the structure. The molds are then placed inside the negative forms of the molds, where carbon fiber is draped over the surface. The epoxy is then applied to the carbon fiber matte by a soft brush, and air is rolled out by spiked rollers. Nicolai Boertman is seen performing this action in figure \ref{fig:handlayup}, putting the final layer on the main element of the rear wing. The white polystyrene mold underneath the carbon fiber is the negative mold, which helps keep the shape when applying to carbon fiber to the other side. After rolling out the epoxy satisfyingly, a plastic tarp is added to the surface and rolled down neatly without air bubbles. This ensures getting a smooth surface, and lets the wing cure in a closed environment.
 
     \begin{figure}
       \includegraphics[width=\textwidth]{residualepoxy}
-      \caption{Curing the wing in a flat position let the resin pool in the center of the wing, making the surface very rough.}
+      \caption{Curing the wing in a flat position lets the resin pool in the center of the wing. This causes the surface to be very rough, potentially causing the boundary layer to trip early. A very unwanted effect that requires mending.}
       \label{fig:roughsurface}
     \end{figure}
 
     Three methods of curing was attempted:
 
-    The wing hanging freely with no pressure: The results was good. No pooling of epoxy, the surface was relatively smooth, but an additional sealing layer had to be applied, as the epoxy had been displaced from the surface. This gave it the surface roughness of the fibers, which is not optimal.
-    The wing laying flat under pressure with the convex shape pointing upwards: This was highly successful, giving a very smooth surface with the right amount of epoxy covering it. No additional treatment was required.
-    The concave shape pointing upwards: The results was not good, but workable. The results can be seen in figure \ref{fig:roughsurface}. The epoxy pooled due to gravity forcing the epoxy down towards the center of the cambered wing. Getting a proper surface finish from this is handled in the section below.
+    \emph{The wing hanging freely with no pressure}: The results was good. No pooling of epoxy, the surface was relatively smooth, but an additional sealing layer had to be applied, as the epoxy had been displaced from the surface. This gave it the surface roughness of the fibers, which is not optimal.\newline
+    \emph{The wing laying flat under pressure with the convex shape pointing upwards}: This was highly successful, giving a very smooth surface with the right amount of epoxy covering it. No additional treatment was required.\newline
+    \emph{The concave shape pointing upwards}: The results was not good, but workable. The results can be seen in figure \ref{fig:roughsurface}. The epoxy pooled due to gravity forcing the epoxy down towards the center of the cambered wing. Getting a proper surface finish from this is handled in the section below.
 
   \subsection{Surface Finish}
 
