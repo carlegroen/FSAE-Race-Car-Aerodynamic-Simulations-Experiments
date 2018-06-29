@@ -26,7 +26,7 @@
 <<<<<<< HEAD
   The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradients have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volume mesh requires greater resolution. Gradients are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results six different mesh resolutions where used to examine the simulations for the windtunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achieved and thereby allowing for more simulations to be run.
 =======
-  The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volume mesh requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results, six different mesh resolutions where used to examine the simulations for the wind tunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achived and thereby allowing for more simulations to be run.
+  The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradients have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volume mesh requires greater resolution. Gradients are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results, six different mesh resolutions where used to examine the simulations for the wind tunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achieved and thereby allowing for more simulations to be run.
 >>>>>>> a678bbb7eb35b75ff4105b50183073fe790d8144
 
   \begin{figure}
@@ -48,7 +48,7 @@
     \label{fig:surfacepressureint}
   \end{figure}
 
-  Simulations were then run in Star-CCM+. Firstly the CAD model of the $\frac{1}{4}$-scaled wing was imported into the software, then the dimensions of the red wind tunnel was drawn and the CAD model was placed in the same location as in the real test. The setup was then volume mesheded with a cell count of around $0.4 \cdot 10^{7}$ cells as found in section \ref{sec:mesh} to be adequaete for convergence of results. A 2D view of the volume mesh is shown in figure \ref{fig:mesh3point8mill}. After meshing, the physics model for the simulation is setup, and simulations are run for the different wind velocities.
+  Simulations were then run in Star-CCM+. Firstly the CAD model of the $\frac{1}{4}$-scaled wing was imported into the software, then the dimensions of the red wind tunnel was drawn and the CAD model was placed in the same location as in the real test. The setup was then volume mesheded with a cell count of around $0.4 \cdot 10^{7}$ cells as found in section \ref{sec:mesh} to be adequate for convergence of results. A 2D view of the volume mesh is shown in figure \ref{fig:mesh3point8mill}. After meshing, the physics model for the simulation is setup, and simulations are run for the different wind velocities.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{mesh3point8millcells}
@@ -86,7 +86,7 @@
 
   Comparing the surface pressure predicted by the simulation, figure \ref{fig:simsurfacepressurev40}, and measured in the test, figure \ref{fig:surfacepressureint}, show that the pressure values are not close. Furthermore comparing the by simulation predicted downforce and measured in the test downforce, shows that the simulated results predict a $\SI{40}{\%}$ higher amount of downforce than measured. This could be caused by several factors. One factor could be the assembly of the test wing is not a perfect replica of the full scale wing, an improvement to help this would be by producing the scaled model completely by machining with small tolerances, compared to the half machined and half hand-build model used in these test. This could cause the relative position of the two wing elements to be different from the CAD model used in simulations.
 
-  Finding the correct correlation between the estimated downforce and excat surface pressure will not be possible in this report. The simulations and measurements can however be compared by using the dimensionless number, the pressure coefficient,
+  Finding the correct correlation between the estimated downforce and exact surface pressure will not be possible in this report. The simulations and measurements can however be compared by using the dimensionless number, the pressure coefficient,
 
   \begin{align}
     C_p \equiv \frac{p-p_{\infty}}{\frac{1}{2}\rho_{\infty}V_{\infty}^2},
@@ -108,7 +108,7 @@
 
   \begin{figure}
     \includegraphics[width=\textwidth]{simulatedvortex}
-    \caption{Visualization by streamlines of the simulated airflow around the wing. Vortex generation at the rear of the wing is visiable.}
+    \caption{Visualization by streamlines of the simulated airflow around the wing. Vortex generation at the rear of the wing is visible.}
     \label{fig:simvortex}
   \end{figure}
 
