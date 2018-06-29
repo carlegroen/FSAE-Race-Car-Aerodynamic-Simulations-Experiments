@@ -23,7 +23,7 @@
 
 \section{Mesh Generation}
 \label{sec:mesh}
-  The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradiants have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volumemesh requires greater resolution. Gradiants are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results six different mesh resolutions where used to examine the simulations for the windtunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achived and thereby allowing for more simulations to be run.
+  The mesh has to be structured in accordance to best practice. Areas with high velocity and pressure gradients have to be dissolved in acceptable resolutions, in order to ensure correct results. Running an initial test on a generic mesh made it clear where the volume mesh requires greater resolution. Gradients are easily visible around the wing's leading edge, and generally around the solid bodies. Furthermore, aligning the mesh with the flow improves accuracy and rate of convergence. To determine the convergence of simulation results six different mesh resolutions where used to examine the simulations for the windtunnel setup with a wind velocity of $\SI{40}{\metre\per\second}$. Finding the minimum mesh resolution where results have converged with higer resolution results, means a minimum computation time can be achieved and thereby allowing for more simulations to be run.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{DFprmeshsize}
@@ -52,7 +52,7 @@
     \label{fig:mesh3point8mill}
   \end{figure}
 
-  The 3-dimensional simulations were run until the simulation results converges. Monitors of the dragforce and downforce for the wing found by the simulation were used to determine the convergence of the results, an example of the convergence plot is shown in figure \ref{fig:downforcemonitor}. Furthermore scalar views and vector views of the pressure distribution and wind velocity around the wing profile can visually help verify that the solutions does not have any obvious faults, such as areas with extremly high velocity og pressure indicating the found solutions are not realistic. Examples of a scalar view for the pressure distribution and a vector view of the wind velocity are shown in \ref{fig:pressureScalarV40} and \ref{fig:velocityScalarV40}.
+  The 3-dimensional simulations were run until the simulation results converges. Monitors of the dragforce and downforce for the wing found by the simulation were used to determine the convergence of the results, an example of the convergence plot is shown in figure \ref{fig:downforcemonitor}. Furthermore scalar views and vector views of the pressure distribution and wind velocity around the wing profile can visually help verify that the solutions does not have any obvious faults, such as areas with extremely high velocity og pressure indicating the found solutions are not realistic. Examples of a scalar view for the pressure distribution and a vector view of the wind velocity are shown in \ref{fig:pressureScalarV40} and \ref{fig:velocityScalarV40}.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{downforcemonitor}
@@ -76,21 +76,21 @@
 
   \begin{figure}
     \includegraphics[width=\textwidth]{simsurfacepressurev40}
-    \caption{Simulated surface pressure on both elements of the wing. To the left the larger element surface pressure and the smaller elements surface pressure is shown right. Simulated at wind velocity of $\SI{40}{\metre\per\second}$.}
+    \caption{Simulated surface pressure on both elements of the wing. To the left: the larger elements surface pressure and to the right the smaller elements surface pressure is shown. Simulated at wind velocity of $\SI{40}{\metre\per\second}$.}
     \label{fig:simsurfacepressurev40}
   \end{figure}
 
-  Comparing the surface pressure predicted by the simulation, figure \ref{fig:simsurfacepressurev40}, and measured in the test, figure \ref{fig:surfacepressureint}, show that the pressure values are not close. Furthermore comparing the by simulation predicted downforce and measured in the test downforce, shows that the simulated results predict a $\SI{40}{\%}$ higher amount of downforce than measured. This could be caused by several factors. One factor could be the assembly of the test wing is not a perfect replica of the full scale wing, an improvement to help this would be by producing the scaled model completely by machining with small tolerances, compared to the half machined and half handbuild model used in these test. This could cause the relative position of the two wing elements to be different from the CAD model used in simulations.
+  Comparing the surface pressure predicted by the simulation, figure \ref{fig:simsurfacepressurev40}, and measured in the test, figure \ref{fig:surfacepressureint}, show that the pressure values are not close. Furthermore comparing the by simulation predicted downforce and measured in the test downforce, shows that the simulated results predict a $\SI{40}{\%}$ higher amount of downforce than measured. This could be caused by several factors. One factor could be the assembly of the test wing is not a perfect replica of the full scale wing, an improvement to help this would be by producing the scaled model completely by machining with small tolerances, compared to the half machined and half hand-build model used in these test. This could cause the relative position of the two wing elements to be different from the CAD model used in simulations.
 
-  Finding the correct correlation between the estimated downforce and extact surface pressure will not be possible in this report. The simulations and measurements can however be compared by using the dimensionless number, the pressure coefficient,
+  Finding the correct correlation between the estimated downforce and excat surface pressure will not be possible in this report. The simulations and measurements can however be compared by using the dimensionless number, the pressure coefficient,
 
   \begin{align}
     C_p \equiv \frac{p-p_{\infty}}{\frac{1}{2}\rho_{\infty}V_{\infty}^2},
   \end{align}
 
-  where $p$ is the static pressure at the point being evaluated, $p_{\infty}$ is the static pressure in the freestream, $\rho_{\infty}$ is the freestream fluid density and $V_{\infty}$ is the freestream velocity of the fluid. The pressure coefficient describes the relative pressure throughout a fluid in movement. The highest possible for $C_p$ is $1$, which occurs at the stagnation point, where the fluid comes to a complete stop. In many situations the pressure coefficient near a body is independt of the size of the body. \fixme{Consider moving to theory}
+  where $p$ is the static pressure at the point being evaluated, $p_{\infty}$ is the static pressure in the freestream, $\rho_{\infty}$ is the freestream fluid density and $V_{\infty}$ is the freestream velocity of the fluid. The pressure coefficient describes the relative pressure throughout a fluid in movement. The highest possible for $C_p$ is $1$, which occurs at the stagnation point, where the fluid comes to a complete stop. In many situations the pressure coefficient near a body is independent of the size of the body. \fixme{Consider moving to theory}
 
-  The pressure coefficient therefore allows us to compared the form of the relative pressure between the simulations and the experimental test. This comparison is shown in figure \ref{fig:CpV40}. When comparing the two, a difference in value is still visible due to the difference in absolute pressure, but the form of the two $C_p$ distributions, confirm the characteristics of the flow around the wing is uptain through the simulation. A higher resolution of measuring taps would help further testing, but for the smaller model is very difficult to achieve due to lack of space. \fixme{fix labels. fixed}
+  The pressure coefficient therefore allows us to compared the form of the relative pressure between the simulations and the experimental test. This comparison is shown in figure \ref{fig:CpV40}. When comparing the two, a difference in value is still visible due to the difference in absolute pressure, but the form of the two $C_p$ distributions, confirm the characteristics of the flow around the wing is obtained through the simulation. A higher resolution of measuring taps would help further testing, but for the smaller model is very difficult to achieve due to lack of space. \fixme{fix labels. fixed}
 
   \begin{figure}
     \includegraphics[width=\textwidth]{CpV40}
@@ -98,9 +98,9 @@
     \label{fig:CpV40}
   \end{figure}
 
-  The use of simulations for designing an aerodynamic package for the race car for the moment is usefull as a way to insure the realtive pressure distrubtion aorund the wing is as wanted, and ensuring that the flow does not seperate at unwanted locations. However further work on the correlation between simulated downforce and measured downforce is still needed and the work will continue with the Vermilion Racing team, in order to have the best possibilities to design a good aero-package before having to build it.
+  The use of simulations for designing an aerodynamic package for the race car for the moment is useful as a way to insure the relative pressure distribution around the wing is as wanted, and ensuring that the flow does not separate at unwanted locations. However further work on the correlation between simulated downforce and measured downforce is still needed and the work will continue with the Vermilion Racing team, in order to have the best possibilities to design a good aero-package before having to build it.
 
-  Lastly worth noting is when the simulated flow is visualized by streamlines, the vortex generation at the rear of the wing, as mentioned in section \ref{subsec:endplates}, is shown clearly in figure \ref{fig:simvortex}. It is clear that the size of the produced vortices are interacting with the side walls of the wind tunnel. A sugestion for further testing of an wing with such large vortex generation would be to use a wind tunnel with a larger cross-secton to avoid interactions with the side walls.
+  Lastly worth noting is when the simulated flow is visualized by streamlines, the vortex generation at the rear of the wing, as mentioned in section \ref{subsec:endplates}, is shown clearly in figure \ref{fig:simvortex}. It is clear that the size of the produced vortices are interacting with the side walls of the wind tunnel. A suggestion for further testing of an wing with such large vortex generation would be to use a wind tunnel with a larger cross-section to avoid interactions with the side walls.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{simulatedvortex}
@@ -116,6 +116,3 @@
     \caption{Optimization of the two element wing. The redder the dots, the higher the lift coefficient.}
     \label{fig:multieleoptimization}
   \end{figure}
-
-\section{Downforce Estimate of Full Scale Wing}
-\fixme{Maybe save for defense}
