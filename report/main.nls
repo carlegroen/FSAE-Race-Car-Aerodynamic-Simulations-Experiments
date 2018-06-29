@@ -45,7 +45,7 @@
 		\nompageref{vii}
   \item [{$C_{d_\text{induced}}$}]\begingroup Drag coefficient of induced drag\nomeqref {0.0}
 		\nompageref{vii}
-  \item [{$C_{L_\alpha}$}]\begingroup Ideal lift coefficient\nomeqref {0.0}
+  \item [{$C_{L_\alpha}$}]\begingroup Lift coefficient slope\nomeqref {0.0}
 		\nompageref{vii}
   \item [{$E$}]\begingroup Young's Modulus\nomeqref {0.0}
 		\nompageref{vii}

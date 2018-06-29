@@ -1,12 +1,3 @@
-<<<<<<< HEAD
-This is makeindex, version 2.15 [TeX Live 2015] (kpathsea + Thai support).
-Scanning style file /usr/local/texlive/2015/texmf-dist/makeindex/nomencl/nomencl.ist.......
-** Input style error (file = /usr/local/texlive/2015/texmf-dist/makeindex/nomencl/nomencl.ist, line = 70):
-   -- Unknown specifier lethead_prefix.
-** Input style error (file = /usr/local/texlive/2015/texmf-dist/makeindex/nomencl/nomencl.ist, line = 71):
-   -- Unknown specifier lethead_suffix.
-** Input style error (file = /usr/local/texlive/2015/texmf-dist/makeindex/nomencl/nomencl.ist, line = 72):
-=======
 This is makeindex, version 2.15 [TeX Live 2018] (kpathsea + Thai support).
 Scanning style file /usr/local/texlive/2018/texmf-dist/makeindex/nomencl/nomencl.ist.......
 ** Input style error (file = /usr/local/texlive/2018/texmf-dist/makeindex/nomencl/nomencl.ist, line = 70):
@@ -14,11 +5,10 @@ Scanning style file /usr/local/texlive/2018/texmf-dist/makeindex/nomencl/nomencl
 ** Input style error (file = /usr/local/texlive/2018/texmf-dist/makeindex/nomencl/nomencl.ist, line = 71):
    -- Unknown specifier lethead_suffix.
 ** Input style error (file = /usr/local/texlive/2018/texmf-dist/makeindex/nomencl/nomencl.ist, line = 72):
->>>>>>> a678bbb7eb35b75ff4105b50183073fe790d8144
    -- Unknown specifier lethead_flag.
 ...done (10 attributes redefined, 3 ignored).
 Scanning input file main.nlo....done (51 entries accepted, 0 rejected).
 Sorting entries....done (321 comparisons).
 Generating output file main.nls....done (100 lines written, 0 warnings).
 Output written in main.nls.
-Transcript written in main.nlg.
+Transcript written in main.ilg.
