@@ -70,7 +70,7 @@ position = position - forskudt;
 figure(4)
 hold on
 plot(position./chord,normalizedpressure,'ro')
-legend('Test','Simulation')
+legend('Measurements','Simulation')
 
 % figure
 % hold on

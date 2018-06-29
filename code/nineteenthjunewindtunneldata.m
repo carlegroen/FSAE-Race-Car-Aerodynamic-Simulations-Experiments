@@ -189,7 +189,7 @@ plot(relativePortLocation,C_pV40,'bo'); %Pressure coefficient
 xlabel('Distance from leading edge / Chord Length')
 ylabel('Pressure Coefficient C_{p}')
 title('C_{p} distrubution at V_{wind} = 40 ms^{-1}, AOA = 0')
-set(gca,'FontSize',15)
+set(gca,'FontSize',20)
 
 
 
