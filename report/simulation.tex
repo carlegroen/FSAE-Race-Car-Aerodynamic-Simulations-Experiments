@@ -2,9 +2,9 @@
 \chapter{Simulation}
 \label{chap:simulations}
 
-  The simulation will run in several parts. First, the wings relative placement between each other will be optimized in a 2-dimensional environment. This involves, $x$- and $y$-distance between the multi-element wings, angle of attack and height relative to the chassis to give a good estimate of the wings placement range. Secondly, a 3-dimensional analysis of the entire wing with endplates will be performed. Endplate dimensions will be optimized, and further optimization of the height relative to the entire chassis to finalize the design and placement.
 
 \section{Star-CCM+}
+  Star-CCM+ was used to run the simulations of the wing first in the windtunnel for verification. As meshing and running the simulations were heavy computational tasks, the computations were run on the \emph{Niflheim Linux cluster supercomputer}, which is installed at the Department of Physics at DTU.
 
   The program numerically solves the Navier-Stokes equations, which are derived by the conservation of energy, mass and momentum through a volumetric flow. As Star-CCM+ uses the finite volume method, the equations are discretized to the conservative form: The in- and outgoing flux through a control volume must be conserved. Mathematically, this is expressed as:
 
@@ -32,9 +32,9 @@
 
   Generating a mesh of correct size is done by sampling downforce over a range of mesh sizes. In figure \ref{fig:DFprmeshsize}, the normalized downforce is plotted as a function of the mesh size. The mesh independence study shows that the function converges to acceptable levels near the mesh size $\SI{.4E7}{}$, and serves to be a good compromise between results and computing time.
 
+  \section{Verification of Simulation Results}
   \label{sec:simulationcomparison}
 
-  The data from the experimental test with the $\frac{1}{4}$ scale was first plotted to obtain a picture of the surface pressure on the test wing. An example of a mean over 3000 pressure readouts for a wind speed of $\SI{40}{\metre\per\second}$ is shown in figure \ref{fig:surfacepressureint}, with the standard deviation shown as errorbars. Measurements were run in wind tunnel from $\SI{10}{\metre\per\second}$ to $\SI{60}{\metre\per\second}$ in steps of $\SI{10}{\metre\per\second}$.
 
   \begin{figure}
     \includegraphics[width=\textwidth]{surfacepressureint}
