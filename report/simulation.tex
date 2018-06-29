@@ -95,7 +95,7 @@
 
   where $p$ is the static pressure at the point being evaluated, $p_{\infty}$ is the static pressure in the freestream, $\rho_{\infty}$ is the freestream fluid density and $V_{\infty}$ is the freestream velocity of the fluid. The pressure coefficient describes the relative pressure throughout a fluid in movement. In many situations the pressure coefficient near a body is independt of the size of the body. \fixme{Consider moving to theory}
 
-  The pressure coefficient allows us to compared the form of the relative pressure between the simulations and the experimental test. This comparison is shown in figure \ref{fig:CpV40}. \fixme{fix labels}
+  The pressure coefficient allows us to compared the form of the relative pressure between the simulations and the experimental test. This comparison is shown in figure \ref{fig:CpV40}. When comparing the two, a difference in value is still visible due to the difference in absolute pressure, but the form of the two $C_p$ distributions, confirm the characteristics of the flow around the wing is uptain through the simulation. A higher resolution of measuring taps would help further testing, but for the smaller model is very difficult to achieve due to lack of space. \fixme{fix labels. fixed}
 
   \begin{figure}
     \includegraphics[width=\textwidth]{CpV40}
@@ -103,11 +103,15 @@
     \label{fig:CpV40}
   \end{figure}
 
-  \fixme{fiks det her}
+  The use of simulations for designing an aerodynamic package for the race car for the moment is usefull as a way to insure the realtive pressure distrubtion aorund the wing is as wanted, and ensuring that the flow does not seperate at unwanted locations. However further work on the correlation between simulated downforce and measured downforce is still needed and the work will continue with the Vermilion Racing team, in order to have the best possibilities to design a good aero-package before having to build it.
 
-  Noget med det verificerer vingens egnedhed til at bruge på bilen, profil minder og det teoretisk forventede?
-  Herefter lidt snak om hvordan vortex kan snyde simulering og billede af simuleret vortex.
+  Lastly worth noting is when the simulated flow is visualized by streamlines, the vortex generation at the rear of the wing, as mentioned in section \ref{subsec:endplates}, is shown clearly in figure \ref{fig:simvortex}. It is clear that the size of the produced vortices are interacting with the side walls of the wind tunnel. A sugestion for further testing of an wing with such large vortex generation would be to use a wind tunnel with a larger cross-secton to avoid interactions with the side walls.
 
+  \begin{figure}
+    \includegraphics[width=\textwidth]{simulatedvortex}
+    \caption{Visualization by streamlines of the simulated airflow around the wing. Vortex generation at the rear of the wing is visiable.}
+    \label{fig:simvortex}
+  \end{figure}
 
   \subsection{Multi-Element Wing Optimization}
   The influence of the two wing elements relative position on lift was examined to optimize the downforce the rear wing provides to the car at a given velocity. This relative position optimization was performed in the software package \emph{MultiElements Airfoils} provided from \emph{Hanley Innovations}. A scatterplot of the relative position is seen in figure \ref{fig:multieleoptimization}. The trailing edge of the first element is seem as the dark lines, and the position of the second elements leading edge is plotted, where the resulting lift coefficient is embedded as color. The redder the better lift coefficient. After sweeping, a maximum lift of $C_L = 2.60$  at $u = \SI{15}{\metre\per\second}$. is found with the leading edge of the secondary element placed at $x=\SI{0.5}{\metre},y=\SI{-0.01}{\metre}$ relative to the leading edge of the main element.
