@@ -43,7 +43,7 @@
 		\nompageref{vii}
   \item [{$C_l$}]\begingroup Lift coefficient for 2D airfoils\nomeqref {0.0}
 		\nompageref{vii}
-  \item [{$C_P$}]\begingroup Pressure coefficient\nomeqref {0.0}
+  \item [{$C_p$}]\begingroup Pressure coefficient\nomeqref {0.0}
 		\nompageref{vii}
   \item [{$C_{d_\text{induced}}$}]\begingroup Drag coefficient of induced drag\nomeqref {0.0}
 		\nompageref{vii}
