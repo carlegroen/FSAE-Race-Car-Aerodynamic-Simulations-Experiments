@@ -1,0 +1,61 @@
+general:
+========
+the login node name of niflheim is: sylg.fysik.dtu.dk
+you can only login to niflheim from the dtu campus; from outside you can
+jump via login.gbar.dtu.dk
+
+to submit a job, create a submit script; fx.
+
+submit.sh 
+
+to access the license, you need to create the file ~/.flexlmrc with the content: 
+CDLMD_LICENSE_FILE=1999@flex.cd-adapco.com
+
+linux users:
+============
+login: 
+------
+ssh -Y sXXXXXX@loginq.gbar.dtu.dk  (or -X)
+
+on the gbar:
+ssh -X sXXXXXX@sylg.fysik.dtu.dk 
+
+copy files
+----------
+to niflheim on campus:
+scp myfile.sim sXXXXXX@sylg.fysik.dtu.dk:.
+
+to niflheim via gbar:
+scp myfile.sim sXXXXXX@login.gbar.dtu.dk:. 
+ssh -X sXXXXXX@sylg.fysik.dtu.dk 
+scp myfile.sim sXXXXXX@sylg.fysik.dtu.dk:. 
+
+from niflheim on campus:
+scp sXXXXXX@sylg.fysik.dtu.dk:testcases/myfile.sim . 
+
+from niflheim via gbar:
+ssh sXXXXXX@login.gbar.dtu.dk 
+scp sXXXXXX@sylg.fysik.dtu.dk:testcases/myfile.sim . 
+exit
+scp sXXXXXX@login.gbar.dtu.dk:myfile.sim . 
+
+windows users:
+==============
+
+use e.g, thinlinc 
+
+http://gbar.dtu.dk/faq/43-thinlinc
+
+how to start starccm+ interactively on niflheim:
+================================================
+add to your ~/.bashrc file:
+export PATH="/home/mek/jhwa/CD-adapco/12.06.011-R8/STAR-CCM+12.06.011-R8/star/bin:${PATH}"
+export LM_PROJECT=your_key_here 
+alias ccm="starccm+ -power -podkey $LM_PROJECT $1"
+
+now to create a new case write:
+ccm -new 
+
+and to open an existing case (example.sim)
+ccm example.sim 
+

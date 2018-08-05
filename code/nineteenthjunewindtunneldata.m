@@ -284,13 +284,13 @@ V20_std  = std(AOA_force_speed_std(2:8,3));
 V40_std  = std(AOA_force_speed_std(10:16,3));
 
 
-C_L   = DF20
+C_L   = DF20;
 b = 0.25; %250mm
 c = 0.155; %150 mm
 ARactual =  b/c;
 h = 0.175; %175mm
 AR = ARactual*(1+1.9*(h/b));
-A = b*c
+A = b*c;
 
 alpha = 28*pi/180;
 alphal0 = 10*pi/180;
