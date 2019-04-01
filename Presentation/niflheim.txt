@@ -15,10 +15,10 @@ linux users:
 ============
 login: 
 ------
-ssh -Y sXXXXXX@loginq.gbar.dtu.dk  (or -X)
+ssh -Y sXXXXXX@loginq.gbar.dtu.dk  (or -X) Y is for graphic interface
 
 on the gbar:
-ssh -X sXXXXXX@sylg.fysik.dtu.dk 
+ssh -Y sXXXXXX@sylg.fysik.dtu.dk 
 
 copy files
 ----------
